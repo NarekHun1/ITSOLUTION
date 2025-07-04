@@ -168,3 +168,103 @@ input, textarea {
 .next {
     right: 10px;
 }
+.video-background {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content-on-top {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.centered-text-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* высота блока */
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* фон */
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding: 0 20px;
+}
+
+.centered-text-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+.feature-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 40px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.feature-block:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #eef2f5;
+}
+
+.feature-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature-text h2 {
+    font-size: 36px;
+    color: #2a5298;
+    margin-bottom: 10px;
+}
+
+.feature-text h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.feature-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.feature-text button {
+    padding: 12px 24px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.feature-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}

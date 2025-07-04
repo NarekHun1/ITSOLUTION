@@ -124,9 +124,51 @@
     </div>
 </section>
 
+<button class="call-request-btn" onclick="openCallModal()">Заказать звонок</button>
+
+<div id="callModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCallModal()">&times;</span>
+        <h2>Оставьте ваш номер</h2>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+            <button type="submit" class="btn">Жду звонка</button>
+        </form>
+    </div>
+</div>
+
+<section class="technologies">
+    <h2>Технологии, с которыми мы работаем</h2>
+    <p>Мы используем современные и надёжные инструменты для создания мощных цифровых решений:</p>
+
+    <ul class="tech-list">
+        <li>React</li>
+        <li>Node.js</li>
+        <li>TypeScript</li>
+        <li>NestJS</li>
+        <li>Prisma</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Docker</li>
+        <li>GitHub Actions</li>
+        <li>Vercel / DigitalOcean / AWS</li>
+    </ul>
+</section>
+
+<div class="messenger-buttons">
+    <a href="https://wa.me/37494051474" target="_blank" class="whatsapp-btn">WhatsApp</a>
+    <a href="https://t.me/narekhun" target="_blank" class="telegram-btn">Telegram</a>
+</div>
+
+
+
 <section id="contact">
     <h2>Свяжитесь с нами</h2>
-    <p>Телефон: +7 (999) 123-45-67</p>
+    <p>Телефон: <a href="tel:+37441083882">+374 41 08 38 82</a></p>
+    <p>Email: isalationit@gmail.com</p>
+
+    <button class="btn btn-order" onclick="openModal()">Заказать</button>
 </section>
 
 <!-- Всплывающее окно заявки -->

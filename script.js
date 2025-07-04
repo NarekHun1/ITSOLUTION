@@ -85,3 +85,11 @@ function moveSlide(step) {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(slideIndex);
 });
+
+function openCallModal() {
+    document.getElementById('callModal').style.display = 'block';
+}
+
+function closeCallModal() {
+    document.getElementById('callModal').style.display = 'none';
+}

@@ -124,15 +124,17 @@
     </div>
 </section>
 
+<!-- Кнопка открытия модального окна -->
 <button class="call-request-btn" onclick="openCallModal()">Заказать звонок</button>
 
+<!-- Модальное окно -->
 <div id="callModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeCallModal()">&times;</span>
         <h2>Оставьте ваш номер</h2>
-        <form>
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="tel" placeholder="Телефон" required>
+        <form id="callForm">
+            <input type="text" id="callback-name" placeholder="Ваше имя" required>
+            <input type="tel" id="callback-phone" placeholder="Телефон" required>
             <button type="submit" class="btn">Жду звонка</button>
         </form>
     </div>
@@ -174,7 +176,7 @@
 <!-- Всплывающее окно заявки -->
 <div id="modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeModal()">&times;</span>
         <h2>Оставить заявку</h2>
         <form id="order-form">
             <input type="text" id="name" placeholder="Ваше имя" required />

@@ -86,10 +86,60 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(slideIndex);
 });
 
+
+
+// Открыть модалку
 function openCallModal() {
-    document.getElementById('callModal').style.display = 'block';
+    document.getElementById("callModal").style.display = "block";
 }
 
+// Закрыть модалку
 function closeCallModal() {
-    document.getElementById('callModal').style.display = 'none';
+    document.getElementById("callModal").style.display = "none";
 }
+
+// Отправка формы в Telegram
+document.getElementById("callForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("callback-name").value.trim();
+    const phone = document.getElementById("callback-phone").value.trim();
+
+    const message = `📞 <b>Новая заявка на звонок</b>\n👤 Имя: ${name}\n📱 Телефон: ${phone}`;
+
+    const token = '8026491620:AAE3qaSoZcsHuCwFyazbiuQ1f40vHfdlccs';       // ← сюда твой токен
+    const chat_id = "934669069";       // ← сюда твой chat_id
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            chat_id: chat_id,
+            text: message,
+            parse_mode: "HTML"
+        })
+    })
+        .then(response => {
+            if (response.ok) {
+                alert("✅ Заявка отправлена !");
+                closeCallModal();
+                document.getElementById("callForm").reset();
+            } else {
+                alert("❌ Ошибка при отправке.");
+            }
+        })
+        .catch(() => alert("❌ Ошибка сети."));
+});
+
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+
+window.addEventListener("click", function (e) {
+    const modal = document.getElementById("modal");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});

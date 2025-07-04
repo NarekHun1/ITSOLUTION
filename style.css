@@ -89,42 +89,154 @@ nav a {
 }
 
 /* Всплывающее окно */
+/* Кнопка открытия */
+.open-modal-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.open-modal-btn:hover {
+    background-color: #005fa3;
+}
+
+/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease forwards;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Контент модалки */
 .modal-content {
-    background: white;
-    padding:30px;
-    margin: 10% auto;
-    width: 300px;
-    border-radius: 10px;
-    text-align:center;
+    background-color: #fff;
+    margin: 6% auto;
+    padding: 30px 40px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
     position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Крестик закрытия */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Заголовок */
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Поля формы */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* Кнопка отправки */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background-color: #005fa3;
+}
+
+
+/* Кнопка закрытия */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #333;
 }
 
 .close {
     position: absolute;
-    right: 15px;
-    top: 10px;
-    cursor: pointer;
+    top: 15px;
+    right: 20px;
     font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.close:hover {
+    color: #333;
 }
+
 .image-slider {
     position: relative;
     width: 100%;

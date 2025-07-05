@@ -11,6 +11,7 @@
     <meta name="author" content="Narek Hunanyan" />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="botstyle.css" />
 </head>
 <body>
 
@@ -53,6 +54,9 @@
             <button class="btn btn-order">Заказать</button>
         </div>
     </div>
+
+    <li><a href="#ai-chatbots">AI и Чат-боты</a></li>
+
 </section>
 
 <section class="image-slider">
@@ -139,6 +143,24 @@
         </form>
     </div>
 </div>
+<section id="ai-chatbots" class="feature-block">
+    <div class="feature-text">
+        <h2>🤖 Чат-боты и AI-решения</h2>
+        <p><strong>Автоматизируйте общение с клиентами</strong></p>
+        <p>Мы создаём умных Telegram и WhatsApp ботов, интегрируем нейросети, реализуем голосовых помощников, AI-консультантов, генераторы контента и многое другое.</p>
+        <ul>
+            <li>Чат-боты для Telegram, WhatsApp, Instagram</li>
+            <li>AI-помощники для сайтов и CRM</li>
+            <li>Нейросети: генерация текста, изображений, видео</li>
+            <li>Интеграция с ChatGPT, DALL·E, Sora, Google AI</li>
+        </ul>
+        <button onclick="openModal()">Обсудить проект</button>
+    </div>
+    <div class="feature-image">
+        <img src="./photo/chatbotAi.png" alt="AI бот" />
+    </div>
+</section>
+
 
 <section class="technologies">
     <h2>Технологии, с которыми мы работаем</h2>
@@ -163,6 +185,14 @@
     <a href="https://t.me/narekhun" target="_blank" class="telegram-btn">Telegram</a>
 </div>
 
+<!--&lt;!&ndash; Чат-бот ChatGPT &ndash;&gt;-->
+<!--<div class="chat-container">-->
+<!--    <div id="chat-messages" class="chat-messages"></div>-->
+<!--    <form id="chat-form">-->
+<!--        <input type="text" id="user-input" placeholder="Напишите сообщение..." required />-->
+<!--        <button type="submit">Отправить</button>-->
+<!--    </form>-->
+<!--</div>-->
 
 
 <section id="contact">
@@ -189,6 +219,7 @@
 </div>
 
 <script src="script.js"></script>
+<script src="botscript.js"></script>
 
 </body>
 </html>

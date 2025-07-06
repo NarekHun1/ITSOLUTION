@@ -13,57 +13,66 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="botstyle.css" />
     <link rel="stylesheet" href="buttonTop.css" />
+    <link rel="stylesheet" href="switcher.css" />
 </head>
 <body>
-
+<!-- Переключатель языков -->
+<div class="language-switcher">
+    <select id="language-select" onchange="changeLanguage()">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+        <option value="hy">Հայերեն</option>
+    </select>
+</div>
 <header>
     <h1>IT Solutions</h1>
     <nav>
         <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#about" id="nav-about">О нас</a></li>
+            <li><a href="#services" id="nav-services">Услуги</a></li>
+            <li><a href="#contact" id="nav-contact">Контакты</a></li>
         </ul>
+
     </nav>
 </header>
 
 <section class="hero">
-    <h2>Создаём современные IT-решения</h2>
-    <p>Разработка сайтов, мобильных приложений, автоматизация и поддержка проектов.</p>
-    <a href="#services" class="btn">Наши услуги</a>
+    <h2 id="hero-title">Создаём современные IT-решения</h2>
+    <p id="hero-subtitle">Разработка сайтов, мобильных приложений, автоматизация и поддержка проектов.</p>
+    <a href="#services" class="btn" id="hero-button">Наши услуги</a>
 </section>
 
+
 <section id="services">
-    <h2>Наши услуги</h2>
+    <h2 id="services-title">Наши услуги</h2>
     <div class="services-container">
         <div class="service-card">
-            <h3>Разработка сайтов</h3>
-            <p>Создаём стильные и удобные сайты под любые задачи.</p>
-            <p class="price">от 30 000 руб.</p>
-            <button class="btn btn-order">Заказать</button>
+            <h3 id="service-1-title">Разработка сайтов</h3>
+            <p id="service-1-desc">Создаём стильные и удобные сайты под любые задачи.</p>
+            <p class="price" id="service-1-price">от 30 000 руб.</p>
+            <button class="btn btn-order" id="service-1-btn">Заказать</button>
         </div>
         <div class="service-card">
-            <h3>Мобильные приложения</h3>
-            <p>Разработка кроссплатформенных и нативных приложений.</p>
-            <p class="price">от 100 000 руб.</p>
-            <button class="btn btn-order">Заказать</button>
+            <h3 id="service-2-title">Мобильные приложения</h3>
+            <p id="service-2-desc">Разработка кроссплатформенных и нативных приложений.</p>
+            <p class="price" id="service-2-price">от 100 000 руб.</p>
+            <button class="btn btn-order" id="service-2-btn">Заказать</button>
         </div>
         <div class="service-card">
-            <h3>Автоматизация</h3>
-            <p>Оптимизация бизнес-процессов, CRM, боты, скрипты.</p>
-            <p class="price">от 50 000 руб.</p>
-            <button class="btn btn-order">Заказать</button>
+            <h3 id="service-3-title">Автоматизация</h3>
+            <p id="service-3-desc">Оптимизация бизнес-процессов, CRM, боты, скрипты.</p>
+            <p class="price" id="service-3-price">от 50 000 руб.</p>
+            <button class="btn btn-order" id="service-3-btn">Заказать</button>
         </div>
     </div>
 
     <div class="center-button">
-        <a href="#ai-chatbots" class="round-button">AI и Чат-боты</a>
+        <a href="#ai-chatbots" class="round-button" id="ai-chatbots-btn">AI и Чат-боты</a>
     </div>
 
     <button id="scrollToTopBtn" title="Наверх">↑</button>
-
-
 </section>
+
 
 <section class="image-slider">
     <div class="slider-container">
@@ -89,53 +98,64 @@
 </section>
 
 <section class="centered-text-section">
-    <h1>Нас выбирают, потому что мы лучшие в:</h1>
+    <h1 id="why-us-title">Нас выбирают, потому что мы лучшие в:</h1>
 </section>
 
 <!-- СЕКЦИЯ 1 -->
 <section class="feature-block">
     <div class="feature-text">
         <h2>1</h2>
-        <h3>Продуктовый подход</h3>
-        <p><strong>Решение бизнес-задач</strong></p>
-        <p>Наша цель — не просто писать код, а решать бизнес-задачи, создавая IT-решения, которые приносят клиенту прибыль.</p>
-        <button>Бесплатная консультация</button>
+        <h3 id="feature-1-title">Продуктовый подход</h3>
+        <p><strong id="feature-1-subtitle">Решение бизнес-задач</strong></p>
+        <p id="feature-1-description">
+            Наша цель — не просто писать код, а решать бизнес-задачи, создавая IT-решения, которые приносят клиенту прибыль.
+        </p>
+        <button id="feature-1-button">Бесплатная консультация</button>
     </div>
     <div class="feature-image">
         <img src="./photo/programing.jpg" alt="Продуктовый подход IT Solutions" />
     </div>
 </section>
 
+
 <!-- СЕКЦИЯ 2 -->
 <section class="feature-block">
     <div class="feature-text">
         <h2>2</h2>
-        <h3>Запуск решения</h3>
-        <p><strong>Несем ответственность за результат</strong></p>
-        <p>Мы формируем продуктовую стратегию и сопровождаем проект до самого запуска продукта и получения прибыли.</p>
-        <button>Обсудить результат</button>
+        <h3 id="feature-2-title">Запуск решения</h3>
+        <p><strong id="feature-2-subtitle">Несем ответственность за результат</strong></p>
+        <p id="feature-2-description">
+            Мы формируем продуктовую стратегию и сопровождаем проект до самого запуска продукта и получения прибыли.
+        </p>
+        <button id="feature-2-button">Обсудить результат</button>
     </div>
     <div class="feature-image">
         <img src="./photo/7040859.jpg" alt="Запуск IT решения IT Solutions" />
     </div>
 </section>
 
+
 <!-- СЕКЦИЯ 3 -->
 <section class="feature-block">
     <div class="feature-text">
         <h2>3</h2>
-        <h3>Результат</h3>
-        <p><strong>Бизнес-задача "под ключ"</strong></p>
-        <p>Внедряем цифровое решение в бизнес: разрабатываем IT-продукт, выстраиваем процессы и обучаем команду.</p>
-        <button>Погнали</button>
+        <h3 id="feature-3-title">Результат</h3>
+        <p><strong id="feature-3-subtitle">Бизнес-задача "под ключ"</strong></p>
+        <p id="feature-3-description">
+            Внедряем цифровое решение в бизнес: разрабатываем IT-продукт, выстраиваем процессы и обучаем команду.
+        </p>
+        <button id="feature-3-button">Погнали</button>
     </div>
     <div class="feature-image">
         <img src="./photo/programing3.jpg" alt="Результат IT Solutions" />
     </div>
 </section>
 
+
 <!-- Кнопка открытия модального окна -->
-<button class="call-request-btn" onclick="openCallModal()">Заказать звонок</button>
+<button id="call-request-btn" class="call-request-btn" onclick="openCallModal()">
+    Заказать звонок
+</button>
 
 <!-- Модальное окно -->
 <div id="callModal" class="modal">
@@ -151,16 +171,18 @@
 </div>
 <section id="ai-chatbots" class="feature-block">
     <div class="feature-text">
-        <h2>🤖 Чат-боты и AI-решения</h2>
-        <p><strong>Автоматизируйте общение с клиентами</strong></p>
-        <p>Мы создаём умных Telegram и WhatsApp ботов, интегрируем нейросети, реализуем голосовых помощников, AI-консультантов, генераторы контента и многое другое.</p>
+        <h2 id="ai-title">🤖 Чат-боты и AI-решения</h2>
+        <p><strong id="ai-subtitle">Автоматизируйте общение с клиентами</strong></p>
+        <p id="ai-description">
+            Мы создаём умных Telegram и WhatsApp ботов, интегрируем нейросети, реализуем голосовых помощников, AI-консультантов, генераторы контента и многое другое.
+        </p>
         <ul>
-            <li>Чат-боты для Telegram, WhatsApp, Instagram</li>
-            <li>AI-помощники для сайтов и CRM</li>
-            <li>Нейросети: генерация текста, изображений, видео</li>
-            <li>Интеграция с ChatGPT, DALL·E, Sora, Google AI</li>
+            <li id="ai-list-1">Чат-боты для Telegram, WhatsApp, Instagram</li>
+            <li id="ai-list-2">AI-помощники для сайтов и CRM</li>
+            <li id="ai-list-3">Нейросети: генерация текста, изображений, видео</li>
+            <li id="ai-list-4">Интеграция с ChatGPT, DALL·E, Sora, Google AI</li>
         </ul>
-        <button onclick="openModal()">Обсудить проект</button>
+        <button id="ai-button" onclick="openModal()">Обсудить проект</button>
     </div>
     <div class="feature-image">
         <img src="./photo/chatbotAi.png" alt="AI бот" />
@@ -168,9 +190,10 @@
 </section>
 
 
+
 <section class="technologies">
-    <h2>Технологии, с которыми мы работаем</h2>
-    <p>Мы используем современные и надёжные инструменты для создания мощных цифровых решений:</p>
+    <h2 id="tech-title">Технологии, с которыми мы работаем</h2>
+    <p id="tech-description">Мы используем современные и надёжные инструменты для создания мощных цифровых решений:</p>
 
     <ul class="tech-list">
         <li>React</li>
@@ -202,12 +225,13 @@
 
 
 <section id="contact">
-    <h2>Свяжитесь с нами</h2>
-    <p>Телефон: <a href="tel:+37441083882">+374 41 08 38 82</a></p>
-    <p>Email: isalationit@gmail.com</p>
+    <h2 id="contact-title">Свяжитесь с нами</h2>
+    <p id="contact-phone">Телефон: <a href="tel:+37441083882">+374 41 08 38 82</a></p>
+    <p id="contact-email">Email: isalationit@gmail.com</p>
 
-    <button class="btn btn-order" onclick="openModal()">Заказать</button>
+    <button id="contact-button" class="btn btn-order" onclick="openModal()">Заказать</button>
 </section>
+
 
 <!-- Всплывающее окно заявки -->
 <div id="modal" class="modal">
@@ -227,6 +251,12 @@
 <script src="script.js"></script>
 <script src="botscript.js"></script>
 <script src="buttonTop.js"></script>
+<script src="switcher.js"></script>
 
 </body>
 </html>
+
+<script src="script.js"></script>
+<script src="botscript.js"></script>
+<script src="buttonTop.js"></script>
+<script src="switcher.js"></script>

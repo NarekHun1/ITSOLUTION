@@ -1,0 +1,30 @@
+/* language-switcher.css */
+.language-switcher,
+.footer-language-switcher {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.footer-language-switcher {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.language-switcher select,
+.footer-language-switcher select {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-switcher select:hover,
+.footer-language-switcher select:hover {
+    border-color: #2a5298;
+}

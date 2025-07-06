@@ -18,12 +18,14 @@
 <body>
 <!-- Переключатель языков -->
 <div class="language-switcher">
-    <select id="language-select" onchange="changeLanguage()">
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-        <option value="hy">Հայերեն</option>
-    </select>
+    <button class="globe-btn" onclick="toggleLanguageDropdown()">🌐</button>
+    <div class="language-dropdown" id="languageDropdown">
+        <div onclick="changeLanguage('ru')">🇷🇺 Русский</div>
+        <div onclick="changeLanguage('en')">🇬🇧 English</div>
+        <div onclick="changeLanguage('hy')">🇦🇲 Հայերեն</div>
+    </div>
 </div>
+
 <header>
     <h1>IT Solutions</h1>
     <nav>

@@ -1,30 +1,57 @@
-/* language-switcher.css */
-.language-switcher,
-.footer-language-switcher {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
 }
 
-.footer-language-switcher {
-    position: static;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.language-switcher select,
-.footer-language-switcher select {
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font-size: 14px;
+.globe-btn {
+    background-color: white; /* тёмный фон */
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%; /* круглая кнопка */
+    padding: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: background 0.3s ease;
 }
 
-.language-switcher select:hover,
-.footer-language-switcher select:hover {
-    border-color: #2a5298;
+.globe-btn:hover {
+    background-color: #222;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    background-color: #222; /* фон дропдауна */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.language-dropdown div {
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.language-dropdown div:hover {
+    background-color: #333;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

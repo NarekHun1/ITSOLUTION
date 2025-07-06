@@ -164,8 +164,13 @@ const translations = {
 
     }
 };
-function changeLanguage() {
-    const lang = document.getElementById("language-select").value;
+function toggleLanguageDropdown() {
+    const dropdown = document.getElementById("languageDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+function changeLanguage(lang) {
+    localStorage.setItem("selectedLanguage", lang); // сохраняем язык
     const elements = document.querySelectorAll("[id]");
     elements.forEach((el) => {
         const key = el.id;
@@ -173,4 +178,16 @@ function changeLanguage() {
             el.textContent = translations[lang][key];
         }
     });
+    // закрыть дропдаун, если открыт
+    const dropdown = document.getElementById("languageDropdown");
+    if (dropdown) dropdown.style.display = "none";
 }
+
+// Загружаем язык при загрузке страницы
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("selectedLanguage") || "ru";
+    changeLanguage(savedLang);
+});
+
+
+

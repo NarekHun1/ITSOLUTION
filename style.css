@@ -460,3 +460,11 @@ nav a {
 .telegram-btn {
     background-color: #0088cc;
 }
+
+.seo-section {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

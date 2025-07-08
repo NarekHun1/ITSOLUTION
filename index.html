@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="botstyle.css" />
     <link rel="stylesheet" href="buttonTop.css" />
     <link rel="stylesheet" href="switcher.css" />
+    <link rel="stylesheet" href="form.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4MW3J6D67"></script>
@@ -256,6 +257,20 @@
     </div>
 </section>
 
+<section id="request-section" class="contact-request">
+    <h2>Оставьте заявку</h2>
+    <p>Мы свяжемся с вами и обсудим проект</p>
+
+    <form id="telegram-form">
+        <input type="text" id="tg-name" placeholder="Имя" required />
+        <input type="email" id="tg-email" placeholder="Email" required />
+        <input type="tel" id="tg-phone" placeholder="Телефон" required />
+        <textarea id="tg-message" placeholder="Сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+
+</section>
+
 
 
 <section class="technologies">
@@ -327,3 +342,4 @@
 <script src="botscript.js"></script>
 <script src="buttonTop.js"></script>
 <script src="switcher.js"></script>
+<script src="telegramForm.js"></script>

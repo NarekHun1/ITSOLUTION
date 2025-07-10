@@ -69,17 +69,17 @@ const translations = {
         "hero-button": "Our Services", "services-title": "Our Services",
         "service-1-title": "Website Development",
         "service-1-desc": "We create stylish and user-friendly websites for any task.",
-        "service-1-price": "from 30,000 RUB",
+        "service-1-price": "from 400 USD",
         "service-1-btn": "Order",
 
         "service-2-title": "Mobile Applications",
         "service-2-desc": "Cross-platform and native mobile app development.",
-        "service-2-price": "from 100,000 RUB",
+        "service-2-price": "from 1300 USD",
         "service-2-btn": "Order",
 
         "service-3-title": "Automation",
         "service-3-desc": "Business process optimization, CRM, bots, scripts.",
-        "service-3-price": "from 50,000 RUB",
+        "service-3-price": "from 650 USD",
         "service-3-btn": "Order",
 
         "ai-chatbots-btn": "AI & Chatbots",
@@ -130,7 +130,7 @@ const translations = {
         "services-title": "Մեր ծառայությունները",
         "service-1-title": "Վեբ կայքերի ստեղծում",
         "service-1-desc": "Ստեղծում ենք գեղեցիկ և հարմար կայքեր ցանկացած խնդրի համար։",
-        "service-1-price": "սկսած 30,000 դր.",
+        "service-1-price": "սկսած 150,000 դր.",
         "service-1-btn": "Պատվիրել",
 
         "service-2-title": "Բջջային հավելվածներ",
@@ -140,7 +140,7 @@ const translations = {
 
         "service-3-title": "Ավտոմատացում",
         "service-3-desc": "Գործընթացների օպտիմալացում, CRM, բոթեր, սկրիպտեր։",
-        "service-3-price": "սկսած 50,000 դր.",
+        "service-3-price": "սկսած 500,000 դր.",
         "service-3-btn": "Պատվիրել",
 
         "ai-chatbots-btn": "AI և չատ-բոթեր",

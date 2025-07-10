@@ -52,6 +52,12 @@ const translations = {
         "contact-phone": "Телефон: +374 41 08 38 82",
         "contact-email": "Email: isalationit@gmail.com",
         "contact-button": "Заказать",
+        "about-title": "О нас",
+        "about-p1": "IT Solutions — команда опытных разработчиков и дизайнеров из Армении. Мы создаём сайты, чат-ботов и IT-продукты, которые решают реальные задачи бизнеса.",
+        "about-p2": "Мы любим технологии и подходим к каждому проекту индивидуально, чтобы добиться максимального результата.",
+        "about-li1": "📍 Работаем в Ереване и по всей Армении",
+        "about-li2": "📈 Более 5 лет опыта, десятки реализованных проектов",
+        "about-li3": "💬 Мы говорим на русском, армянском и английском"
 
     },
     en: {
@@ -105,7 +111,13 @@ const translations = {
         "contact-title": "Contact Us",
         "contact-phone": "Phone:",
         "contact-email": "Email: isalationit@gmail.com",
-        "contact-button": "Order"
+        "contact-button": "Order",
+        "about-title": "About Us",
+        "about-p1": "IT Solutions is a team of experienced developers and designers from Armenia. We build websites, chatbots, and IT products that solve real business challenges.",
+        "about-p2": "We love technology and approach each project individually to achieve maximum results.",
+        "about-li1": "📍 Based in Yerevan, working across Armenia",
+        "about-li2": "📈 Over 5 years of experience and dozens of completed projects",
+        "about-li3": "💬 We speak Russian, Armenian, and English"
 
     },
     hy: {
@@ -160,7 +172,12 @@ const translations = {
         "contact-title": "Կապ հաստատեք մեզ հետ",
         "contact-phone": "Հեռախոս՝ +37441083882",
         "contact-email": "Էլ. հասցե՝ isalationit@gmail.com",
-        "contact-button": "Պատվիրել"
+        "contact-button": "Պատվիրել", "about-title": "Մեր մասին",
+        "about-p1": "IT Solutions՝ փորձառու ծրագրավորողների և դիզայներների թիմ Հայաստանում։ Մենք ստեղծում ենք կայքեր, չաթ-բոթեր և IT լուծումներ բիզնեսի համար։",
+        "about-p2": "Մենք սիրում ենք տեխնոլոգիաները և յուրաքանչյուր նախագծին մոտենում ենք անհատական՝ լավագույն արդյունքի հասնելու համար։",
+        "about-li1": "📍 Աշխատում ենք Երևանում և ամբողջ Հայաստանում",
+        "about-li2": "📈 Ավելի քան 5 տարվա փորձ, տասնյակ հաջողված նախագծեր",
+        "about-li3": "💬 Խոսում ենք հայերեն, ռուսերեն և անգլերեն"
 
     }
 };

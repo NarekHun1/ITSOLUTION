@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background: linear-gradient(135deg, #1e1e2f, #27293d);
     color: #fff;
     padding: 40px 20px;
@@ -12,7 +13,8 @@
 }
 
 .promo-content {
-    max-width: 50%;
+    flex: 1 1 300px;
+    max-width: 600px;
 }
 
 .promo-content h2 {
@@ -32,6 +34,7 @@
     font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
@@ -40,8 +43,9 @@
 }
 
 .promo-image {
-    width: 45%;
-    max-width: 400px;
+    flex: 1 1 250px;
+    max-width: 100%;
+    margin-top: 20px;
 }
 
 @keyframes slideIn {
@@ -52,5 +56,32 @@
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .promo-content {
+        max-width: 100%;
+    }
+
+    .promo-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .promo-content p {
+        font-size: 1rem;
+    }
+
+    .promo-image {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 300px;
     }
 }

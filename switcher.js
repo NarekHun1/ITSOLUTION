@@ -135,12 +135,12 @@ const translations = {
 
         "service-2-title": "Բջջային հավելվածներ",
         "service-2-desc": "Խաչաձեւ հարթակ և բնիկ հավելվածների մշակում։",
-        "service-2-price": "սկսած 100,000 դր.",
+        "service-2-price": "սկսած 500,000 դր.",
         "service-2-btn": "Պատվիրել",
 
         "service-3-title": "Ավտոմատացում",
         "service-3-desc": "Գործընթացների օպտիմալացում, CRM, բոթեր, սկրիպտեր։",
-        "service-3-price": "սկսած 500,000 դր.",
+        "service-3-price": "սկսած 250,000 դր.",
         "service-3-btn": "Պատվիրել",
 
         "ai-chatbots-btn": "AI և չատ-բոթեր",

@@ -501,3 +501,38 @@ nav a {
     font-weight: 600;
     color: #333;
 }
+
+.dev-warning {
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dev-warning p {
+    margin: 0;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Чтоб контент не прилипал к верху */
+body {
+    padding-top: 40px;
+}

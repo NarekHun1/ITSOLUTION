@@ -1,0 +1,57 @@
+/* Contact page extra styling */
+
+#contact-hero h1 {
+    max-width: 760px;
+}
+
+#contact-hero .hero-copy {
+    background: linear-gradient(180deg, rgba(255,255,255,.065), rgba(255,255,255,.03));
+}
+
+.contact-form-extended {
+    margin-top: 24px;
+}
+
+.contact-select {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.035);
+    color: #fff;
+    border-radius: 16px;
+    padding: 16px 18px;
+    outline: none;
+    font: inherit;
+    appearance: none;
+}
+
+.contact-select:focus {
+    border-color: rgba(0,198,255,.45);
+    box-shadow: 0 0 0 4px rgba(0,198,255,.08);
+    background: rgba(255,255,255,.05);
+}
+
+.contact-select option {
+    background: #0b1020;
+    color: #fff;
+}
+
+#contact-form-section .panel {
+    background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+}
+
+#contact-info-grid .contact-item {
+    min-height: 220px;
+}
+
+#contact-faq .feature-card {
+    min-height: 220px;
+    background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+}
+
+#contact-cta .cta-wrap {
+    border-color: rgba(0,198,255,.24);
+}
+
+#contact-cta .cta-wrap::before {
+    background: linear-gradient(90deg, transparent, rgba(0,198,255,.16), transparent);
+}

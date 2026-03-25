@@ -507,21 +507,27 @@ nav a {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #222831, #393e46);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
     overflow: hidden;
-    white-space: nowrap;
     padding: 10px 0;
     z-index: 9999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .scroll-text {
     display: inline-block;
+    white-space: nowrap;
     padding-left: 100%;
     font-size: 16px;
     color: #fff;
-    font-weight: 500;
-    animation: scroll-left 15s linear infinite;
+    font-weight: 600;
+    animation: scroll-left 12s linear infinite;
+}
+
+.scroll-banner .scroll-text:nth-child(2) {
+    animation-delay: 10s;
+    animation-duration: 16s;
 }
 
 @keyframes scroll-left {
@@ -533,14 +539,12 @@ nav a {
     }
 }
 
-/* Адаптация для мобильных */
 @media (max-width: 480px) {
     .scroll-text {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
-/* Добавим отступ, чтобы контент не скрывался под баннером */
 body {
-    padding-top: 40px; /* высота баннера + небольшой отступ */
+    padding-top: 70px; /* Увеличить отступ от верха */
 }

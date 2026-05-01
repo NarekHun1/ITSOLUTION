@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "isolation-react/node_modules/.bin/vite",
-    "build": "isolation-react/node_modules/.bin/tsc -b && vite build",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
     "lint": "isolation-react/node_modules/.bin/eslint .",
     "preview": "isolation-react/node_modules/.bin/vite preview"
   },

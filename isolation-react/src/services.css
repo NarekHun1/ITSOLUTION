@@ -1,0 +1,95 @@
+.section {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+/* фон */
+.section::before {
+    content: "";
+    position: absolute;
+    inset: 80px -10% auto -10%;
+    height: 420px;
+    background:
+            radial-gradient(circle at 20% 40%, rgba(156,255,0,0.12), transparent 34%),
+            radial-gradient(circle at 80% 30%, rgba(124,58,237,0.18), transparent 36%);
+    filter: blur(22px);
+    z-index: 0;
+}
+
+/* grid эффект */
+.section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(156,255,0,0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(156,255,0,0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    transform: perspective(700px) rotateX(62deg);
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.section > .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* grid */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* card */
+.serviceCard {
+    padding: 26px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow */
+.serviceCard::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(
+            circle at var(--x, 50%) var(--y, 50%),
+            rgba(156,255,0,0.25),
+            transparent 40%
+    );
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.serviceCard:hover::before {
+    opacity: 1;
+}
+
+/* hover */
+.serviceCard:hover {
+    transform: translateY(-8px) rotateX(4deg);
+    border-color: rgba(156,255,0,0.4);
+}
+
+/* text */
+.serviceCard h3 {
+    margin-bottom: 10px;
+}
+
+.serviceCard p {
+    color: #b8b8c8;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+}

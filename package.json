@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "isolation-react/node_modules/.bin/vite",
+    "build": "isolation-react/node_modules/.bin/tsc -b && vite build",
+    "lint": "isolation-react/node_modules/.bin/eslint .",
+    "preview": "isolation-react/node_modules/.bin/vite preview"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
@@ -36,11 +36,5 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10"
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }

@@ -133,7 +133,19 @@
 }
 
 /* 🔥 эффекты */
+/* 🔥 FIX ОБРЕЗАНИЯ НА MOBILE */
+html, body {
+    overflow-x: hidden;
+}
 
+* {
+    max-width: 100%;
+}
+.section {
+    position: relative;
+    overflow: visible; /* ❗ вместо hidden */
+    padding: 120px 0;
+}
 .startGlow {
     position: absolute;
     width: 360px;
@@ -383,5 +395,241 @@
     .choiceGrid,
     .packageGrid {
         grid-template-columns: 1fr;
+    }
+}
+/* ✅ PERFECT MOBILE FIX */
+@media (max-width: 768px) {
+    .startProjectPage {
+        min-height: 100svh;
+        padding: 96px 14px 50px;
+        overflow-x: hidden;
+    }
+
+    .startProjectHero {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .startProjectBadge {
+        font-size: 10px;
+        padding: 8px 12px;
+        letter-spacing: 1.2px;
+        margin-bottom: 16px;
+    }
+
+    .startProjectHero h1 {
+        font-size: clamp(34px, 11vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 16px;
+        word-break: break-word;
+    }
+
+    .startProjectHero > p {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 28px;
+        padding: 0 2px;
+    }
+
+    .projectBuilder {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 26px;
+        width: 100%;
+    }
+
+    .builderLeft,
+    .summaryCard {
+        width: 100%;
+        padding: 20px 14px;
+        border-radius: 24px;
+        box-sizing: border-box;
+    }
+
+    .builderLeft h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .choiceGrid,
+    .packageGrid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .choice,
+    .package {
+        width: 100%;
+        min-height: auto;
+        padding: 15px 14px;
+        border-radius: 16px;
+        font-size: 15px;
+        transform: none !important;
+    }
+
+    .package strong {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .package span {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .summaryCard {
+        position: relative;
+        top: auto;
+        text-align: center;
+    }
+
+    .summaryCard h3 {
+        font-size: clamp(26px, 8vw, 36px);
+        line-height: 1.1;
+        word-break: break-word;
+    }
+
+    .summaryCard p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .summaryCard input,
+    .summaryCard textarea {
+        font-size: 14px;
+        padding: 14px 15px;
+        border-radius: 15px;
+    }
+
+    .summaryCard textarea {
+        min-height: 110px;
+    }
+
+    .startProjectBtn,
+    .whatsappBtn {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+
+    .startGlow {
+        width: 220px;
+        height: 220px;
+        filter: blur(38px);
+        opacity: 0.28;
+    }
+
+    .glowOne {
+        top: 80px;
+        left: -120px;
+    }
+
+    .glowTwo {
+        right: -120px;
+        bottom: 120px;
+    }
+
+    .startOrb {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .startProjectPage {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .builderLeft,
+    .summaryCard {
+        padding: 18px 12px;
+    }
+
+    .startProjectHero h1 {
+        font-size: 32px;
+    }
+
+    .startProjectHero > p {
+        font-size: 14px;
+    }
+}
+/* ✅ PERFECT FIX FOR 435px */
+@media (max-width: 435px) {
+    .startProjectPage {
+        padding: 90px 12px 40px;
+    }
+
+    .startProjectHero h1 {
+        font-size: 30px;
+        line-height: 1.1;
+        letter-spacing: -1.5px;
+    }
+
+    .startProjectHero > p {
+        font-size: 13.5px;
+        margin-bottom: 22px;
+    }
+
+    .builderLeft,
+    .summaryCard {
+        padding: 16px 12px;
+        border-radius: 20px;
+    }
+
+    .builderLeft h2 {
+        font-size: 16px;
+    }
+
+    .choice,
+    .package {
+        padding: 13px 12px;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+
+    .package strong {
+        font-size: 16px;
+    }
+
+    .package span {
+        font-size: 12px;
+    }
+
+    .summaryCard h3 {
+        font-size: 24px;
+    }
+
+    .summaryCard p {
+        font-size: 13px;
+    }
+
+    .summaryCard input,
+    .summaryCard textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .startProjectBtn,
+    .whatsappBtn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* убираем лишние эффекты чтобы не ломало */
+    .startGlow {
+        display: none;
+    }
+
+    /* убираем tilt эффект на мобиле */
+    .choice,
+    .package {
+        transform: none !important;
     }
 }

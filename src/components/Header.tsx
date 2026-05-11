@@ -13,8 +13,7 @@ export default function Header() {
         { label: t('nav.services'), to: '/services' },
         { label: t('nav.projects'), to: '/#projects' },
         { label: t('nav.process'), to: '/#process' },
-        { label: t('nav.contact'), to: '/#contact' },
-    ];
+        { label: t('nav.contact'), to: '/contact' },    ];
 
     return (
         <>

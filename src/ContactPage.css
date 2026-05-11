@@ -1,0 +1,290 @@
+.contactPage {
+    min-height: 100vh;
+    padding-top: 110px;
+    background:
+            radial-gradient(circle at 15% 20%, rgba(124, 77, 255, 0.35), transparent 32%),
+            radial-gradient(circle at 85% 10%, rgba(80, 170, 255, 0.28), transparent 30%),
+            linear-gradient(180deg, #090918, #111027);
+    color: #fff;
+    overflow: hidden;
+}
+
+.contactHero {
+    position: relative;
+    width: min(1240px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 34px;
+    align-items: center;
+    padding: 70px 0 40px;
+}
+
+.contactGlow {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(70px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.contactGlowOne {
+    width: 260px;
+    height: 260px;
+    background: #7c4dff;
+    left: -80px;
+    top: 40px;
+}
+
+.contactGlowTwo {
+    width: 220px;
+    height: 220px;
+    background: #ffb84d;
+    right: -60px;
+    bottom: 30px;
+}
+
+.contactContent,
+.contactCards,
+.contactMapSection {
+    position: relative;
+    z-index: 2;
+}
+
+.contactBadge {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.78);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.contactContent h1 {
+    max-width: 760px;
+    font-size: clamp(44px, 7vw, 92px);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+    margin: 0;
+}
+
+.contactContent h1 span {
+    display: block;
+    background: linear-gradient(135deg, #7c4dff, #58c5ff, #ffb84d);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 40px rgba(124,77,255,0.35);
+}
+
+.contactContent p {
+    max-width: 620px;
+    margin: 26px 0 0;
+    color: rgba(255,255,255,0.68);
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.contactActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.contactPrimaryBtn,
+.contactSecondaryBtn,
+.navigatorBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.contactPrimaryBtn {
+    padding: 17px 24px;
+    color: #fff;
+    background: linear-gradient(135deg, #7c4dff, #3db7ff);
+    box-shadow: 0 20px 45px rgba(91, 93, 255, 0.35);
+}
+
+.contactSecondaryBtn {
+    padding: 17px 24px;
+    color: #fff;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.contactPrimaryBtn:hover,
+.contactSecondaryBtn:hover,
+.navigatorBtn:hover {
+    transform: translateY(-3px);
+}
+
+.contactCards {
+    display: grid;
+    gap: 16px;
+}
+
+.contactInfoCard {
+    min-height: 132px;
+    padding: 22px;
+    border-radius: 28px;
+    text-decoration: none;
+    color: #fff;
+    background:
+            linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    transition: 0.3s ease;
+}
+
+.contactInfoCard:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(124,77,255,0.45);
+}
+
+.contactInfoCard div {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #7c4dff, #ffb84d);
+}
+
+.contactInfoCard span {
+    display: block;
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.contactInfoCard strong {
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.contactMapSection {
+    width: min(1240px, calc(100% - 40px));
+    margin: 20px auto 80px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 36px;
+    background:
+            linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.035));
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 35px 100px rgba(0,0,0,0.35);
+}
+
+.contactMapText {
+    padding: 26px;
+}
+
+.contactMapText span {
+    color: #8ecbff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+}
+
+.contactMapText h2 {
+    font-size: clamp(30px, 4vw, 54px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 18px 0;
+}
+
+.contactMapText p {
+    color: rgba(255,255,255,0.62);
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 26px;
+}
+
+.navigatorBtn {
+    padding: 16px 20px;
+    color: #111;
+    background: linear-gradient(135deg, #fff, #ffcf7a);
+}
+
+.mapBox {
+    min-height: 430px;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+}
+
+.mapBox iframe {
+    display: block;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+@media (max-width: 900px) {
+    .contactHero,
+    .contactMapSection {
+        grid-template-columns: 1fr;
+    }
+
+    .contactHero {
+        padding-top: 42px;
+    }
+
+    .contactMapSection {
+        padding: 16px;
+    }
+
+    .mapBox {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contactPage {
+        padding-top: 92px;
+    }
+
+    .contactHero,
+    .contactMapSection {
+        width: min(100% - 24px, 1240px);
+    }
+
+    .contactContent h1 {
+        font-size: 46px;
+    }
+
+    .contactContent p {
+        font-size: 16px;
+    }
+
+    .contactActions {
+        flex-direction: column;
+    }
+
+    .contactPrimaryBtn,
+    .contactSecondaryBtn,
+    .navigatorBtn {
+        width: 100%;
+    }
+
+    .contactInfoCard {
+        min-height: 112px;
+    }
+
+    .contactMapText {
+        padding: 14px;
+    }
+}

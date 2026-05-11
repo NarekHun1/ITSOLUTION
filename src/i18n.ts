@@ -110,7 +110,18 @@ const resources = {
                     },
                 },
             },
-
+            contact: {
+                badge: 'Contact Isolation IT Solutions',
+                title1: 'Let’s discuss your next',
+                title2: 'digital project',
+                desc: 'Website, CRM, marketplace, AI assistant, Telegram bot or mobile app — we will help choose the right solution and estimate the cost.',
+                startProject: 'Start project',
+                callNow: 'Call now',
+                addressLabel: 'Address',
+                mapTitle: 'Find us on Yandex Navigator',
+                mapDesc: 'Click the map or button to open the location.',
+                openNavigator: 'Open in Yandex Navigator',
+            },
             services: {
                 title: 'Our expertise',
                 desc: 'We build digital systems that help businesses grow, automate and scale.',
@@ -186,7 +197,18 @@ const resources = {
                     support: 'Поддержка',
                 },
             },
-
+            contact: {
+                badge: 'Контакты Isolation IT Solutions',
+                title1: 'Обсудим ваш следующий',
+                title2: 'digital проект',
+                desc: 'Сайт, CRM, marketplace, AI assistant, Telegram bot или mobile app — мы поможем выбрать правильное решение и оценить стоимость.',
+                startProject: 'Начать проект',
+                callNow: 'Позвонить сейчас',
+                addressLabel: 'Адрес',
+                mapTitle: 'Найдите нас в Yandex Navigator',
+                mapDesc: 'Нажмите на карту или кнопку, чтобы открыть локацию.',
+                openNavigator: 'Открыть в Yandex Navigator',
+            },
             startProject: {
                 badge: 'Начать проект',
                 title: 'Создадим ваш следующий цифровой продукт',
@@ -354,7 +376,18 @@ const resources = {
                     support: 'Աջակցություն',
                 },
             },
-
+            contact: {
+                badge: 'Կապ Isolation IT Solutions-ի հետ',
+                title1: 'Եկեք քննարկենք ձեր հաջորդ',
+                title2: 'digital project-ը',
+                desc: 'Կայք, CRM, marketplace, AI assistant, Telegram bot կամ mobile app — մենք կօգնենք ընտրել ճիշտ լուծումը և գնահատել արժեքը։',
+                startProject: 'Սկսել նախագիծը',
+                callNow: 'Զանգահարել հիմա',
+                addressLabel: 'Հասցե',
+                mapTitle: 'Գտեք մեզ Yandex Navigator-ում',
+                mapDesc: 'Սեղմեք քարտեզի կամ կոճակի վրա՝ տեղը բացելու համար։',
+                openNavigator: 'Բացել Yandex Navigator-ում',
+            },
             startProject: {
                 badge: 'Սկսել նախագիծ',
                 title: 'Եկեք ստեղծենք ձեր հաջորդ թվային պրոդուկտը',

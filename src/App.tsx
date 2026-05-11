@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import StartProjectPage from './components/StartProjectPage';
+import ServicesPage from './components/Services';
+import AIChatWidget from './components/AIChatWidget';
 
 function Home() {
     return (
@@ -12,6 +14,7 @@ function Home() {
             <Hero />
             <Services />
             <Projects />
+            <AIChatWidget />
         </>
     );
 }
@@ -23,7 +26,16 @@ export default function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/start-project" element={<StartProjectPage />} />
+
+                <Route
+                    path="/services"
+                    element={<ServicesPage />}
+                />
+
+                <Route
+                    path="/start-project"
+                    element={<StartProjectPage />}
+                />
             </Routes>
         </>
     );

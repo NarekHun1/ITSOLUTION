@@ -37,21 +37,94 @@ export default function StartProjectPage() {
     const [type, setType] = useState(types[0]);
     const [pack, setPack] = useState(packages[1].title);
 
+    const [name, setName] = useState('');
+    const [contact, setContact] = useState('');
+    const [idea, setIdea] = useState('');
+
+    const [loading, setLoading] = useState(false);
+
+    const sendToTelegram = async () => {
+        if (!name || !contact || !idea) {
+            alert('Please fill all fields');
+            return;
+        }
+
+        setLoading(true);
+
+        const BOT_TOKEN = '8026491620:AAE3qaSoZcsHuCwFyazbiuQ1f40vHfdlccs';
+        const CHAT_ID = '934669069';
+
+        const text = `
+🚀 NEW PROJECT REQUEST
+
+👤 Name: ${name}
+📞 Contact: ${contact}
+
+💻 Project Type: ${type}
+📦 Package: ${pack}
+
+📝 Project Idea:
+${idea}
+`;
+
+        try {
+            const response = await fetch(
+                `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text,
+                    }),
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error('Telegram API Error');
+            }
+
+            alert('Request sent successfully');
+
+            setName('');
+            setContact('');
+            setIdea('');
+        } catch (error) {
+            console.error(error);
+            alert('Error sending request');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <main className="startProjectPage">
             <div className="startGlow glowOne" />
             <div className="startGlow glowTwo" />
 
             <section className="startProjectHero">
-                <motion.span className="startProjectBadge">
+                <motion.span
+                    className="startProjectBadge"
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                >
                     {t('startProject.badge')}
                 </motion.span>
 
-                <motion.h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                >
                     {t('startProject.title')}
                 </motion.h1>
 
-                <motion.p>
+                <motion.p
+                    initial={{ opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                >
                     {t('startProject.desc')}
                 </motion.p>
 
@@ -70,7 +143,11 @@ export default function StartProjectPage() {
                                     scale={1.05}
                                 >
                                     <button
-                                        className={type === item ? 'choice active' : 'choice'}
+                                        className={
+                                            type === item
+                                                ? 'choice active'
+                                                : 'choice'
+                                        }
                                         onClick={() => setType(item)}
                                     >
                                         {item}
@@ -83,12 +160,22 @@ export default function StartProjectPage() {
 
                         <div className="packageGrid">
                             {packages.map((item) => (
-                                <Tilt key={item.key} tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable>
+                                <Tilt
+                                    key={item.key}
+                                    tiltMaxAngleX={10}
+                                    tiltMaxAngleY={10}
+                                    glareEnable
+                                >
                                     <button
-                                        className={pack === item.title ? 'package active' : 'package'}
+                                        className={
+                                            pack === item.title
+                                                ? 'package active'
+                                                : 'package'
+                                        }
                                         onClick={() => setPack(item.title)}
                                     >
                                         <strong>{item.title}</strong>
+
                                         <span>{item.desc}</span>
                                     </button>
                                 </Tilt>
@@ -98,34 +185,62 @@ export default function StartProjectPage() {
 
                     <div className="builderRight">
                         <div className="summaryCard">
-                            <span>{t('startProject.yourRequest')}</span>
+                            <span>
+                                {t('startProject.yourRequest')}
+                            </span>
 
                             <h3>{type}</h3>
 
                             <p>
-                                {t('startProject.selectedPackage')}: <strong>{pack}</strong>
+                                {t('startProject.selectedPackage')}:{' '}
+                                <strong>{pack}</strong>
                             </p>
 
-                            <input placeholder={t('startProject.form.name')} />
-                            <input placeholder={t('startProject.form.contact')} />
-                            <textarea placeholder={t('startProject.form.idea')} />
+                            <input
+                                placeholder={t('startProject.form.name')}
+                                value={name}
+                                onChange={(e) =>
+                                    setName(e.target.value)
+                                }
+                            />
 
-                            <a
+                            <input
+                                placeholder={t('startProject.form.contact')}
+                                value={contact}
+                                onChange={(e) =>
+                                    setContact(e.target.value)
+                                }
+                            />
+
+                            <textarea
+                                placeholder={t('startProject.form.idea')}
+                                value={idea}
+                                onChange={(e) =>
+                                    setIdea(e.target.value)
+                                }
+                            />
+
+                            <button
                                 className="btn primary startProjectBtn"
-                                href={`https://t.me/YOUR_TELEGRAM_USERNAME?text=${type} (${pack})`}
-                                target="_blank"
-                                rel="noreferrer"
+                                onClick={sendToTelegram}
+                                disabled={loading}
                             >
-                                {t('startProject.form.sendTelegram')}
-                            </a>
+                                {loading
+                                    ? 'Sending...'
+                                    : t(
+                                        'startProject.form.sendTelegram'
+                                    )}
+                            </button>
 
                             <a
                                 className="whatsappBtn"
-                                href={`https://wa.me/374XXXXXXXX?text=${type} (${pack})`}
+                                href="https://wa.me/37441083882"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                {t('startProject.form.sendWhatsapp')}
+                                {t(
+                                    'startProject.form.sendWhatsapp'
+                                )}
                             </a>
                         </div>
                     </div>

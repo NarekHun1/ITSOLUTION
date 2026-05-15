@@ -122,35 +122,122 @@ const resources = {
                 mapDesc: 'Click the map or button to open the location.',
                 openNavigator: 'Open in Yandex Navigator',
             },
-            services: {
-                title: 'Our expertise',
-                desc: 'We build digital systems that help businesses grow, automate and scale.',
-                items: {
-                    website: {
-                        title: 'Sales Websites',
-                        desc: 'High-conversion websites that generate leads and clients.',
+            processPage: {
+                badge: 'Our Process',
+                title: 'How We Turn Ideas Into Real Products',
+                desc: 'We follow a clear and professional workflow — from first discussion to launch, support and future growth.',
+                ctaTitle: 'Ready to Start Your Project?',
+                ctaDesc: 'Tell us your idea and we will help you choose the right solution, structure and development plan.',
+                steps: {
+                    consultation: {
+                        title: 'Discovery & Consultation',
+                        desc: 'We discuss your idea, goals, target audience, functionality and business needs.',
                     },
-                    saas: {
-                        title: 'Web Apps / SaaS',
-                        desc: 'Platforms, dashboards and scalable systems.',
+                    planning: {
+                        title: 'Planning & Strategy',
+                        desc: 'We define the project structure, timeline, technical solution and development roadmap.',
                     },
-                    ai: {
-                        title: 'AI Integration',
-                        desc: 'Automation, AI assistants and smart workflows.',
+                    design: {
+                        title: 'UI/UX Design',
+                        desc: 'We create a modern, clean and user-friendly design for desktop and mobile users.',
                     },
-                    telegram: {
-                        title: 'Telegram Apps',
-                        desc: 'Mini apps, bots and game systems.',
+                    development: {
+                        title: 'Development',
+                        desc: 'We build frontend, backend, admin panel, APIs, integrations and all core functionality.',
                     },
-                    crm: {
-                        title: 'CRM Systems',
-                        desc: 'Admin panels and business management tools.',
+                    testing: {
+                        title: 'Testing & Optimization',
+                        desc: 'We test performance, mobile version, security, user experience and fix all issues.',
                     },
-                    automation: {
-                        title: 'Automation',
-                        desc: 'Process optimization and integrations.',
+                    launch: {
+                        title: 'Launch',
+                        desc: 'We deploy the project, connect domain, SSL, analytics and prepare it for real users.',
+                    },
+                    support: {
+                        title: 'Support & Growth',
+                        desc: 'After launch, we support the product, add new features and improve business results.',
                     },
                 },
+            },
+            servicesPage: {
+                badge: 'Our Services',
+                title: 'Digital Solutions for Modern Businesses',
+                description:
+                    'We build websites, platforms, AI tools, Telegram WebApps, automation systems and admin panels for businesses.',
+
+                backHome: 'Back to Home',
+
+                servicesTitle: 'Services',
+                servicesDesc: 'Choose the solution your business needs.',
+
+                processTitle: 'How We Work',
+                processDesc: 'A clear process from idea to launch.',
+
+                ctaTitle: 'Have an Idea?',
+                ctaDesc:
+                    'Tell us about your project and we will help turn it into a real digital product.',
+
+                whatWeBuild: 'What We Build',
+
+                list: {
+                    website: {
+                        title: 'Website Development',
+                        desc: 'Modern business websites, landing pages and corporate websites with premium UX/UI design.',
+                    },
+                    saas: {
+                        title: 'SaaS Platforms',
+                        desc: 'Custom web platforms for startups and businesses with dashboards, accounts and subscriptions.',
+                    },
+                    ai: {
+                        title: 'AI Tools',
+                        desc: 'AI assistants, chatbots and automation solutions for business.',
+                    },
+                    telegram: {
+                        title: 'Telegram Bot & WebApp',
+                        desc: 'Telegram bots, Mini Apps, payment systems and business automation.',
+                    },
+                    crm: {
+                        title: 'CRM & Admin Panel',
+                        desc: 'Internal systems for managing clients, orders and business processes.',
+                    },
+                    automation: {
+                        title: 'Automation Systems',
+                        desc: 'API integrations, data synchronization and workflow automation.',
+                    },
+                },
+            },
+
+            features: {
+                responsive: 'Responsive Design',
+                seo: 'SEO Optimization',
+                fast: 'Fast Performance',
+                admin: 'Admin Panel',
+                auth: 'Authorization',
+                dashboard: 'Dashboard',
+                payments: 'Payments',
+                scalable: 'Scalable',
+                chatbot: 'AI Chatbot',
+                textgen: 'Text Generation',
+                recommendations: 'Recommendations',
+                automation: 'Automation',
+                telegramBot: 'Telegram Bot',
+                miniapp: 'Mini App',
+                notifications: 'Notifications',
+                users: 'Users',
+                analytics: 'Analytics',
+                roles: 'Roles',
+                reports: 'Reports',
+                api: 'API Integration',
+                sync: 'Data Sync',
+            },
+
+            process: {
+                analysis: 'Analysis',
+                design: 'Design',
+                development: 'Development',
+                testing: 'Testing',
+                launch: 'Launch',
+                support: 'Support',
             },
             "techStack": {
                 "title": "Tech Stack",
@@ -278,58 +365,128 @@ const resources = {
                     },
                 },
             },
+            processPage: {
+                badge: 'Наш процесс',
+                title: 'Как мы превращаем идеи в реальные продукты',
+                desc: 'Мы работаем по понятному и профессиональному процессу — от первого обсуждения до запуска, поддержки и роста проекта.',
+                ctaTitle: 'Готовы начать проект?',
+                ctaDesc: 'Расскажите нам вашу идею, и мы поможем выбрать правильное решение, структуру и план разработки.',
+                steps: {
+                    consultation: {
+                        title: 'Консультация и анализ',
+                        desc: 'Обсуждаем вашу идею, цели, аудиторию, функционал и задачи бизнеса.',
+                    },
+                    planning: {
+                        title: 'Планирование и стратегия',
+                        desc: 'Определяем структуру проекта, сроки, техническое решение и roadmap разработки.',
+                    },
+                    design: {
+                        title: 'UI/UX дизайн',
+                        desc: 'Создаем современный, удобный и адаптивный дизайн для desktop и mobile.',
+                    },
+                    development: {
+                        title: 'Разработка',
+                        desc: 'Разрабатываем frontend, backend, admin panel, API, интеграции и основной функционал.',
+                    },
+                    testing: {
+                        title: 'Тестирование и оптимизация',
+                        desc: 'Проверяем скорость, mobile версию, безопасность, UX и исправляем все ошибки.',
+                    },
+                    launch: {
+                        title: 'Запуск',
+                        desc: 'Размещаем проект на сервере, подключаем домен, SSL, аналитику и готовим к пользователям.',
+                    },
+                    support: {
+                        title: 'Поддержка и развитие',
+                        desc: 'После запуска поддерживаем продукт, добавляем новые функции и улучшаем результат.',
+                    },
+                },
+            },
+            servicesPage: {
+                badge: 'Наши услуги',
+                title: 'Цифровые решения для современного бизнеса',
+                description:
+                    'Мы создаем сайты, платформы, AI инструменты, Telegram WebApps, системы автоматизации и админ панели для бизнеса.',
 
+                backHome: 'Вернуться на главную',
 
-    "servicesPage": {
-    "badge": "Наши услуги",
-        "title": "Цифровые решения для современного бизнеса",
-        "description": "Мы создаем сайты, платформы, AI инструменты, Telegram WebApps, системы автоматизации и админ панели для бизнеса.",
+                servicesTitle: 'Услуги',
+                servicesDesc: 'Выберите решение, которое нужно вашему бизнесу.',
 
-        "backHome": "Вернуться на главную",
+                processTitle: 'Как мы работаем',
+                processDesc: 'Понятный процесс от идеи до запуска.',
 
-        "servicesTitle": "Услуги",
-        "servicesDesc": "Выберите решение, которое нужно вашему бизнесу.",
+                ctaTitle: 'Есть идея?',
+                ctaDesc:
+                    'Расскажите нам о вашем проекте, и мы поможем превратить его в реальный цифровой продукт.',
 
-        "processTitle": "Как мы работаем",
-        "processDesc": "Понятный процесс от идеи до запуска.",
+                whatWeBuild: 'Что мы создаем',
 
-        "ctaTitle": "Есть идея?",
-        "ctaDesc": "Расскажите нам о вашем проекте, и мы поможем превратить его в реальный цифровой продукт.",
+                list: {
+                    website: {
+                        title: 'Разработка сайтов',
+                        desc: 'Современные бизнес сайты, landing page и корпоративные сайты с premium UX/UI дизайном.',
+                    },
 
-        "whatWeBuild": "Что мы создаем",
+                    saas: {
+                        title: 'SaaS платформы',
+                        desc: 'Веб платформы для стартапов и бизнеса с dashboard, аккаунтами и подписками.',
+                    },
 
-        "list": {
-        "website": {
-            "title": "Разработка сайтов",
-                "desc": "Современные бизнес сайты, landing page и корпоративные сайты с premium UX/UI дизайном."
-        },
+                    ai: {
+                        title: 'AI инструменты',
+                        desc: 'AI помощники, чат-боты и системы автоматизации для бизнеса.',
+                    },
 
-        "saas": {
-            "title": "SaaS платформы",
-                "desc": "Веб платформы для стартапов и бизнеса с dashboard, аккаунтами и подписками."
-        },
+                    telegram: {
+                        title: 'Telegram Bot & WebApp',
+                        desc: 'Telegram боты, Mini App, платежные системы и автоматизация бизнеса.',
+                    },
 
-        "ai": {
-            "title": "AI инструменты",
-                "desc": "AI помощники, чат-боты и системы автоматизации для бизнеса."
-        },
+                    crm: {
+                        title: 'CRM и Admin Panel',
+                        desc: 'Системы управления клиентами, заказами и бизнес процессами.',
+                    },
 
-        "telegram": {
-            "title": "Telegram Bot & WebApp",
-                "desc": "Telegram боты, Mini App, платежные системы и автоматизация бизнеса."
-        },
+                    automation: {
+                        title: 'Системы автоматизации',
+                        desc: 'API интеграции, синхронизация данных и автоматизация workflow.',
+                    },
+                },
+            },
 
-        "crm": {
-            "title": "CRM и Admin Panel",
-                "desc": "Системы управления клиентами, заказами и бизнес процессами."
-        },
+            features: {
+                responsive: 'Адаптивный дизайн',
+                seo: 'SEO оптимизация',
+                fast: 'Быстрая работа',
+                admin: 'Админ панель',
+                auth: 'Авторизация',
+                dashboard: 'Dashboard',
+                payments: 'Платежи',
+                scalable: 'Масштабируемость',
+                chatbot: 'AI Чат-бот',
+                textgen: 'Генерация текста',
+                recommendations: 'Рекомендации',
+                automation: 'Автоматизация',
+                telegramBot: 'Telegram бот',
+                miniapp: 'Mini App',
+                notifications: 'Уведомления',
+                users: 'Пользователи',
+                analytics: 'Аналитика',
+                roles: 'Роли',
+                reports: 'Отчёты',
+                api: 'API интеграция',
+                sync: 'Синхронизация данных',
+            },
 
-        "automation": {
-            "title": "Системы автоматизации",
-                "desc": "API интеграции, синхронизация данных и автоматизация workflow."
-        }
-    }
-},
+            process: {
+                analysis: 'Анализ',
+                design: 'Дизайн',
+                development: 'Разработка',
+                testing: 'Тестирование',
+                launch: 'Запуск',
+                support: 'Поддержка',
+            },
             "techStack": {
                 "title": "Технологический стек",
                 "desc": "Современные технологии, которые мы используем для создания быстрых, масштабируемых и надежных цифровых продуктов."
@@ -457,58 +614,127 @@ const resources = {
                     },
                 },
             },
+            processPage: {
+                badge: 'Մեր գործընթացը',
+                title: 'Ինչպես ենք գաղափարը դարձնում իրական պրոդուկտ',
+                desc: 'Մենք աշխատում ենք հստակ և պրոֆեսիոնալ գործընթացով՝ առաջին քննարկումից մինչև գործարկում, աջակցություն և զարգացում։',
+                ctaTitle: 'Պատրա՞ստ եք սկսել նախագիծը',
+                ctaDesc: 'Պատմեք ձեր գաղափարի մասին, և մենք կօգնենք ընտրել ճիշտ լուծումը, կառուցվածքը և մշակման պլանը։',
+                steps: {
+                    consultation: {
+                        title: 'Քննարկում և վերլուծություն',
+                        desc: 'Քննարկում ենք ձեր գաղափարը, նպատակները, լսարանը, ֆունկցիոնալը և բիզնեսի կարիքները։',
+                    },
+                    planning: {
+                        title: 'Պլանավորում և ռազմավարություն',
+                        desc: 'Սահմանում ենք նախագծի կառուցվածքը, ժամկետները, տեխնիկական լուծումը և զարգացման roadmap-ը։',
+                    },
+                    design: {
+                        title: 'UI/UX դիզայն',
+                        desc: 'Ստեղծում ենք ժամանակակից, հարմար և ադապտիվ դիզայն desktop և mobile տարբերակների համար։',
+                    },
+                    development: {
+                        title: 'Ծրագրավորում',
+                        desc: 'Մշակում ենք frontend, backend, admin panel, API, ինտեգրացիաներ և հիմնական ֆունկցիոնալը։',
+                    },
+                    testing: {
+                        title: 'Թեստավորում և օպտիմիզացիա',
+                        desc: 'Ստուգում ենք արագությունը, mobile տարբերակը, անվտանգությունը, UX-ը և ուղղում սխալները։',
+                    },
+                    launch: {
+                        title: 'Գործարկում',
+                        desc: 'Տեղադրում ենք նախագիծը սերվերում, միացնում դոմենը, SSL-ը, analytics-ը և պատրաստում իրական օգտատերերի համար։',
+                    },
+                    support: {
+                        title: 'Աջակցություն և զարգացում',
+                        desc: 'Գործարկումից հետո աջակցում ենք պրոդուկտին, ավելացնում նոր ֆունկցիաներ և բարելավում արդյունքը։',
+                    },
+                },
+            },
+            servicesPage: {
+                badge: 'Մեր ծառայությունները',
+                title: 'Թվային լուծումներ ժամանակակից բիզնեսների համար',
+                description:
+                    'Մենք ստեղծում ենք կայքեր, հարթակներ, AI գործիքներ, Telegram WebApps, ավտոմատացման համակարգեր և ադմին վահանակներ բիզնեսների համար։',
 
+                backHome: 'Վերադառնալ գլխավոր էջ',
 
-            "servicesPage": {
+                servicesTitle: 'Ծառայություններ',
+                servicesDesc: 'Ընտրեք ձեր բիզնեսին անհրաժեշտ լուծումը։',
 
-                "badge": "Մեր ծառայությունները",
-                "title": "Թվային լուծումներ ժամանակակից բիզնեսների համար",
-                "description": "Մենք ստեղծում ենք կայքեր, հարթակներ, AI գործիքներ, Telegram WebApps, ավտոմատացման համակարգեր և ադմին վահանակներ բիզնեսների համար։",
+                processTitle: 'Ինչպես ենք աշխատում',
+                processDesc: 'Հստակ գործընթաց՝ գաղափարից մինչև գործարկում։',
 
-                "backHome": "Վերադառնալ գլխավոր էջ",
+                ctaTitle: 'Ունե՞ք գաղափար',
+                ctaDesc:
+                    'Պատմեք ձեր նախագծի մասին, և մենք կօգնենք այն վերածել իրական թվային պրոդուկտի։',
 
-                "servicesTitle": "Ծառայություններ",
-                "servicesDesc": "Ընտրեք ձեր բիզնեսին անհրաժեշտ լուծումը։",
+                whatWeBuild: 'Ինչ ենք ստեղծում',
 
-                "processTitle": "Ինչպես ենք աշխատում",
-                "processDesc": "Հստակ գործընթաց՝ գաղափարից մինչև գործարկում։",
-
-                "ctaTitle": "Ունե՞ք գաղափար",
-                "ctaDesc": "Պատմեք ձեր նախագծի մասին, և մենք կօգնենք այն վերածել իրական թվային պրոդուկտի։",
-
-                "whatWeBuild": "Ինչ ենք ստեղծում",
-
-                "list": {
-                    "website": {
-                        "title": "Կայքերի ստեղծում",
-                        "desc": "Ժամանակակից բիզնես կայքեր, landing page-եր և կորպորատիվ կայքեր premium UX/UI դիզայնով։"
+                list: {
+                    website: {
+                        title: 'Կայքերի ստեղծում',
+                        desc: 'Ժամանակակից բիզնես կայքեր, landing page-եր և կորպորատիվ կայքեր premium UX/UI դիզայնով։',
                     },
 
-                    "saas": {
-                        "title": "SaaS հարթակներ",
-                        "desc": "Պատվերով վեբ հարթակներ startup-ների և բիզնեսների համար՝ dashboard-ներով և subscription համակարգերով։"
+                    saas: {
+                        title: 'SaaS հարթակներ',
+                        desc: 'Պատվերով վեբ հարթակներ startup-ների և բիզնեսների համար՝ dashboard-ներով և subscription համակարգերով։',
                     },
 
-                    "ai": {
-                        "title": "AI գործիքներ",
-                        "desc": "AI օգնականներ, chatbot-ներ և ավտոմատացման լուծումներ բիզնեսի համար։"
+                    ai: {
+                        title: 'AI գործիքներ',
+                        desc: 'AI օգնականներ, chatbot-ներ և ավտոմատացման լուծումներ բիզնեսի համար։',
                     },
 
-                    "telegram": {
-                        "title": "Telegram Bot & WebApp",
-                        "desc": "Telegram bot-եր, Mini App-եր, վճարային համակարգեր և բիզնես ավտոմատացում։"
+                    telegram: {
+                        title: 'Telegram Bot & WebApp',
+                        desc: 'Telegram bot-եր, Mini App-եր, վճարային համակարգեր և բիզնես ավտոմատացում։',
                     },
 
-                    "crm": {
-                        "title": "CRM և Admin Panel",
-                        "desc": "Ներքին համակարգեր հաճախորդների, պատվերների և բիզնես գործընթացների կառավարման համար։"
+                    crm: {
+                        title: 'CRM և Admin Panel',
+                        desc: 'Ներքին համակարգեր հաճախորդների, պատվերների և բիզնես գործընթացների կառավարման համար։',
                     },
 
-                    "automation": {
-                        "title": "Ավտոմատացման համակարգեր",
-                        "desc": "API ինտեգրացիաներ, տվյալների սինխրոնացում և workflow ավտոմատացում։"
-                    }
-                }
+                    automation: {
+                        title: 'Ավտոմատացման համակարգեր',
+                        desc: 'API ինտեգրացիաներ, տվյալների սինխրոնացում և workflow ավտոմատացում։',
+                    },
+                },
+            },
+
+            features: {
+                responsive: 'Responsive դիզայն',
+                seo: 'SEO օպտիմիզացիա',
+                fast: 'Արագ աշխատանք',
+                admin: 'Ադմին համակարգ',
+                auth: 'Ավտորիզացիա',
+                dashboard: 'Dashboard',
+                payments: 'Վճարումներ',
+                scalable: 'Մասշտաբավորվող',
+                chatbot: 'AI Chatbot',
+                textgen: 'Տեքստի գեներացում',
+                recommendations: 'Խորհուրդներ',
+                automation: 'Ավտոմատացում',
+                telegramBot: 'Telegram բոտ',
+                miniapp: 'Mini App',
+                notifications: 'Ծանուցումներ',
+                users: 'Օգտատերեր',
+                analytics: 'Անալիտիկա',
+                roles: 'Դերեր',
+                reports: 'Հաշվետվություններ',
+                api: 'API ինտեգրում',
+                sync: 'Տվյալների սինխրոնացում',
+            },
+
+            process: {
+                analysis: 'Վերլուծություն',
+                design: 'Դիզայն',
+                development: 'Մշակում',
+                testing: 'Թեստավորում',
+                launch: 'Գործարկում',
+                support: 'Աջակցություն',
             },
             "techStack": {
                 "title": "Տեխնոլոգիական Stack",

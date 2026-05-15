@@ -19,37 +19,67 @@ export default function ServicesPage() {
             icon: '💻',
             title: t('servicesPage.list.website.title'),
             desc: t('servicesPage.list.website.desc'),
-            features: [t('features.responsive'), t('features.seo'), t('features.fast'), t('features.admin')],
+            features: [
+                t('features.responsive'),
+                t('features.seo'),
+                t('features.fast'),
+                t('features.admin'),
+            ],
         },
         {
             icon: '🚀',
             title: t('servicesPage.list.saas.title'),
             desc: t('servicesPage.list.saas.desc'),
-            features: [t('features.auth'), t('features.dashboard'), t('features.payments'), t('features.scalable')],
+            features: [
+                t('features.auth'),
+                t('features.dashboard'),
+                t('features.payments'),
+                t('features.scalable'),
+            ],
         },
         {
             icon: '🤖',
             title: t('servicesPage.list.ai.title'),
             desc: t('servicesPage.list.ai.desc'),
-            features: [t('features.chatbot'), t('features.textgen'), t('features.recommendations'), t('features.automation')],
+            features: [
+                t('features.chatbot'),
+                t('features.textgen'),
+                t('features.recommendations'),
+                t('features.automation'),
+            ],
         },
         {
             icon: '📱',
             title: t('servicesPage.list.telegram.title'),
             desc: t('servicesPage.list.telegram.desc'),
-            features: [t('features.telegramBot'), t('features.miniapp'), t('features.admin'), t('features.notifications')],
+            features: [
+                t('features.telegramBot'),
+                t('features.miniapp'),
+                t('features.admin'),
+                t('features.notifications'),
+            ],
         },
         {
             icon: '🧠',
             title: t('servicesPage.list.crm.title'),
             desc: t('servicesPage.list.crm.desc'),
-            features: [t('features.users'), t('features.analytics'), t('features.roles'), t('features.reports')],
+            features: [
+                t('features.users'),
+                t('features.analytics'),
+                t('features.roles'),
+                t('features.reports'),
+            ],
         },
         {
             icon: '⚙️',
             title: t('servicesPage.list.automation.title'),
             desc: t('servicesPage.list.automation.desc'),
-            features: [t('features.api'), t('features.sync'), t('features.reports'), t('features.notifications')],
+            features: [
+                t('features.api'),
+                t('features.sync'),
+                t('features.reports'),
+                t('features.notifications'),
+            ],
         },
     ];
 
@@ -60,6 +90,14 @@ export default function ServicesPage() {
         t('process.testing'),
         t('process.launch'),
         t('process.support'),
+    ];
+
+    const heroList = [
+        t('servicesPage.list.website.title'),
+        t('servicesPage.list.saas.title'),
+        t('servicesPage.list.ai.title'),
+        t('servicesPage.list.telegram.title'),
+        t('servicesPage.list.crm.title'),
     ];
 
     const techStack = [
@@ -77,9 +115,17 @@ export default function ServicesPage() {
         <main className="servicesPage">
             <section className="servicesHero">
                 <div className="container servicesHeroGrid">
-                    <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-                        <span className="servicesBadge">{t('servicesPage.badge')}</span>
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                    >
+                        <span className="servicesBadge">
+                            {t('servicesPage.badge')}
+                        </span>
+
                         <h1>{t('servicesPage.title')}</h1>
+
                         <p>{t('servicesPage.description')}</p>
 
                         <div className="servicesHeroActions">
@@ -102,11 +148,9 @@ export default function ServicesPage() {
                         <h3>{t('servicesPage.whatWeBuild')}</h3>
 
                         <ul>
-                            <li>{t('servicesPage.list.website.title')}</li>
-                            <li>{t('servicesPage.list.saas.title')}</li>
-                            <li>{t('servicesPage.list.ai.title')}</li>
-                            <li>{t('servicesPage.list.telegram.title')}</li>
-                            <li>{t('servicesPage.list.crm.title')}</li>
+                            {heroList.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
                     </motion.div>
                 </div>
@@ -116,6 +160,7 @@ export default function ServicesPage() {
                 <div className="container">
                     <div className="sectionHead">
                         <h2>{t('servicesPage.servicesTitle')}</h2>
+
                         <p>{t('servicesPage.servicesDesc')}</p>
                     </div>
 
@@ -127,15 +172,24 @@ export default function ServicesPage() {
                                 initial={{ opacity: 0, y: 24 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.06 }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: index * 0.06,
+                                }}
                             >
-                                <div className="serviceIcon">{service.icon}</div>
+                                <div className="serviceIcon">
+                                    {service.icon}
+                                </div>
+
                                 <h3>{service.title}</h3>
+
                                 <p>{service.desc}</p>
 
                                 <div className="serviceFeatures">
                                     {service.features.map((feature) => (
-                                        <span key={feature}>{feature}</span>
+                                        <span key={feature}>
+                                            {feature}
+                                        </span>
                                     ))}
                                 </div>
                             </motion.div>
@@ -148,13 +202,17 @@ export default function ServicesPage() {
                 <div className="container">
                     <div className="sectionHead">
                         <h2>{t('servicesPage.processTitle')}</h2>
+
                         <p>{t('servicesPage.processDesc')}</p>
                     </div>
 
                     <div className="processLine">
                         {process.map((step, index) => (
                             <div className="processStep" key={step}>
-                                <strong>{String(index + 1).padStart(2, '0')}</strong>
+                                <strong>
+                                    {String(index + 1).padStart(2, '0')}
+                                </strong>
+
                                 <span>{step}</span>
                             </div>
                         ))}
@@ -174,6 +232,7 @@ export default function ServicesPage() {
                         {techStack.map((tech) => (
                             <div className="techItem" key={tech.name}>
                                 <img src={tech.icon} alt={tech.name} />
+
                                 <span>{tech.name}</span>
                             </div>
                         ))}
@@ -185,6 +244,7 @@ export default function ServicesPage() {
                 <div className="container">
                     <div className="servicesCtaBox">
                         <h2>{t('servicesPage.ctaTitle')}</h2>
+
                         <p>{t('servicesPage.ctaDesc')}</p>
 
                         <Link to="/start-project" className="btn primary">

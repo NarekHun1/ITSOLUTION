@@ -87,26 +87,42 @@ const resources = {
             projects: {
                 title: 'Selected projects',
                 desc: 'Real digital products built across finance, gaming, education and healthcare.',
+
                 items: {
                     hayfin: {
                         title: 'Hayfin — financial platform',
                         desc: 'A premium finance website with application flow, admin logic and conversion-focused structure.',
                         result: 'Built for lead generation, trust and fast client requests.',
                     },
+
                     monster: {
                         title: 'Monster Catch — Telegram WebApp game',
                         desc: 'A gamified Telegram experience with tournaments, rewards, anti-cheat logic and player retention systems.',
                         result: 'Product direction for 3000+ users and scalable monetization.',
                     },
+
                     bau: {
                         title: 'BAU Academy — AI EdTech',
                         desc: 'An AI-powered learning concept with Telegram bot, lessons, quizzes and certificate automation.',
                         result: 'Designed for learning, certificates and future marketplace growth.',
                     },
+
                     clinic: {
                         title: 'SD Clinic — healthcare website',
                         desc: 'A clinic website with appointment flow, responsive pages and Telegram-connected lead handling.',
                         result: 'Improved online presentation and easier patient requests.',
+                    },
+
+                    emwblock: {
+                        title: 'EMW Block',
+                        desc: 'E-commerce platform for EVA car mats with multilingual support, admin dashboard and modern shopping experience.',
+                        result: 'Vehicle catalog, online orders and efficient product management.',
+                    },
+
+                    baubranding: {
+                        title: 'BAU Branding Agency',
+                        desc: 'Full-service branding and marketing agency providing design, content creation and digital promotion.',
+                        result: 'Professional service showcase and client acquisition platform.',
                     },
                 },
             },
@@ -341,27 +357,43 @@ const resources = {
 
             projects: {
                 title: 'Избранные проекты',
-                desc: 'Реальные цифровые продукты в сфере финансов, игр, образования и медицины.',
+                desc: 'Реальные цифровые продукты в сфере финансов, игр, образования, медицины и e-commerce.',
+
                 items: {
                     hayfin: {
                         title: 'Hayfin — финансовая платформа',
                         desc: 'Премиальный финансовый сайт с формой заявки, админ-логикой и структурой под конверсию.',
                         result: 'Создан для заявок, доверия и быстрого контакта с клиентом.',
                     },
+
                     monster: {
                         title: 'Monster Catch — Telegram WebApp игра',
                         desc: 'Игровой Telegram-продукт с турнирами, наградами, античитом и механиками удержания.',
                         result: 'Продуктовое направление для 3000+ пользователей и масштабируемой монетизации.',
                     },
+
                     bau: {
                         title: 'BAU Academy — AI EdTech',
                         desc: 'AI-образовательная платформа с Telegram-ботом, уроками, тестами и автоматическими сертификатами.',
                         result: 'Создано для обучения, сертификатов и будущего marketplace.',
                     },
+
                     clinic: {
                         title: 'SD Clinic — сайт клиники',
                         desc: 'Сайт клиники с онлайн-записью, адаптивными страницами и заявками через Telegram.',
                         result: 'Улучшена онлайн-презентация и упрощена запись пациентов.',
+                    },
+
+                    emwblock: {
+                        title: 'EMW Block',
+                        desc: 'Интернет-магазин EVA ковриков для электромобилей с каталогом, мультиязычностью, админ-панелью и адаптивным дизайном.',
+                        result: 'Каталог автомобилей, онлайн-заказы и удобное управление товарами.',
+                    },
+
+                    baubranding: {
+                        title: 'BAU Branding Agency',
+                        desc: 'Маркетинговое агентство полного цикла с услугами брендинга, дизайна, контент-маркетинга и digital-продвижения.',
+                        result: 'Современная презентация услуг и привлечение новых клиентов.',
                     },
                 },
             },
@@ -402,6 +434,7 @@ const resources = {
                     },
                 },
             },
+
             servicesPage: {
                 badge: 'Наши услуги',
                 title: 'Цифровые решения для современного бизнеса',
@@ -590,27 +623,43 @@ const resources = {
 
             projects: {
                 title: 'Ընտրված նախագծեր',
-                desc: 'Իրական թվային լուծումներ ֆինանսների, խաղերի, կրթության և բժշկության ոլորտներում։',
+                desc: 'Իրական թվային լուծումներ ֆինանսների, խաղերի, կրթության, բժշկության և e-commerce ոլորտներում։',
+
                 items: {
                     hayfin: {
                         title: 'Hayfin — ֆինանսական հարթակ',
                         desc: 'Պրեմիում ֆինանսական կայք՝ հայտի ձևով, ադմին տրամաբանությամբ և կոնվերսիայի համար կառուցվածքով։',
                         result: 'Ստեղծված է հայտերի, վստահության և արագ կապի համար։',
                     },
+
                     monster: {
                         title: 'Monster Catch — Telegram WebApp խաղ',
                         desc: 'Խաղային Telegram պրոդուկտ՝ մրցաշարերով, պարգևներով, հակաչիթ համակարգով և օգտատերերի պահման մեխանիկայով։',
                         result: 'Պրոդուկտային ուղղություն 3000+ օգտատերերի և մասշտաբվող մոնետիզացիայի համար։',
                     },
+
                     bau: {
                         title: 'BAU Academy — AI EdTech',
                         desc: 'AI կրթական հարթակ՝ Telegram բոտով, դասերով, թեստերով և ավտոմատ սերտիֆիկատներով։',
                         result: 'Ստեղծված է ուսուցման, սերտիֆիկատների և ապագա marketplace-ի համար։',
                     },
+
                     clinic: {
                         title: 'SD Clinic — բժշկական կայք',
                         desc: 'Կլինիկայի կայք՝ առցանց գրանցմամբ, ադապտիվ էջերով և Telegram-ի միջոցով հայտերով։',
                         result: 'Բարելավված առցանց ներկայություն և ավելի հեշտ պացիենտների գրանցում։',
+                    },
+
+                    emwblock: {
+                        title: 'EMW Block',
+                        desc: 'EVA գորգերի առցանց խանութ էլեկտրամոբիլների համար՝ կատալոգով, բազմալեզու աջակցությամբ, ադմին վահանակով և ժամանակակից դիզայնով։',
+                        result: 'Մեքենաների կատալոգ, առցանց պատվերներ և ապրանքների հարմար կառավարում։',
+                    },
+
+                    baubranding: {
+                        title: 'BAU Branding Agency',
+                        desc: 'Բրենդինգի և մարքեթինգի գործակալություն՝ դիզայնի, կոնտենտի և թվային առաջխաղացման ծառայություններով։',
+                        result: 'Ծառայությունների պրոֆեսիոնալ ներկայացում և նոր հաճախորդների ներգրավում։',
                     },
                 },
             },

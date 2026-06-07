@@ -101,3 +101,64 @@
         grid-template-columns: 1fr;
     }
 }
+.projectBtn {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+    );
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: all .3s ease;
+}
+
+.projectBtn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+            0 12px 30px rgba(37,99,235,.35);
+}
+.projectCard {
+    position: relative;
+    overflow: hidden;
+}
+
+.projectVisual {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.projectVisual img,
+.projectOverlay,
+.projectGlow,
+.projectMock {
+    pointer-events: none;
+}
+
+.projectInfo {
+    position: relative;
+    z-index: 50;
+    pointer-events: auto;
+}
+
+.projectBtn {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    cursor: pointer;
+    border: none;
+}

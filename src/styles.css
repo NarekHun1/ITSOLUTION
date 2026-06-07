@@ -200,7 +200,7 @@ h1 {
 .typingWrapper {
     display: block;
     width: 100%;
-    min-height: 1.1em;
+    min-height: 80px;
 }
 
 .typingText {
@@ -508,10 +508,10 @@ h1 {
         display: block;
     }
 
-    .hero {
-        min-height: 100vh;
-        padding: 118px 0 70px;
-    }
+        .hero {
+            min-height: auto;
+            padding: 118px 0 40px;
+        }
 
     .heroGrid {
         display: grid;
@@ -880,4 +880,25 @@ h1 {
         max-width: 100% !important;
     }
 
+}@media (max-width: 768px) {
+    .hero {
+        min-height: auto !important;
+        padding-bottom: 30px !important;
+    }
+
+    .section {
+        padding: 70px 0 !important;
+    }
+
+    .sectionHead {
+        margin-bottom: 30px !important;
+    }
+
+    h1 {
+        min-height: 120px;
+    }
+
+    .typingWrapper {
+        min-height: 60px;
+    }
 }

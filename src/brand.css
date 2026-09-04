@@ -1,0 +1,543 @@
+:root {
+    --brand-green: #00d878;
+    --brand-green-bright: #22f59a;
+    --brand-green-soft: rgba(0, 216, 120, 0.14);
+    --brand-green-line: rgba(0, 216, 120, 0.28);
+    --brand-bg: #050706;
+    --brand-panel: #0b0f0d;
+    --brand-text: #f5f8f6;
+    --brand-muted: #9aa39e;
+}
+
+body {
+    background:
+        linear-gradient(rgba(0, 216, 120, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 216, 120, 0.025) 1px, transparent 1px),
+        radial-gradient(circle at 15% 8%, rgba(0, 216, 120, 0.14), transparent 30%),
+        radial-gradient(circle at 88% 20%, rgba(0, 216, 120, 0.08), transparent 24%),
+        var(--brand-bg);
+    background-size: 72px 72px, 72px 72px, auto, auto, auto;
+    color: var(--brand-text);
+}
+
+::selection {
+    color: #02150c;
+    background: var(--brand-green);
+}
+
+.header {
+    background: transparent;
+    border-bottom: 0;
+    backdrop-filter: none;
+    pointer-events: none;
+}
+
+.headerInner {
+    width: calc(100% - 28px);
+    max-width: none;
+    height: 72px;
+    margin: 14px auto 0;
+    padding: 10px 12px 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 216, 120, 0.06);
+    backdrop-filter: blur(20px);
+    pointer-events: auto;
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.brandLogoViewport {
+    position: relative;
+    display: block;
+    width: 242px;
+    height: 48px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+}
+
+.brandLogoImage {
+    position: absolute;
+    top: -59px;
+    left: -39px;
+    display: block;
+    width: 320px;
+    max-width: none;
+    height: auto;
+}
+
+.logoMark {
+    background: var(--brand-green);
+    box-shadow: 0 0 34px rgba(0, 216, 120, 0.4);
+}
+
+.nav a,
+.langSwitch button,
+.menuBtn,
+.secondary {
+    transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+}
+
+.nav a:hover,
+.langSwitch button:hover,
+.menuBtn:hover {
+    color: #008a4d;
+}
+
+.header .nav {
+    color: #4d5550;
+    font-weight: 650;
+}
+
+.nav a:hover {
+    text-shadow: 0 0 20px rgba(0, 216, 120, 0.28);
+}
+
+.langSwitch button:hover,
+.menuBtn:hover {
+    border-color: var(--brand-green-line);
+    background: var(--brand-green-soft);
+}
+
+.header .langSwitch {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+}
+
+.header .langSwitch button {
+    color: #151a17;
+    background: #f2f5f3;
+    border-color: #e1e6e3;
+}
+
+.header .langCurrent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 62px;
+    height: 38px;
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+.header .langCurrent svg {
+    transition: transform 0.22s ease;
+}
+
+.header .langSwitch.isOpen .langCurrent {
+    color: #007b45;
+    border-color: var(--brand-green-line);
+    background: var(--brand-green-soft);
+}
+
+.header .langSwitch.isOpen .langCurrent svg {
+    transform: rotate(180deg);
+}
+
+.header .langMenu {
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 50%;
+    z-index: 10;
+    display: grid;
+    width: 64px;
+    padding: 5px;
+    border: 1px solid rgba(0, 216, 120, 0.2);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -7px) scale(0.96);
+    transform-origin: top center;
+    transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+}
+
+.header .langSwitch.isOpen .langMenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1);
+}
+
+.header .langMenu button {
+    width: 100%;
+    padding: 8px 6px;
+    border: 0;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.header .menuBtn {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: #0a0d0b;
+    border-color: #0a0d0b;
+    border-radius: 15px;
+}
+
+.header .menuBtn:hover {
+    color: #04120b;
+    background: var(--brand-green);
+    border-color: var(--brand-green);
+}
+
+.header .primary {
+    box-shadow: none;
+}
+
+.primary,
+.projectBtn,
+.contactPrimaryBtn,
+.sendBtn,
+.chatLauncher,
+.chatSendButton {
+    color: #02150c;
+    background: linear-gradient(135deg, var(--brand-green-bright), var(--brand-green));
+    border-color: transparent;
+    box-shadow: 0 16px 50px rgba(0, 216, 120, 0.2);
+}
+
+.primary:hover,
+.projectBtn:hover,
+.contactPrimaryBtn:hover {
+    box-shadow: 0 22px 65px rgba(0, 216, 120, 0.3);
+}
+
+.secondary:hover {
+    border-color: var(--brand-green-line);
+    background: var(--brand-green-soft);
+}
+
+.eyebrow,
+.servicesBadge,
+.processBadge,
+.contactBadge,
+.startProjectBadge,
+.menuEyebrow,
+.processStep strong {
+    color: var(--brand-green-bright);
+    background: var(--brand-green-soft);
+    border-color: var(--brand-green-line);
+}
+
+.typingText {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: block;
+    width: max-content;
+    max-width: none;
+    font-size: clamp(25px, 3.5vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    color: var(--brand-green-bright);
+    white-space: nowrap;
+    text-shadow: 0 0 35px rgba(0, 216, 120, 0.3);
+}
+
+.hero {
+    padding-top: 104px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(5, 7, 6, 0.92) 0%, rgba(5, 7, 6, 0.7) 32%, rgba(5, 7, 6, 0.18) 58%, transparent 82%);
+}
+
+.typingWrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1.12em;
+    min-height: 0;
+    overflow: visible;
+    contain: layout;
+}
+
+.heroText {
+    margin-top: 32px;
+}
+
+.heroCubesBg {
+    inset: 0 calc(50% - 50vw);
+    width: auto;
+    height: auto;
+    z-index: 0;
+    opacity: 0.72;
+    filter: none;
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.42) 25%, #000 48%, #000 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.42) 25%, #000 48%, #000 100%);
+}
+
+.cubeCanvas {
+    transform: translateX(18%);
+}
+
+.cubeCanvas canvas {
+    background: transparent !important;
+}
+
+.stats div,
+.projectCard,
+.servicesHeroCard,
+.servicesFullCard,
+.processStep,
+.ultraMenuRight,
+.startProjectCards div,
+.contactInfoCard,
+.contactMapCard,
+.processCard,
+.startTypeCard,
+.startPackageCard,
+.startFormCard {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+    border-color: rgba(255, 255, 255, 0.09);
+}
+
+.stats div:hover,
+.projectCard:hover,
+.servicesFullCard:hover,
+.processCard:hover,
+.startTypeCard:hover,
+.startPackageCard:hover,
+.contactInfoCard:hover {
+    border-color: var(--brand-green-line);
+}
+
+.projectCard::before,
+.projectGlow,
+.servicesHero::before,
+.servicesFullCard::before,
+.processOrb,
+.contactGlow,
+.startGlow {
+    background: radial-gradient(circle, rgba(0, 216, 120, 0.2), transparent 68%);
+}
+
+.projectBtn {
+    color: #02150c;
+}
+
+.servicesPage,
+.processPage,
+.contactPage,
+.startProjectPage {
+    background:
+        linear-gradient(rgba(0, 216, 120, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 216, 120, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 14% 8%, rgba(0, 216, 120, 0.12), transparent 28%),
+        linear-gradient(180deg, #050706 0%, #080d0a 50%, #050706 100%);
+    background-size: 72px 72px, 72px 72px, auto, auto;
+}
+
+.servicesHeroCard::after,
+.servicesCtaBox,
+.processCta,
+.contactMapCard::before {
+    background: linear-gradient(135deg, rgba(0, 216, 120, 0.24), transparent 42%);
+}
+
+.serviceIcon,
+.processIcon,
+.contactIcon {
+    color: var(--brand-green-bright);
+    background: var(--brand-green-soft);
+}
+
+.servicesFullCard:hover::before {
+    background: rgba(0, 216, 120, 0.2);
+}
+
+.aiButton,
+.aiInput button,
+.aiMsg.user {
+    background: linear-gradient(135deg, var(--brand-green-bright), var(--brand-green));
+}
+
+.aiButton {
+    color: #02150c;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 216, 120, 0.3);
+}
+
+.aiButton:hover {
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48), 0 0 40px rgba(0, 216, 120, 0.38);
+}
+
+.aiChat {
+    background: linear-gradient(180deg, rgba(8, 14, 10, 0.985), rgba(4, 8, 6, 0.985));
+    border-color: rgba(0, 216, 120, 0.16);
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.55), 0 0 60px rgba(0, 216, 120, 0.1);
+}
+
+.aiQuick button:hover {
+    color: var(--brand-green-bright);
+    border-color: var(--brand-green-line);
+}
+
+.ultraMenuOverlay {
+    background: rgba(3, 6, 4, 0.95);
+}
+
+.ultraMenuPanel {
+    background:
+        radial-gradient(circle at 82% 18%, rgba(0, 216, 120, 0.14), transparent 34%),
+        rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 216, 120, 0.16);
+}
+
+.ultraMenuTop {
+    min-height: 72px;
+    padding: 10px 12px 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.ultraMenuTop .closeBtn {
+    width: 50px;
+    height: 50px;
+    color: var(--brand-green-bright);
+    background: #0a0d0b;
+    border-color: #0a0d0b;
+    border-radius: 15px;
+}
+
+.ultraMenuTop .closeBtn:hover {
+    color: #04120b;
+    background: var(--brand-green);
+    border-color: var(--brand-green);
+}
+
+.ultraMenuLink span,
+.ultraMenuLink:hover,
+.closeBtn {
+    color: var(--brand-green-bright);
+}
+
+.closeBtn {
+    border-color: var(--brand-green-line);
+    background: var(--brand-green-soft);
+}
+
+.startProjectHero h1,
+.contactHero h1 {
+    background: linear-gradient(90deg, #fff 8%, #bcebd4 52%, var(--brand-green-bright));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.startTypeCard.active,
+.startPackageCard.active {
+    border-color: var(--brand-green);
+    background: var(--brand-green-soft);
+    box-shadow: 0 18px 50px rgba(0, 216, 120, 0.16);
+}
+
+@media (max-width: 1080px) {
+    .brandLogoViewport {
+        width: 210px;
+    }
+
+    .brandLogoImage {
+        left: -34px;
+        width: 278px;
+        top: -49px;
+    }
+}
+
+@media (max-width: 560px) {
+    .headerInner {
+        width: calc(100% - 20px);
+        height: 64px;
+        margin-top: 10px;
+        padding: 8px 8px 8px 12px;
+        border-radius: 17px;
+    }
+
+    .brandLogoViewport {
+        width: 176px;
+        height: 40px;
+    }
+
+    .brandLogoImage {
+        top: -43px;
+        left: -29px;
+        width: 234px;
+    }
+
+    .headerRight {
+        gap: 8px;
+    }
+
+    .header .langCurrent {
+        min-width: 52px;
+        height: 36px;
+        padding-inline: 8px;
+        gap: 5px;
+    }
+
+    .menuBtn {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+    }
+
+    .typingText {
+        font-size: clamp(19px, 6vw, 27px);
+        letter-spacing: -0.04em;
+    }
+
+    .typingWrapper {
+        height: 1.18em;
+    }
+
+    .heroText {
+        margin-top: 26px;
+    }
+
+    .hero {
+        padding-top: 84px;
+    }
+
+    .heroCubesBg {
+        inset: -20px -150px -50px -95px;
+        width: auto;
+        height: auto;
+        opacity: 0.42;
+        mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 28%, #000 68%, #000 100%);
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 28%, #000 68%, #000 100%);
+    }
+
+    .cubeCanvas {
+        transform: translateX(24%);
+    }
+
+    .ultraMenuTop {
+        min-height: 64px;
+        padding: 8px 8px 8px 12px;
+        border-radius: 17px;
+    }
+
+    .ultraMenuTop .closeBtn {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+    }
+}

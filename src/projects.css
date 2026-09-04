@@ -248,23 +248,88 @@
     }
 
     .projectsStage {
-        gap: 12px;
+        gap: 8px;
         mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
         -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
     }
 
+    .projectsMarquee {
+        padding: 6px 0 12px;
+    }
+
+    .projectsGroup {
+        gap: 9px;
+        padding-right: 9px;
+    }
+
     .projectCard {
-        flex-basis: 242px;
-        width: 242px;
-        border-radius: 20px;
+        flex-basis: clamp(96px, 30vw, 216px);
+        width: clamp(96px, 30vw, 216px);
+        border-radius: 14px;
     }
 
     .projectVisual {
-        height: 124px;
+        height: clamp(64px, 17vw, 110px);
     }
 
     .projectInfo {
-        padding: 15px;
+        display: flex;
+        min-height: clamp(104px, 25vw, 136px);
+        flex-direction: column;
+        padding: clamp(8px, 2.2vw, 12px);
+    }
+
+    .projectTags {
+        gap: 3px;
+        margin-bottom: 6px;
+    }
+
+    .projectTags span {
+        padding: 3px 5px;
+        font-size: clamp(6.5px, 1.8vw, 9px);
+        letter-spacing: 0.02em;
+    }
+
+    .projectTags span:nth-child(n + 2) {
+        display: none;
+    }
+
+    .projectInfo h3 {
+        display: -webkit-box;
+        min-height: 2.4em;
+        overflow: hidden;
+        font-size: clamp(10px, 2.8vw, 15px);
+        line-height: 1.2;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .projectInfo p,
+    .projectResult {
+        display: none;
+    }
+
+    .projectBtn {
+        width: 100%;
+        min-height: 28px;
+        margin-top: auto;
+        padding: 6px 5px;
+        border-radius: 8px;
+        font-size: clamp(7.5px, 2vw, 10px);
+        line-height: 1.1;
+    }
+
+    .projectsGroup .projectCard:nth-child(3n + 2) {
+        translate: 0 6px;
+    }
+
+    .projectsGroup .projectCard:nth-child(3n),
+    .projectsMarqueeRow2 .projectCard:nth-child(3n + 2) {
+        translate: 0 -3px;
+    }
+
+    .projectsMarqueeRow2 .projectCard:nth-child(3n + 1) {
+        translate: 0 6px;
     }
 
     .projectsTrack {

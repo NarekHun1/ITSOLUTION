@@ -1,29 +1,34 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { RoundedBox } from '@react-three/drei';
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+import type { RefObject } from 'react';
 import * as THREE from 'three';
 
-function Cube({ position }: { position: [number, number, number] }) {
+function Cube({
+    position,
+    pointer,
+}: {
+    position: [number, number, number];
+    pointer: RefObject<THREE.Vector2>;
+}) {
     const ref = useRef<THREE.Mesh>(null);
     const original = useMemo(() => new THREE.Vector3(...position), [position]);
+    const pointerPosition = useMemo(() => new THREE.Vector3(), []);
+    const direction = useMemo(() => new THREE.Vector3(), []);
 
-    useFrame((state) => {
+    useFrame(() => {
         if (!ref.current) return;
 
-        const pointer = new THREE.Vector3(
-            state.pointer.x * 7,
-            state.pointer.y * 4,
-            0
-        );
+        pointerPosition.set(pointer.current.x * 5.3, pointer.current.y * 3.7, 0);
 
-        const distance = ref.current.position.distanceTo(pointer);
-        const force = Math.max(0, 1.8 - distance);
+        const distance = ref.current.position.distanceTo(pointerPosition);
+        const force = Math.max(0, 2.15 - distance);
 
         if (force > 0) {
-            const direction = ref.current.position.clone().sub(pointer).normalize();
-            ref.current.position.add(direction.multiplyScalar(force * 0.05));
-            ref.current.rotation.x += 0.04;
-            ref.current.rotation.y += 0.05;
+            direction.copy(ref.current.position).sub(pointerPosition).normalize();
+            ref.current.position.add(direction.multiplyScalar(force * 0.065));
+            ref.current.rotation.x += 0.045;
+            ref.current.rotation.y += 0.055;
         } else {
             ref.current.position.lerp(original, 0.06);
             ref.current.rotation.x += 0.006;
@@ -42,7 +47,7 @@ function Cube({ position }: { position: [number, number, number] }) {
     );
 }
 
-function CubeField() {
+function CubeField({ pointer }: { pointer: RefObject<THREE.Vector2> }) {
     const cubes = useMemo(() => {
         const positions: [number, number, number][] = [];
         const cubeCount = 38;
@@ -64,13 +69,51 @@ function CubeField() {
     return (
         <>
             {cubes.map((pos, index) => (
-                <Cube key={index} position={pos} />
+                <Cube key={index} position={pos} pointer={pointer} />
             ))}
         </>
     );
 }
 
 export default function InteractiveCubes() {
+    const pointer = useRef(new THREE.Vector2(10, 10));
+
+    useEffect(() => {
+        const updatePointer = (clientX: number, clientY: number) => {
+            pointer.current.set(
+                (clientX / window.innerWidth) * 2 - 1,
+                -((clientY / window.innerHeight) * 2 - 1)
+            );
+        };
+
+        const handlePointerMove = (event: PointerEvent) => {
+            updatePointer(event.clientX, event.clientY);
+        };
+
+        const handleTouch = (event: TouchEvent) => {
+            const touch = event.touches[0];
+            if (touch) updatePointer(touch.clientX, touch.clientY);
+        };
+
+        const resetPointer = () => pointer.current.set(10, 10);
+
+        window.addEventListener('pointermove', handlePointerMove, { passive: true });
+        window.addEventListener('pointerleave', resetPointer);
+        window.addEventListener('touchstart', handleTouch, { passive: true });
+        window.addEventListener('touchmove', handleTouch, { passive: true });
+        window.addEventListener('touchend', resetPointer, { passive: true });
+        window.addEventListener('touchcancel', resetPointer, { passive: true });
+
+        return () => {
+            window.removeEventListener('pointermove', handlePointerMove);
+            window.removeEventListener('pointerleave', resetPointer);
+            window.removeEventListener('touchstart', handleTouch);
+            window.removeEventListener('touchmove', handleTouch);
+            window.removeEventListener('touchend', resetPointer);
+            window.removeEventListener('touchcancel', resetPointer);
+        };
+    }, []);
+
     return (
         <div className="cubeCanvas">
             <Canvas
@@ -82,7 +125,7 @@ export default function InteractiveCubes() {
                 <ambientLight intensity={1.2} />
                 <pointLight position={[4, 5, 7]} intensity={4} />
                 <pointLight position={[-5, -3, 4]} intensity={2} color="#00d878" />
-                <CubeField />
+                <CubeField pointer={pointer} />
             </Canvas>
         </div>
     );

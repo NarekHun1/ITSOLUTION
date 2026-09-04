@@ -14,6 +14,10 @@ export default function Hero() {
 
     return (
         <section className="hero" id="home">
+            <div className="heroCubesBg" aria-hidden="true">
+                <InteractiveCubes />
+            </div>
+
             <div className="container heroGrid">
                 <div className="heroContent">
                     <motion.div
@@ -87,9 +91,6 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="heroCubesBg">
-                    <InteractiveCubes />
-                </div>
             </div>
         </section>
     );

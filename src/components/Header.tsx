@@ -1,12 +1,43 @@
-import { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [open, setOpen] = useState(false);
+    const [languageOpen, setLanguageOpen] = useState(false);
+    const languageRef = useRef<HTMLDivElement>(null);
     const { t, i18n } = useTranslation();
+
+    const languages = [
+        { code: 'en', label: 'EN' },
+        { code: 'ru', label: 'RU' },
+        { code: 'hy', label: 'HY' },
+    ];
+    const currentLanguage = languages.find(({ code }) =>
+        i18n.resolvedLanguage?.startsWith(code)
+    ) ?? languages[0];
+
+    useEffect(() => {
+        const closeLanguageMenu = (event: MouseEvent) => {
+            if (!languageRef.current?.contains(event.target as Node)) {
+                setLanguageOpen(false);
+            }
+        };
+
+        const closeOnEscape = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setLanguageOpen(false);
+        };
+
+        document.addEventListener('pointerdown', closeLanguageMenu);
+        document.addEventListener('keydown', closeOnEscape);
+
+        return () => {
+            document.removeEventListener('pointerdown', closeLanguageMenu);
+            document.removeEventListener('keydown', closeOnEscape);
+        };
+    }, []);
 
     const links = [
         { label: t('nav.home'), to: '/' },
@@ -20,9 +51,14 @@ export default function Header() {
             <header className="header">
                 <div className="container headerInner">
                     {/* Logo */}
-                    <Link to="/" className="logo">
-                        <span className="logoMark" />
-                        <span>Isolation IT Solutions</span>
+                    <Link to="/" className="logo" aria-label="Isolation IT Solutions — home">
+                        <span className="brandLogoViewport">
+                            <img
+                                className="brandLogoImage"
+                                src="/isolation-logo.png"
+                                alt="Isolation IT Solutions"
+                            />
+                        </span>
                     </Link>
 
                     {/* Desktop nav */}
@@ -37,10 +73,36 @@ export default function Header() {
                     {/* Right side */}
                     <div className="headerRight">
                         {/* 🌍 Language Switch */}
-                        <div className="langSwitch">
-                            <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-                            <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
-                            <button onClick={() => i18n.changeLanguage('hy')}>HY</button>
+                        <div className={`langSwitch${languageOpen ? ' isOpen' : ''}`} ref={languageRef}>
+                            <button
+                                type="button"
+                                className="langCurrent"
+                                aria-label="Change language"
+                                aria-haspopup="menu"
+                                aria-expanded={languageOpen}
+                                onClick={() => setLanguageOpen((value) => !value)}
+                            >
+                                <span>{currentLanguage.label}</span>
+                                <ChevronDown size={14} aria-hidden="true" />
+                            </button>
+
+                            <div className="langMenu" role="menu">
+                                {languages
+                                    .filter(({ code }) => code !== currentLanguage.code)
+                                    .map(({ code, label }) => (
+                                        <button
+                                            type="button"
+                                            role="menuitem"
+                                            key={code}
+                                            onClick={() => {
+                                                void i18n.changeLanguage(code);
+                                                setLanguageOpen(false);
+                                            }}
+                                        >
+                                            {label}
+                                        </button>
+                                    ))}
+                            </div>
                         </div>
 
                         {/* CTA */}
@@ -76,9 +138,19 @@ export default function Header() {
                         >
                             {/* Top */}
                             <div className="ultraMenuTop">
-                                <Link to="/" className="logo" onClick={() => setOpen(false)}>
-                                    <span className="logoMark" />
-                                    <span>Isolation IT Solutions</span>
+                                <Link
+                                    to="/"
+                                    className="logo"
+                                    aria-label="Isolation IT Solutions — home"
+                                    onClick={() => setOpen(false)}
+                                >
+                                    <span className="brandLogoViewport">
+                                        <img
+                                            className="brandLogoImage"
+                                            src="/isolation-logo.png"
+                                            alt="Isolation IT Solutions"
+                                        />
+                                    </span>
                                 </Link>
 
                                 <button className="closeBtn" onClick={() => setOpen(false)}>

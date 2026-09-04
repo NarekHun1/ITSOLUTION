@@ -8,6 +8,7 @@ import ServicesPage from './components/Services';
 import AIChatWidget from './components/AIChatWidget';
 import ContactPage from './components/ContactPage';
 import ProcessPage from './components/ProcessPage';
+import SocialDock from './components/SocialDock';
 
 function Home() {
     return (
@@ -47,6 +48,8 @@ export default function App() {
                     element={<StartProjectPage />}
                 />
             </Routes>
+
+            <SocialDock />
         </>
     );
 }

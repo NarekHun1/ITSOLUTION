@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../process.css';
 
@@ -47,41 +46,37 @@ export default function ProcessPage() {
             </section>
 
             <section className="processStepsSection">
-                <div className="container processSteps">
+                <svg className="processRibbon" viewBox="0 0 1000 1600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                    <defs>
+                        <path id="process-ribbon-path" pathLength="100" d="M 690 -60 C 1060 180, 120 270, 470 480 S 1020 740, 580 920 S 120 1170, 580 1330 S 940 1490, 600 1670" />
+                    </defs>
+                    <use href="#process-ribbon-path" className="processRibbonGlow" />
+                    <use href="#process-ribbon-path" className="processRibbonLine" />
+                    <use href="#process-ribbon-path" className="processRibbonPulse" />
+                </svg>
+                <ol className="container processRoute">
                     {steps.map((step, index) => (
-                        <motion.div
-                            className="processCard"
+                        <motion.li
+                            className="processRouteStep"
                             key={step}
                             initial={{ opacity: 0, y: 28 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.45, delay: index * 0.07 }}
                         >
-                            <div className="processNumber">
+                            <div className="processRouteNumber" aria-hidden="true">
                                 {String(index + 1).padStart(2, '0')}
                             </div>
 
-                            <div>
+                            <div className="processRouteCopy">
                                 <h3>{t(`processPage.steps.${step}.title`)}</h3>
                                 <p>{t(`processPage.steps.${step}.desc`)}</p>
                             </div>
-                        </motion.div>
+                        </motion.li>
                     ))}
-                </div>
+                </ol>
             </section>
 
-            <section className="processCta">
-                <div className="container">
-                    <div className="processCtaBox">
-                        <h2>{t('processPage.ctaTitle')}</h2>
-                        <p>{t('processPage.ctaDesc')}</p>
-
-                        <Link to="/start-project" className="btn primary">
-                            {t('common.startProject')}
-                        </Link>
-                    </div>
-                </div>
-            </section>
         </main>
     );
 }

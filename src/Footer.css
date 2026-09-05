@@ -4,12 +4,8 @@
     margin-left: calc(50% - 50vw);
     padding: 76px 20px 22px;
     overflow: hidden;
-    border-top: 1px solid rgba(34, 245, 154, 0.14);
-    background:
-        linear-gradient(rgba(0, 216, 120, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 216, 120, 0.025) 1px, transparent 1px),
-        #101617;
-    background-size: 64px 64px, 64px 64px, auto;
+    border-top: 0;
+    background: var(--brand-bg);
 }
 
 .footerInner {
@@ -20,6 +16,7 @@
 }
 
 .footerGlow {
+    display: none;
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
@@ -50,15 +47,14 @@
     gap: 38px;
     padding: clamp(28px, 4vw, 52px);
     overflow: hidden;
-    border: 1px solid rgba(34, 245, 154, 0.32);
-    border-radius: 30px;
-    background:
-        radial-gradient(circle at 82% 15%, rgba(34, 245, 154, 0.2), transparent 34%),
-        linear-gradient(135deg, rgba(15, 31, 23, 0.96), rgba(7, 13, 10, 0.96));
-    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.38), inset 0 1px rgba(255, 255, 255, 0.06);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .footerCta::after {
+    display: none;
     content: '';
     position: absolute;
     top: -90px;
@@ -75,6 +71,23 @@
     position: relative;
     z-index: 1;
     max-width: 720px;
+}
+
+.siteFooterProcess {
+    background:
+        linear-gradient(to bottom, rgba(51, 129, 174, 0.075), transparent 380px),
+        var(--brand-bg);
+}
+
+.siteFooterProcess::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 460px;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 55% 38%, rgba(75, 165, 213, 0.095), transparent 65%);
+    -webkit-mask-image: linear-gradient(transparent, #000 28%, #000 70%, transparent);
+    mask-image: linear-gradient(transparent, #000 28%, #000 70%, transparent);
 }
 
 .footerEyebrow {

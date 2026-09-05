@@ -1,7 +1,18 @@
 .processPage {
+    position: relative;
     background: #05070d;
     color: #fff;
     overflow: hidden;
+}
+
+/* Match the footer's top tint without adding another hard-edged panel. */
+.processPage::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 180px;
+    pointer-events: none;
+    background: linear-gradient(transparent, rgba(51, 129, 174, 0.075));
 }
 
 .processHero {
@@ -15,7 +26,9 @@
     inset: -120px auto auto 50%;
     width: 520px;
     height: 520px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.35), transparent 65%);
+    background:
+        radial-gradient(ellipse at 65% 38%, rgba(51, 129, 174, 0.14), transparent 65%),
+        radial-gradient(ellipse at 40% 58%, rgba(53, 163, 165, 0.07), transparent 60%);
     transform: translateX(-50%);
     filter: blur(10px);
     pointer-events: none;
@@ -56,7 +69,158 @@
 }
 
 .processStepsSection {
+    position: relative;
+    isolation: isolate;
     padding: 50px 0 90px;
+}
+
+.processRibbon {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    fill: none;
+    stroke-linecap: round;
+    -webkit-mask-image: linear-gradient(transparent, #000 8%, #000 88%, transparent);
+    mask-image: linear-gradient(transparent, #000 8%, #000 88%, transparent);
+}
+
+.processRibbonGlow {
+    stroke: rgba(75, 165, 213, 0.18);
+    stroke-width: 52px;
+    filter: blur(24px);
+}
+
+.processRibbonLine {
+    stroke: rgba(111, 195, 228, 0.13);
+    stroke-width: 1px;
+}
+
+.processRibbonPulse {
+    stroke: rgba(135, 213, 244, 0.42);
+    stroke-width: 3px;
+    stroke-dasharray: 4 106;
+    stroke-dashoffset: 6;
+    filter: drop-shadow(0 0 8px rgba(83, 189, 236, 0.65));
+    animation: processRibbonTravel 22s linear infinite;
+}
+
+@keyframes processRibbonTravel {
+    to { stroke-dashoffset: -104; }
+}
+
+@media (max-width: 760px) {
+    .processRibbon { opacity: 0.7; }
+    .processRibbonGlow { stroke-width: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .processRibbonPulse { animation: none; stroke-dashoffset: -34; opacity: 0.4; }
+}
+
+/* A continuous editorial route, rather than separate cards. */
+.processRoute {
+    list-style: none;
+    padding-block: 0;
+    max-width: 1120px;
+}
+
+.processRouteStep {
+    position: relative;
+    padding: 38px 0 48px 62px;
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 34px;
+}
+
+.processRouteStep::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(128, 177, 169, 0.24);
+}
+
+.processRouteStep:first-child::before { top: 56px; }
+.processRouteStep:last-child::before {
+    bottom: 32px;
+    background: linear-gradient(rgba(128, 177, 169, 0.24), transparent);
+}
+
+.processRouteStep::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 52px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #728b83;
+    box-shadow: 0 0 0 6px var(--brand-bg);
+    transition: background 200ms ease, box-shadow 200ms ease;
+}
+
+.processRouteNumber {
+    color: #92a59d;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.06em;
+    line-height: 1;
+    transition: color 200ms ease;
+}
+
+.processRouteCopy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 36px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(220, 238, 231, 0.09);
+}
+
+.processRouteCopy h3 {
+    margin: 0;
+    color: var(--brand-text);
+    font-size: clamp(23px, 2.6vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+}
+
+.processRouteCopy p {
+    margin: 0;
+    color: #aab7b2;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.processRouteStep:hover .processRouteNumber { color: var(--brand-green-bright); }
+.processRouteStep:hover::after {
+    background: var(--brand-green-bright);
+    box-shadow: 0 0 0 6px var(--brand-bg), 0 0 22px rgba(0, 216, 120, 0.3);
+}
+
+@media (max-width: 760px) {
+    .processRouteStep {
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 18px;
+        padding: 28px 0 28px 32px;
+    }
+    .processRouteStep::before { left: 4px; }
+    .processRouteStep::after { left: 0; top: 39px; }
+    .processRouteStep:first-child::before { top: 43px; }
+    .processRouteNumber { font-size: 40px; }
+    .processRouteCopy { grid-template-columns: 1fr; gap: 14px; padding-bottom: 28px; }
+    .processRouteCopy p { font-size: 15px; line-height: 1.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .processRouteNumber, .processRouteStep::after { transition: none; }
 }
 
 .processSteps {
@@ -86,7 +250,7 @@
     top: -70px;
     width: 180px;
     height: 180px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.23), transparent 70%);
+    background: radial-gradient(circle, rgba(53, 163, 165, 0.18), transparent 70%);
 }
 
 .processNumber {

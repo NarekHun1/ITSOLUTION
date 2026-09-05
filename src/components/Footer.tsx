@@ -1,5 +1,5 @@
 import { ArrowUpRight, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../Footer.css';
 
@@ -10,6 +10,7 @@ const FACEBOOK = 'https://www.facebook.com/IsolationIT';
 
 export default function Footer() {
     const { t } = useTranslation();
+    const { pathname } = useLocation();
     const year = new Date().getFullYear();
 
     const navigation = [
@@ -21,7 +22,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="siteFooter">
+        <footer className={`siteFooter${pathname === '/process' ? ' siteFooterProcess' : ''}`}>
             <div className="footerGlow footerGlowOne" />
             <div className="footerGlow footerGlowTwo" />
 

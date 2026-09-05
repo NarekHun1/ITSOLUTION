@@ -9,6 +9,7 @@ import AIChatWidget from './components/AIChatWidget';
 import ContactPage from './components/ContactPage';
 import ProcessPage from './components/ProcessPage';
 import SocialDock from './components/SocialDock';
+import Footer from './components/Footer';
 
 function Home() {
     return (
@@ -49,6 +50,7 @@ export default function App() {
                 />
             </Routes>
 
+            <Footer />
             <SocialDock />
         </>
     );

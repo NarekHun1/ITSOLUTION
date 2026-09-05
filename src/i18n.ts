@@ -255,6 +255,16 @@ const resources = {
                 launch: 'Launch',
                 support: 'Support',
             },
+            footer: {
+                eyebrow: 'Have an idea?',
+                title: 'Let’s build something powerful together.',
+                description: 'Tell us about your goals — we will shape the right digital solution and turn it into a product ready for real growth.',
+                brandText: 'Premium websites, platforms, AI tools, Telegram WebApps and automation systems for ambitious businesses.',
+                navigation: 'Explore',
+                contact: 'Contact',
+                address: 'Hakob Hakobyan 3, Yerevan',
+                rights: 'All rights reserved.',
+            },
             "techStack": {
                 "title": "Tech Stack",
                 "desc": "Modern technologies we use to build fast, scalable and reliable digital products."
@@ -520,6 +530,16 @@ const resources = {
                 launch: 'Запуск',
                 support: 'Поддержка',
             },
+            footer: {
+                eyebrow: 'Есть идея?',
+                title: 'Давайте создадим вместе что-то мощное.',
+                description: 'Расскажите о ваших целях — мы подберём правильное digital-решение и превратим его в продукт, готовый к реальному росту.',
+                brandText: 'Премиальные сайты, платформы, AI-инструменты, Telegram WebApps и системы автоматизации для амбициозного бизнеса.',
+                navigation: 'Навигация',
+                contact: 'Контакты',
+                address: 'Акопа Акопяна 3, Ереван',
+                rights: 'Все права защищены.',
+            },
             "techStack": {
                 "title": "Технологический стек",
                 "desc": "Современные технологии, которые мы используем для создания быстрых, масштабируемых и надежных цифровых продуктов."
@@ -784,6 +804,16 @@ const resources = {
                 testing: 'Թեստավորում',
                 launch: 'Գործարկում',
                 support: 'Աջակցություն',
+            },
+            footer: {
+                eyebrow: 'Ունե՞ք գաղափար',
+                title: 'Եկեք միասին ստեղծենք հզոր մի բան։',
+                description: 'Պատմեք ձեր նպատակների մասին․ մենք կընտրենք ճիշտ թվային լուծումը և այն կդարձնենք իրական աճի պատրաստ պրոդուկտ։',
+                brandText: 'Պրեմիում կայքեր, հարթակներ, AI գործիքներ, Telegram WebApp-եր և ավտոմատացման համակարգեր հավակնոտ բիզնեսների համար։',
+                navigation: 'Նավիգացիա',
+                contact: 'Կապ',
+                address: 'Հակոբ Հակոբյան 3, Երևան',
+                rights: 'Բոլոր իրավունքները պաշտպանված են։',
             },
             "techStack": {
                 "title": "Տեխնոլոգիական Stack",

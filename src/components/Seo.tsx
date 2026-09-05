@@ -45,6 +45,18 @@ function setMeta(selector: string, attribute: 'content', value: string) {
     if (element) element.setAttribute(attribute, value);
 }
 
+function setCanonical(url: string) {
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+    }
+
+    canonical.href = url;
+}
+
 export default function Seo() {
     const { pathname } = useLocation();
     const { i18n } = useTranslation();
@@ -52,8 +64,10 @@ export default function Seo() {
     useEffect(() => {
         const language = (i18n.resolvedLanguage?.split('-')[0] ?? 'en') as Language;
         const supportedLanguage: Language = language in pages ? language : 'en';
-        const page = pages[supportedLanguage][routeKeys[pathname] ?? 'home'];
-        const canonicalUrl = `${SITE_URL}${pathname === '/' ? '' : pathname}`;
+        const pageKey = routeKeys[pathname] ?? 'home';
+        const canonicalPath = pathname in routeKeys ? pathname : '/';
+        const page = pages[supportedLanguage][pageKey];
+        const canonicalUrl = `${SITE_URL}${canonicalPath === '/' ? '' : canonicalPath}`;
 
         document.documentElement.lang = supportedLanguage;
         document.title = page.title;
@@ -66,7 +80,7 @@ export default function Seo() {
         setMeta('meta[name="twitter:description"]', 'content', page.description);
         setMeta('meta[name="twitter:image"]', 'content', SOCIAL_IMAGE);
 
-        document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', canonicalUrl);
+        setCanonical(canonicalUrl);
     }, [i18n.resolvedLanguage, pathname]);
 
     return null;

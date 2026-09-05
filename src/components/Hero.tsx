@@ -11,6 +11,7 @@ export default function Hero() {
     const typingWords = t('hero.typingWords', {
         returnObjects: true,
     }) as string[];
+    const stableHeading = `${t('hero.title')} ${typingWords[0] ?? ''}`.trim();
 
     return (
         <section className="hero" id="home">
@@ -30,12 +31,13 @@ export default function Hero() {
                     </motion.div>
 
                     <motion.h1
+                        aria-label={stableHeading}
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                     >
                         {t('hero.title')}{' '}
-                        <span className="typingWrapper">
+                        <span className="typingWrapper" data-nosnippet>
   <span className="typingText">
   <Typewriter
       words={typingWords}

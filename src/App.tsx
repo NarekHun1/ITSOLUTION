@@ -10,6 +10,7 @@ import ContactPage from './components/ContactPage';
 import ProcessPage from './components/ProcessPage';
 import SocialDock from './components/SocialDock';
 import Footer from './components/Footer';
+import Seo from './components/Seo';
 
 function Home() {
     return (
@@ -24,6 +25,7 @@ function Home() {
 export default function App() {
     return (
         <>
+            <Seo />
             <Header />
 
             <Routes>

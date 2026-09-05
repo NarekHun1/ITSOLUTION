@@ -3,10 +3,10 @@
     --brand-green-bright: #22f59a;
     --brand-green-soft: rgba(0, 216, 120, 0.14);
     --brand-green-line: rgba(0, 216, 120, 0.28);
-    --brand-bg: #050706;
-    --brand-panel: #0b0f0d;
+    --brand-bg: #101813;
+    --brand-panel: #18231c;
     --brand-text: #f5f8f6;
-    --brand-muted: #9aa39e;
+    --brand-muted: #a8b3ac;
 }
 
 body {
@@ -251,6 +251,7 @@ body {
 
 .hero {
     padding-top: 104px;
+    --hero-edge-fade: linear-gradient(to bottom, #000 0%, #000 70%, rgba(0, 0, 0, 0.82) 80%, rgba(0, 0, 0, 0.3) 92%, transparent 100%);
 }
 
 .hero::after {
@@ -259,7 +260,16 @@ body {
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(90deg, rgba(5, 7, 6, 0.92) 0%, rgba(5, 7, 6, 0.7) 32%, rgba(5, 7, 6, 0.18) 58%, transparent 82%);
+    background: linear-gradient(90deg, rgba(16, 24, 19, 0.92) 0%, rgba(16, 24, 19, 0.7) 32%, rgba(16, 24, 19, 0.18) 58%, transparent 82%);
+    -webkit-mask-image: var(--hero-edge-fade);
+    mask-image: var(--hero-edge-fade);
+}
+
+/* Reveal the same continuous body background/grid on both sides of the seam.
+   Mask the inner canvas separately to retain the responsive horizontal mask. */
+.heroCubesBg .cubeCanvas {
+    -webkit-mask-image: var(--hero-edge-fade);
+    mask-image: var(--hero-edge-fade);
 }
 
 .typingWrapper {
@@ -308,8 +318,8 @@ body {
 .startTypeCard,
 .startPackageCard,
 .startFormCard {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
-    border-color: rgba(255, 255, 255, 0.09);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04));
+    border-color: rgba(255, 255, 255, 0.14);
 }
 
 .stats div:hover,
@@ -344,7 +354,7 @@ body {
         linear-gradient(rgba(0, 216, 120, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 216, 120, 0.02) 1px, transparent 1px),
         radial-gradient(circle at 14% 8%, rgba(0, 216, 120, 0.12), transparent 28%),
-        linear-gradient(180deg, #050706 0%, #080d0a 50%, #050706 100%);
+        linear-gradient(180deg, var(--brand-bg) 0%, #15211a 50%, var(--brand-bg) 100%);
     background-size: 72px 72px, 72px 72px, auto, auto;
 }
 

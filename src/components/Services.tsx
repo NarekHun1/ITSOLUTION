@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Monitor, Layers, Bot, Send, LayoutDashboard, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../services.css';
@@ -16,7 +17,7 @@ export default function ServicesPage() {
 
     const services = [
         {
-            icon: '💻',
+            icon: <Monitor aria-hidden="true" />,
             title: t('servicesPage.list.website.title'),
             desc: t('servicesPage.list.website.desc'),
             features: [
@@ -27,7 +28,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: '🚀',
+            icon: <Layers aria-hidden="true" />,
             title: t('servicesPage.list.saas.title'),
             desc: t('servicesPage.list.saas.desc'),
             features: [
@@ -38,7 +39,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: '🤖',
+            icon: <Bot aria-hidden="true" />,
             title: t('servicesPage.list.ai.title'),
             desc: t('servicesPage.list.ai.desc'),
             features: [
@@ -49,7 +50,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: '📱',
+            icon: <Send aria-hidden="true" />,
             title: t('servicesPage.list.telegram.title'),
             desc: t('servicesPage.list.telegram.desc'),
             features: [
@@ -60,7 +61,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: '🧠',
+            icon: <LayoutDashboard aria-hidden="true" />,
             title: t('servicesPage.list.crm.title'),
             desc: t('servicesPage.list.crm.desc'),
             features: [
@@ -71,7 +72,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: '⚙️',
+            icon: <Workflow aria-hidden="true" />,
             title: t('servicesPage.list.automation.title'),
             desc: t('servicesPage.list.automation.desc'),
             features: [

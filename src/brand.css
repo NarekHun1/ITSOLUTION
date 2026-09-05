@@ -225,11 +225,14 @@ body {
 .processBadge,
 .contactBadge,
 .startProjectBadge,
-.menuEyebrow,
-.processStep strong {
+.menuEyebrow {
     color: var(--brand-green-bright);
     background: var(--brand-green-soft);
     border-color: var(--brand-green-line);
+}
+
+.processStep strong {
+    color: var(--brand-green-bright);
 }
 
 .typingText {

@@ -87,6 +87,8 @@ const resources = {
             projects: {
                 title: 'Selected projects',
                 desc: 'Real digital products built across finance, gaming, education and healthcare.',
+                previousProject: 'Show previous projects',
+                nextProject: 'Show next projects',
 
                 items: {
                     hayfin: {
@@ -386,6 +388,8 @@ const resources = {
             projects: {
                 title: 'Избранные проекты',
                 desc: 'Реальные цифровые продукты в сфере финансов, игр, образования, медицины и e-commerce.',
+                previousProject: 'Показать предыдущие проекты',
+                nextProject: 'Показать следующие проекты',
 
                 items: {
                     hayfin: {
@@ -680,6 +684,8 @@ const resources = {
             projects: {
                 title: 'Ընտրված նախագծեր',
                 desc: 'Իրական թվային լուծումներ ֆինանսների, խաղերի, կրթության, բժշկության և e-commerce ոլորտներում։',
+                previousProject: 'Ցույց տալ նախորդ նախագծերը',
+                nextProject: 'Ցույց տալ հաջորդ նախագծերը',
 
                 items: {
                     hayfin: {

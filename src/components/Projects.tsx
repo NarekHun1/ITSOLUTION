@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import '../projects.css';
 
 import hayfinImg from '../assets/projects /hayfin.png';
@@ -86,6 +88,32 @@ export default function Projects() {
         [...projects.slice(3), ...projects.slice(0, 3)],
     ];
 
+    const trackRefs = useRef<Array<HTMLDivElement | null>>([]);
+    const marqueeRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+    const moveProjects = (direction: -1 | 1) => {
+        trackRefs.current.forEach((track, rowIndex) => {
+            if (!track) return;
+
+            const animation = track.getAnimations()[0];
+            const duration = Number(animation?.effect?.getTiming().duration);
+
+            if (animation && Number.isFinite(duration) && duration > 0) {
+                const currentTime = Number(animation.currentTime ?? 0);
+                const step = duration / projects.length;
+                animation.currentTime = (currentTime + direction * step + duration) % duration;
+                return;
+            }
+
+            const marquee = marqueeRefs.current[rowIndex];
+            const card = track.querySelector<HTMLElement>('.projectCard');
+            marquee?.scrollBy({
+                left: direction * ((card?.offsetWidth ?? 280) + 18),
+                behavior: 'smooth',
+            });
+        });
+    };
+
     const renderProject = (
         project: (typeof projects)[number],
         duplicate: boolean,
@@ -142,9 +170,25 @@ export default function Projects() {
             </div>
 
             <div className="projectsStage">
+                <button
+                    type="button"
+                    className="projectsNavButton projectsNavButtonPrev"
+                    aria-label={t('projects.previousProject')}
+                    onClick={() => moveProjects(-1)}
+                >
+                    <ChevronLeft aria-hidden="true" />
+                </button>
+
                 {projectRows.map((row, rowIndex) => (
-                    <div className={`projectsMarquee projectsMarqueeRow${rowIndex + 1}`} key={rowIndex}>
-                        <div className="projectsTrack">
+                    <div
+                        className={`projectsMarquee projectsMarqueeRow${rowIndex + 1}`}
+                        key={rowIndex}
+                        ref={(element) => { marqueeRefs.current[rowIndex] = element; }}
+                    >
+                        <div
+                            className="projectsTrack"
+                            ref={(element) => { trackRefs.current[rowIndex] = element; }}
+                        >
                             <div className="projectsGroup">
                                 {row.map((project) => renderProject(project, false, rowIndex))}
                             </div>
@@ -154,6 +198,15 @@ export default function Projects() {
                         </div>
                     </div>
                 ))}
+
+                <button
+                    type="button"
+                    className="projectsNavButton projectsNavButtonNext"
+                    aria-label={t('projects.nextProject')}
+                    onClick={() => moveProjects(1)}
+                >
+                    <ChevronRight aria-hidden="true" />
+                </button>
             </div>
         </section>
     );

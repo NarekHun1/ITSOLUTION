@@ -46,11 +46,11 @@
     display: flex;
     width: max-content;
     will-change: transform;
-    animation: projectsScroll 58s linear infinite;
+    animation: projectsScroll 87s linear infinite;
 }
 
 .projectsMarqueeRow2 .projectsTrack {
-    animation-duration: 66s;
+    animation-duration: 99s;
     animation-delay: -21s;
 }
 
@@ -228,6 +228,21 @@
     box-shadow: 0 16px 34px rgba(0, 216, 120, 0.25);
 }
 
+.projectBtn.isDisabled,
+.projectBtn:disabled {
+    color: #aab3ae;
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    cursor: default;
+}
+
+.projectBtn.isDisabled:hover,
+.projectBtn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 @keyframes projectsScroll {
     from {
         transform: translate3d(0, 0, 0);
@@ -333,11 +348,11 @@
     }
 
     .projectsTrack {
-        animation-duration: 48s;
+        animation-duration: 72s;
     }
 
     .projectsMarqueeRow2 .projectsTrack {
-        animation-duration: 56s;
+        animation-duration: 84s;
     }
 }
 

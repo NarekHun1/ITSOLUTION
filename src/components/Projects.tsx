@@ -7,6 +7,9 @@ import bauImg from '../assets/projects /bau.png';
 import clinicImg from '../assets/projects /clinic.png';
 import emwImg from '../assets/projects /emwblock.png';
 import brandingImg from '../assets/projects /baubranding.png';
+import arosImg from '../assets/projects /aros.jpg';
+import astrumImg from '../assets/projects /astrum.jpg';
+import himagoImg from '../assets/projects /himago.jpg';
 
 
 export default function Projects() {
@@ -55,6 +58,27 @@ export default function Projects() {
             link: 'https://www.baubranding.com',
             button: 'Visit Website',
         },
+        {
+            key: 'aros',
+            image: arosImg,
+            tags: ['AI', 'Restaurant'],
+            link: '',
+            button: 'In Development',
+        },
+        {
+            key: 'astrum',
+            image: astrumImg,
+            tags: ['Commerce', 'PWA'],
+            link: 'https://app.astrumgo.com',
+            button: 'Visit Website',
+        },
+        {
+            key: 'himago',
+            image: himagoImg,
+            tags: ['Travel', 'Marketplace'],
+            link: 'https://www.himago.am',
+            button: 'Visit Website',
+        },
     ];
 
     const projectRows = [
@@ -97,9 +121,10 @@ export default function Projects() {
                 </div>
                 <button
                     type="button"
-                    className="projectBtn"
+                    className={`projectBtn${project.link ? '' : ' isDisabled'}`}
                     tabIndex={duplicate ? -1 : 0}
-                    onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+                    disabled={!project.link}
+                    onClick={() => project.link && window.open(project.link, '_blank', 'noopener,noreferrer')}
                 >
                     {project.button}
                 </button>

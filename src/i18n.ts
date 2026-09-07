@@ -124,6 +124,24 @@ const resources = {
                         desc: 'Full-service branding and marketing agency providing design, content creation and digital promotion.',
                         result: 'Professional service showcase and client acquisition platform.',
                     },
+
+                    aros: {
+                        title: 'AROS — Restaurant Intelligence',
+                        desc: 'AI platform that turns food costs, supplier prices and recipe data into clear profit insights.',
+                        result: 'Built for faster decisions and healthier restaurant margins.',
+                    },
+
+                    astrum: {
+                        title: 'ASTRUM Coffee — ordering platform',
+                        desc: 'A modern café experience for discovering locations, browsing the menu and ordering ahead for pickup.',
+                        result: 'A fast, mobile-first ordering journey built for customer loyalty.',
+                    },
+
+                    himago: {
+                        title: 'HimaGo — discover Armenia',
+                        desc: 'Travel platform for discovering stays, experiences, tours and local services across Armenia.',
+                        result: 'A premium foundation for smarter travel discovery and future bookings.',
+                    },
                 },
             },
             contact: {
@@ -405,6 +423,24 @@ const resources = {
                         desc: 'Маркетинговое агентство полного цикла с услугами брендинга, дизайна, контент-маркетинга и digital-продвижения.',
                         result: 'Современная презентация услуг и привлечение новых клиентов.',
                     },
+
+                    aros: {
+                        title: 'AROS — аналитика для ресторанов',
+                        desc: 'AI-платформа для анализа себестоимости, цен поставщиков и прибыльности ресторанных блюд.',
+                        result: 'Быстрые решения, прозрачные расходы и здоровая маржинальность ресторана.',
+                    },
+
+                    astrum: {
+                        title: 'ASTRUM Coffee — платформа заказов',
+                        desc: 'Современный сервис для поиска кофеен, просмотра меню и предварительного заказа с самовывозом.',
+                        result: 'Быстрый mobile-first путь заказа и основа для лояльности клиентов.',
+                    },
+
+                    himago: {
+                        title: 'HimaGo — путешествия по Армении',
+                        desc: 'Платформа для поиска жилья, впечатлений, туров и локальных услуг по всей Армении.',
+                        result: 'Премиальная основа для умного планирования путешествий и будущих бронирований.',
+                    },
                 },
             },
             processPage: {
@@ -680,6 +716,24 @@ const resources = {
                         title: 'BAU Branding Agency',
                         desc: 'Բրենդինգի և մարքեթինգի գործակալություն՝ դիզայնի, կոնտենտի և թվային առաջխաղացման ծառայություններով։',
                         result: 'Ծառայությունների պրոֆեսիոնալ ներկայացում և նոր հաճախորդների ներգրավում։',
+                    },
+
+                    aros: {
+                        title: 'AROS — ռեստորանային վերլուծություն',
+                        desc: 'AI հարթակ՝ ինքնարժեքի, մատակարարների գների և ռեստորանային ուտեստների շահութաբերության վերլուծության համար։',
+                        result: 'Ավելի արագ որոշումներ, թափանցիկ ծախսեր և առողջ շահութաբերություն։',
+                    },
+
+                    astrum: {
+                        title: 'ASTRUM Coffee — պատվերների հարթակ',
+                        desc: 'Ժամանակակից հարթակ՝ սրճարաններ գտնելու, մենյուն դիտելու և նախապես պատվիրելու համար։',
+                        result: 'Արագ mobile-first պատվերի փորձ և հաճախորդների հավատարմության հիմք։',
+                    },
+
+                    himago: {
+                        title: 'HimaGo — բացահայտիր Հայաստանը',
+                        desc: 'Հայաստանում կացարաններ, տպավորություններ, տուրեր և տեղական ծառայություններ գտնելու հարթակ։',
+                        result: 'Պրեմիում հիմք՝ խելացի ճանապարհորդությունների և ապագա ամրագրումների համար։',
                     },
                 },
             },

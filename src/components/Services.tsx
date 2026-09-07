@@ -149,8 +149,11 @@ export default function ServicesPage() {
                         <h3>{t('servicesPage.whatWeBuild')}</h3>
 
                         <ul>
-                            {heroList.map((item) => (
-                                <li key={item}>{item}</li>
+                            {heroList.map((item, index) => (
+                                <li key={item}>
+                                    <span>{String(index + 1).padStart(2, '0')}</span>
+                                    <strong>{item}</strong>
+                                </li>
                             ))}
                         </ul>
                     </motion.div>
@@ -178,6 +181,10 @@ export default function ServicesPage() {
                                     delay: index * 0.06,
                                 }}
                             >
+                                <span className="serviceNumber" aria-hidden="true">
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
+
                                 <div className="serviceIcon">
                                     {service.icon}
                                 </div>
@@ -195,6 +202,12 @@ export default function ServicesPage() {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+
+                    <div className="servicesScrollRail" aria-hidden="true">
+                        <span>01</span>
+                        <i />
+                        <span>06</span>
                     </div>
                 </div>
             </section>

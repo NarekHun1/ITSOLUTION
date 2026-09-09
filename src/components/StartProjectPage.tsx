@@ -16,71 +16,38 @@ export default function StartProjectPage() {
         t('startProject.types.mvp'),
     ];
 
-    const packages = [
-        {
-            key: 'basic',
-            title: t('startProject.packages.basic.title'),
-            desc: t('startProject.packages.basic.desc'),
-        },
-        {
-            key: 'pro',
-            title: t('startProject.packages.pro.title'),
-            desc: t('startProject.packages.pro.desc'),
-        },
-        {
-            key: 'enterprise',
-            title: t('startProject.packages.enterprise.title'),
-            desc: t('startProject.packages.enterprise.desc'),
-        },
-    ];
+    const packages = ['$5k–$10k', '$10k–$25k', '$25k–$50k', '$50k+', t('startProject.packages.notSure')];
+    const timelines = [t('startProject.timelines.flexible'), t('startProject.timelines.oneThree'), t('startProject.timelines.threeSix'), t('startProject.timelines.sixPlus')];
 
-    const [type, setType] = useState(types[0]);
-    const [pack, setPack] = useState(packages[1].title);
+    const [typeIndex, setTypeIndex] = useState(0);
+    const [packIndex, setPackIndex] = useState(1);
+    const [timelineIndex, setTimelineIndex] = useState(0);
+    const type = types[typeIndex];
+    const pack = packages[packIndex];
+    const timeline = timelines[timelineIndex];
 
     const [name, setName] = useState('');
+    const [company, setCompany] = useState('');
+    const [email, setEmail] = useState('');
     const [contact, setContact] = useState('');
     const [idea, setIdea] = useState('');
 
     const [loading, setLoading] = useState(false);
 
     const sendToTelegram = async () => {
-        if (!name || !contact || !idea) {
-            alert('Please fill all fields');
+        if (!name || !email || !idea) {
+            alert(t('startProject.form.required'));
             return;
         }
 
         setLoading(true);
 
-        const BOT_TOKEN = '8026491620:AAE3qaSoZcsHuCwFyazbiuQ1f40vHfdlccs';
-        const CHAT_ID = '934669069';
-
-        const text = `
-🚀 NEW PROJECT REQUEST
-
-👤 Name: ${name}
-📞 Contact: ${contact}
-
-💻 Project Type: ${type}
-📦 Package: ${pack}
-
-📝 Project Idea:
-${idea}
-`;
-
         try {
-            const response = await fetch(
-                `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: CHAT_ID,
-                        text,
-                    }),
-                }
-            );
+            const response = await fetch('/api/project-inquiry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, company, email, contact, type, budget: pack, timeline, idea }),
+            });
 
             if (!response.ok) {
                 throw new Error('Telegram API Error');
@@ -89,6 +56,8 @@ ${idea}
             alert('Request sent successfully');
 
             setName('');
+            setCompany('');
+            setEmail('');
             setContact('');
             setIdea('');
         } catch (error) {
@@ -133,7 +102,7 @@ ${idea}
                         <h2>{t('startProject.chooseType')}</h2>
 
                         <div className="choiceGrid">
-                            {types.map((item) => (
+                            {types.map((item, index) => (
                                 <Tilt
                                     key={item}
                                     tiltMaxAngleX={12}
@@ -148,7 +117,7 @@ ${idea}
                                                 ? 'choice active'
                                                 : 'choice'
                                         }
-                                        onClick={() => setType(item)}
+                                        onClick={() => setTypeIndex(index)}
                                     >
                                         {item}
                                     </button>
@@ -159,27 +128,30 @@ ${idea}
                         <h2>{t('startProject.choosePackage')}</h2>
 
                         <div className="packageGrid">
-                            {packages.map((item) => (
+                            {packages.map((item, index) => (
                                 <Tilt
-                                    key={item.key}
+                                    key={item}
                                     tiltMaxAngleX={10}
                                     tiltMaxAngleY={10}
                                     glareEnable
                                 >
                                     <button
                                         className={
-                                            pack === item.title
+                                            pack === item
                                                 ? 'package active'
                                                 : 'package'
                                         }
-                                        onClick={() => setPack(item.title)}
+                                        onClick={() => setPackIndex(index)}
                                     >
-                                        <strong>{item.title}</strong>
-
-                                        <span>{item.desc}</span>
+                                        <strong>{item}</strong>
                                     </button>
                                 </Tilt>
                             ))}
+                        </div>
+
+                        <h2>{t('startProject.chooseTimeline')}</h2>
+                        <div className="timelineGrid">
+                            {timelines.map((item, index) => <button type="button" className={timeline === item ? 'choice active' : 'choice'} key={item} onClick={() => setTimelineIndex(index)}>{item}</button>)}
                         </div>
                     </div>
 
@@ -203,6 +175,9 @@ ${idea}
                                     setName(e.target.value)
                                 }
                             />
+
+                            <input placeholder={t('startProject.form.company')} value={company} onChange={(e) => setCompany(e.target.value)} />
+                            <input type="email" required placeholder={t('startProject.form.email')} value={email} onChange={(e) => setEmail(e.target.value)} />
 
                             <input
                                 placeholder={t('startProject.form.contact')}

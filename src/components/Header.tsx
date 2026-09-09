@@ -95,6 +95,7 @@ export default function Header() {
                                             role="menuitem"
                                             key={code}
                                             onClick={() => {
+                                                localStorage.setItem('isolation-language', code);
                                                 void i18n.changeLanguage(code);
                                                 setLanguageOpen(false);
                                             }}

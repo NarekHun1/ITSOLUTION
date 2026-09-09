@@ -142,6 +142,10 @@
     box-shadow: 0 23px 54px rgba(0, 216, 120, 0.34);
 }
 
+.footerCtaActions { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 10px; flex: 0 0 auto; }
+.footerAiButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 20px; border: 1px solid rgba(0,216,120,.25); border-radius: 16px; color: #dff8ea; background: rgba(0,216,120,.07); font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; }
+.footerAiButton:hover { border-color: #22f59a; background: rgba(0,216,120,.14); }
+
 .footerMain {
     display: grid;
     grid-template-columns: minmax(0, 1.8fr) minmax(150px, 0.7fr) minmax(240px, 1fr);
@@ -313,6 +317,7 @@
         width: 100%;
         min-height: 50px;
     }
+    .footerCtaActions, .footerAiButton { width: 100%; }
 
     .footerMain {
         grid-template-columns: 1fr;

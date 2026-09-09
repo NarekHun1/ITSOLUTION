@@ -289,6 +289,8 @@ html, body {
     gap: 14px;
 }
 
+.timelineGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+
 .package {
     text-align: left;
     min-height: 120px;
@@ -393,7 +395,8 @@ html, body {
     }
 
     .choiceGrid,
-    .packageGrid {
+    .packageGrid,
+    .timelineGrid {
         grid-template-columns: 1fr;
     }
 }

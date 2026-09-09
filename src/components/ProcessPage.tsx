@@ -6,13 +6,12 @@ export default function ProcessPage() {
     const { t } = useTranslation();
 
     const steps = [
-        'consultation',
-        'planning',
-        'design',
-        'development',
-        'testing',
+        'discovery',
+        'strategy',
+        'architecture',
+        'engineering',
         'launch',
-        'support',
+        'evolution',
     ];
 
     return (

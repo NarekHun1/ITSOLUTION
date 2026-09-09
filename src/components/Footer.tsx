@@ -12,6 +12,7 @@ export default function Footer() {
     const { t } = useTranslation();
     const { pathname } = useLocation();
     const year = new Date().getFullYear();
+    const openAI = () => window.dispatchEvent(new Event('open-isolation-ai'));
 
     const navigation = [
         { label: t('nav.home'), to: '/' },
@@ -37,10 +38,16 @@ export default function Footer() {
                         <p>{t('footer.description')}</p>
                     </div>
 
-                    <Link to="/start-project" className="footerCtaButton">
-                        {t('common.startProject')}
-                        <ArrowUpRight size={20} />
-                    </Link>
+                    <div className="footerCtaActions">
+                        <Link to="/start-project" className="footerCtaButton">
+                            {t('common.startProject')}
+                            <ArrowUpRight size={20} />
+                        </Link>
+                        <button type="button" className="footerAiButton" onClick={openAI}>
+                            <Sparkles size={18} />
+                            {t('footer.talkToAI')}
+                        </button>
+                    </div>
                 </div>
 
                 <div className="footerMain">

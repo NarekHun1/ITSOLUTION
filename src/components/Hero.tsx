@@ -12,6 +12,7 @@ export default function Hero() {
         returnObjects: true,
     }) as string[];
     const stableHeading = `${t('hero.title')} ${typingWords[0] ?? ''}`.trim();
+    const capabilities = t('hero.capabilities', { returnObjects: true }) as string[];
 
     return (
         <section className="hero" id="home">
@@ -60,6 +61,10 @@ export default function Hero() {
                         {t('hero.description')}
                     </motion.p>
 
+                    <motion.div className="heroCapabilities" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.12 }} aria-label={t('hero.capabilitiesLabel')}>
+                        {capabilities.map((capability) => <span key={capability}>{capability}</span>)}
+                    </motion.div>
+
                     <motion.div
                         className="heroActions"
                         initial={{ opacity: 0, y: 24 }}
@@ -82,12 +87,12 @@ export default function Hero() {
                         </div>
 
                         <div>
-                            <strong>50+</strong>
+                            <strong>9</strong>
                             <span>{t('hero.stats.projects')}</span>
                         </div>
 
                         <div>
-                            <strong>24/7</strong>
+                            <strong>6</strong>
                             <span>{t('hero.stats.support')}</span>
                         </div>
                     </div>

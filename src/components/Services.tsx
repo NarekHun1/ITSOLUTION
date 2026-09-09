@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Monitor, Layers, Bot, Send, LayoutDashboard, Workflow } from 'lucide-react';
+import { BrainCircuit, Code2, Layers3, Smartphone, Workflow, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../services.css';
@@ -17,18 +17,15 @@ export default function ServicesPage() {
 
     const services = [
         {
-            icon: <Monitor aria-hidden="true" />,
+            icon: <BrainCircuit aria-hidden="true" />,
             title: t('servicesPage.list.website.title'),
             desc: t('servicesPage.list.website.desc'),
             features: [
-                t('features.responsive'),
-                t('features.seo'),
-                t('features.fast'),
-                t('features.admin'),
+                t('features.chatbot'), t('features.analytics'), t('features.automation'), t('features.api'),
             ],
         },
         {
-            icon: <Layers aria-hidden="true" />,
+            icon: <Code2 aria-hidden="true" />,
             title: t('servicesPage.list.saas.title'),
             desc: t('servicesPage.list.saas.desc'),
             features: [
@@ -39,29 +36,23 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: <Bot aria-hidden="true" />,
+            icon: <Layers3 aria-hidden="true" />,
             title: t('servicesPage.list.ai.title'),
             desc: t('servicesPage.list.ai.desc'),
             features: [
-                t('features.chatbot'),
-                t('features.textgen'),
-                t('features.recommendations'),
-                t('features.automation'),
+                t('features.auth'), t('features.dashboard'), t('features.scalable'), t('features.payments'),
             ],
         },
         {
-            icon: <Send aria-hidden="true" />,
+            icon: <Smartphone aria-hidden="true" />,
             title: t('servicesPage.list.telegram.title'),
             desc: t('servicesPage.list.telegram.desc'),
             features: [
-                t('features.telegramBot'),
-                t('features.miniapp'),
-                t('features.admin'),
-                t('features.notifications'),
+                t('features.responsive'), t('features.notifications'), t('features.payments'), t('features.api'),
             ],
         },
         {
-            icon: <LayoutDashboard aria-hidden="true" />,
+            icon: <Workflow aria-hidden="true" />,
             title: t('servicesPage.list.crm.title'),
             desc: t('servicesPage.list.crm.desc'),
             features: [
@@ -72,7 +63,7 @@ export default function ServicesPage() {
             ],
         },
         {
-            icon: <Workflow aria-hidden="true" />,
+            icon: <Network aria-hidden="true" />,
             title: t('servicesPage.list.automation.title'),
             desc: t('servicesPage.list.automation.desc'),
             features: [
@@ -85,12 +76,12 @@ export default function ServicesPage() {
     ];
 
     const process = [
-        t('process.analysis'),
-        t('process.design'),
-        t('process.development'),
-        t('process.testing'),
+        t('process.discovery'),
+        t('process.strategy'),
+        t('process.architecture'),
+        t('process.engineering'),
         t('process.launch'),
-        t('process.support'),
+        t('process.evolution'),
     ];
 
     const heroList = [
@@ -99,6 +90,7 @@ export default function ServicesPage() {
         t('servicesPage.list.ai.title'),
         t('servicesPage.list.telegram.title'),
         t('servicesPage.list.crm.title'),
+        t('servicesPage.list.automation.title'),
     ];
 
     const techStack = [

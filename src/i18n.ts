@@ -11,56 +11,55 @@ const resources = {
 
             nav: {
                 home: 'Home',
-                services: 'Services',
-                projects: 'Projects',
+                services: 'Capabilities',
+                projects: 'Work',
                 process: 'Process',
                 contact: 'Contact',
             },
 
             menu: {
-                title: "Let’s build something powerful",
-                subtitle: 'Websites, AI tools, Telegram apps and automation systems.',
-                desc: 'We create digital products that help businesses look premium, work faster and generate real growth.',
+                title: "Let’s engineer what comes next",
+                subtitle: 'AI systems, custom software and digital platforms.',
+                desc: 'We turn complex business problems into scalable software built for long-term growth.',
             },
 
             hero: {
-                eyebrow: 'Premium Digital Studio',
-                title: 'We build digital products that',
+                eyebrow: 'AI & Software Engineering Company',
+                title: 'We turn complex business problems into intelligent software',
                 typingWords: [
-                    'generate revenue',
-                    'attract clients',
-                    'automate business',
-                    'scale faster',
+                    'built to scale',
+                    'powered by AI',
+                    'designed for growth',
+                    'engineered for business',
                 ],
                 description:
-                    'Isolation IT Solutions creates websites, platforms, AI tools, Telegram WebApps and automation systems for businesses that want premium design, strong technology and real growth.',
+                    'We design and engineer AI-powered software, business platforms and digital products that help companies automate, scale and operate smarter.',
+                capabilitiesLabel: 'Core capabilities',
+                capabilities: ['AI Systems', 'Custom Software', 'Web Platforms', 'Mobile Apps', 'Business Automation'],
                 stats: {
                     experience: 'Years experience',
-                    projects: 'Projects',
-                    support: 'Support',
+                    projects: 'Real products',
+                    support: 'Industries',
                 },
             },
 
             startProject: {
                 badge: 'Start Project',
                 title: 'Build your next digital product with us',
-                desc: 'Choose your project type, package and send us your idea. We will contact you with the best solution.',
+                desc: 'Tell us what you are building and the business problem behind it. We will review the scope and suggest the right delivery path.',
 
                 chooseType: 'Choose project type',
-                choosePackage: 'Choose package',
+                choosePackage: 'Estimated budget',
+                chooseTimeline: 'Preferred timeline',
                 yourRequest: 'Your request',
-                selectedPackage: 'Selected package',
+                selectedPackage: 'Selected budget',
 
                 types: {
-                    website: 'Website',
-                    bot: 'Telegram Bot',
-                    webapp: 'Web App',
-                    ai: 'AI Product',
-                    design: 'UI / UX',
-                    mvp: 'Startup MVP',
+                    website: 'AI System', bot: 'Custom Software', webapp: 'Web / SaaS Platform', ai: 'Mobile Product', design: 'Business Automation', mvp: 'Startup / MVP',
                 },
 
                 packages: {
+                    notSure: 'Not sure yet',
                     basic: {
                         title: 'Basic',
                         desc: 'Landing / simple site',
@@ -77,11 +76,15 @@ const resources = {
 
                 form: {
                     name: 'Your name',
-                    contact: 'Phone / Telegram',
-                    idea: 'Tell us about your idea...',
+                    company: 'Company',
+                    email: 'Work email *',
+                    contact: 'Phone / Telegram (optional)',
+                    idea: 'What are you building and what business problem should it solve? *',
+                    required: 'Please add your name, work email and project description.',
                     sendTelegram: 'Send to Telegram',
                     sendWhatsapp: 'Write on WhatsApp',
                 },
+                timelines: { flexible: 'Flexible / not sure', oneThree: '1–3 months', threeSix: '3–6 months', sixPlus: '6+ months' },
             },
 
             projects: {
@@ -165,6 +168,11 @@ const resources = {
                 ctaTitle: 'Ready to Start Your Project?',
                 ctaDesc: 'Tell us your idea and we will help you choose the right solution, structure and development plan.',
                 steps: {
+                    discovery: { title: 'Discovery', desc: 'We clarify the business problem, users, constraints and measurable product goals.' },
+                    strategy: { title: 'Product Strategy', desc: 'We define priorities, scope, roadmap and the strongest route to a valuable first release.' },
+                    architecture: { title: 'UX & Architecture', desc: 'We design user flows, interfaces, data structure and a scalable technical foundation.' },
+                    engineering: { title: 'Engineering', desc: 'We build, integrate and test the frontend, backend, AI and operational tooling.' },
+                    evolution: { title: 'Evolution', desc: 'After launch, we improve the product using real feedback, data and changing business needs.' },
                     consultation: {
                         title: 'Discovery & Consultation',
                         desc: 'We discuss your idea, goals, target audience, functionality and business needs.',
@@ -196,15 +204,15 @@ const resources = {
                 },
             },
             servicesPage: {
-                badge: 'Our Services',
-                title: 'Digital Solutions for Modern Businesses',
+                badge: 'Engineering Capabilities',
+                title: 'Software built around your business, not a template',
                 description:
-                    'We build websites, platforms, AI tools, Telegram WebApps, automation systems and admin panels for businesses.',
+                    'From product strategy and architecture to engineering, launch and evolution — we build systems ready for real operations.',
 
                 backHome: 'Back to Home',
 
-                servicesTitle: 'Services',
-                servicesDesc: 'Choose the solution your business needs.',
+                servicesTitle: 'Capabilities',
+                servicesDesc: 'Senior product and engineering capability across the full software lifecycle.',
 
                 processTitle: 'How We Work',
                 processDesc: 'A clear process from idea to launch.',
@@ -213,32 +221,32 @@ const resources = {
                 ctaDesc:
                     'Tell us about your project and we will help turn it into a real digital product.',
 
-                whatWeBuild: 'What We Build',
+                whatWeBuild: 'Core Capabilities',
 
                 list: {
                     website: {
-                        title: 'Website Development',
-                        desc: 'Modern business websites, landing pages and corporate websites with premium UX/UI design.',
+                        title: 'AI & Intelligent Systems',
+                        desc: 'AI assistants, intelligent workflows, data-driven tools and applied automation built around business operations.',
                     },
                     saas: {
-                        title: 'SaaS Platforms',
-                        desc: 'Custom web platforms for startups and businesses with dashboards, accounts and subscriptions.',
+                        title: 'Custom Software Engineering',
+                        desc: 'Purpose-built software, internal systems and complex products engineered for your exact workflow.',
                     },
                     ai: {
-                        title: 'AI Tools',
-                        desc: 'AI assistants, chatbots and automation solutions for business.',
+                        title: 'Web & SaaS Platforms',
+                        desc: 'Scalable web applications, SaaS products, customer portals and commerce platforms.',
                     },
                     telegram: {
-                        title: 'Telegram Bot & WebApp',
-                        desc: 'Telegram bots, Mini Apps, payment systems and business automation.',
+                        title: 'Mobile Product Development',
+                        desc: 'Mobile-first product experiences and cross-platform applications connected to reliable backends.',
                     },
                     crm: {
-                        title: 'CRM & Admin Panel',
-                        desc: 'Internal systems for managing clients, orders and business processes.',
+                        title: 'Business Automation',
+                        desc: 'CRM, admin systems and automated workflows that reduce repetitive work and improve control.',
                     },
                     automation: {
-                        title: 'Automation Systems',
-                        desc: 'API integrations, data synchronization and workflow automation.',
+                        title: 'Systems & Integrations',
+                        desc: 'APIs, payment providers, data synchronization and integrations connecting your technology stack.',
                     },
                 },
             },
@@ -268,6 +276,7 @@ const resources = {
             },
 
             process: {
+                discovery: 'Discovery', strategy: 'Product Strategy', architecture: 'UX & Architecture', engineering: 'Engineering', evolution: 'Evolution',
                 analysis: 'Analysis',
                 design: 'Design',
                 development: 'Development',
@@ -277,9 +286,10 @@ const resources = {
             },
             footer: {
                 eyebrow: 'Have an idea?',
-                title: 'Let’s build something powerful together.',
-                description: 'Tell us about your goals — we will shape the right digital solution and turn it into a product ready for real growth.',
-                brandText: 'Premium websites, platforms, AI tools, Telegram WebApps and automation systems for ambitious businesses.',
+                title: 'Have a complex idea? Let’s turn it into a scalable product.',
+                description: 'Tell us about the business problem. We will help shape the product, architecture and delivery plan.',
+                brandText: 'AI systems, custom software and digital platforms engineered for ambitious businesses.',
+                talkToAI: 'Talk to Isolation AI',
                 navigation: 'Explore',
                 contact: 'Contact',
                 address: 'Hakob Hakobyan 3, Yerevan',
@@ -301,33 +311,35 @@ const resources = {
 
             nav: {
                 home: 'Главная',
-                services: 'Услуги',
-                projects: 'Проекты',
+                services: 'Компетенции',
+                projects: 'Кейсы',
                 process: 'Процесс',
                 contact: 'Контакты',
             },
 
             menu: {
-                title: 'Давайте создадим что-то мощное',
-                subtitle: 'Сайты, AI решения, Telegram приложения и автоматизация',
-                desc: 'Мы создаём цифровые продукты, которые помогают бизнесу выглядеть премиально и расти.',
+                title: 'Создадим следующую сильную систему',
+                subtitle: 'AI-системы, заказное ПО и цифровые платформы',
+                desc: 'Мы превращаем сложные бизнес-задачи в масштабируемые программные продукты.',
             },
 
             hero: {
-                eyebrow: 'Премиальная digital-студия',
-                title: 'Мы создаём цифровые продукты, которые',
+                eyebrow: 'AI & Software Engineering Company',
+                title: 'Мы превращаем сложные задачи бизнеса в интеллектуальное ПО',
                 typingWords: [
-                    'приносят прибыль',
-                    'привлекают клиентов',
-                    'автоматизируют бизнес',
-                    'помогают расти быстрее',
+                    'готовое к масштабированию',
+                    'усиленное AI',
+                    'созданное для роста',
+                    'спроектированное для бизнеса',
                 ],
                 description:
-                    'Isolation IT Solutions создаёт сайты, платформы, AI-инструменты, Telegram WebApps и системы автоматизации для бизнеса.',
+                    'Мы проектируем и разрабатываем AI-системы, бизнес-платформы и цифровые продукты, которые помогают компаниям автоматизировать процессы, масштабироваться и работать умнее.',
+                capabilitiesLabel: 'Ключевые компетенции',
+                capabilities: ['AI-системы', 'Заказное ПО', 'Web-платформы', 'Mobile Apps', 'Автоматизация бизнеса'],
                 stats: {
                     experience: 'Лет опыта',
-                    projects: 'Проектов',
-                    support: 'Поддержка',
+                    projects: 'Реальных продуктов',
+                    support: 'Индустрий',
                 },
             },
             contact: {
@@ -345,23 +357,20 @@ const resources = {
             startProject: {
                 badge: 'Начать проект',
                 title: 'Создадим ваш следующий цифровой продукт',
-                desc: 'Выберите тип проекта, пакет и отправьте нам идею. Мы свяжемся с вами и предложим лучшее решение.',
+                desc: 'Расскажите, что вы создаёте и какую бизнес-задачу нужно решить. Мы изучим scope и предложим правильный план реализации.',
 
                 chooseType: 'Выберите тип проекта',
-                choosePackage: 'Выберите пакет',
+                choosePackage: 'Ориентировочный бюджет',
+                chooseTimeline: 'Желаемые сроки',
                 yourRequest: 'Ваша заявка',
-                selectedPackage: 'Выбранный пакет',
+                selectedPackage: 'Выбранный бюджет',
 
                 types: {
-                    website: 'Веб-сайт',
-                    bot: 'Telegram бот',
-                    webapp: 'Web App',
-                    ai: 'AI продукт',
-                    design: 'UI / UX',
-                    mvp: 'Startup MVP',
+                    website: 'AI-система', bot: 'Заказное ПО', webapp: 'Web / SaaS платформа', ai: 'Mobile-продукт', design: 'Автоматизация бизнеса', mvp: 'Startup / MVP',
                 },
 
                 packages: {
+                    notSure: 'Пока не уверен',
                     basic: {
                         title: 'Basic',
                         desc: 'Landing / простой сайт',
@@ -378,11 +387,15 @@ const resources = {
 
                 form: {
                     name: 'Ваше имя',
-                    contact: 'Телефон / Telegram',
-                    idea: 'Расскажите о вашей идее...',
+                    company: 'Компания',
+                    email: 'Рабочий email *',
+                    contact: 'Телефон / Telegram (необязательно)',
+                    idea: 'Что вы создаёте и какую бизнес-задачу нужно решить? *',
+                    required: 'Укажите имя, рабочий email и описание проекта.',
                     sendTelegram: 'Отправить в Telegram',
                     sendWhatsapp: 'Написать в WhatsApp',
                 },
+                timelines: { flexible: 'Гибко / пока не уверен', oneThree: '1–3 месяца', threeSix: '3–6 месяцев', sixPlus: '6+ месяцев' },
             },
 
             projects: {
@@ -454,6 +467,11 @@ const resources = {
                 ctaTitle: 'Готовы начать проект?',
                 ctaDesc: 'Расскажите нам вашу идею, и мы поможем выбрать правильное решение, структуру и план разработки.',
                 steps: {
+                    discovery: { title: 'Discovery', desc: 'Уточняем бизнес-задачу, пользователей, ограничения и измеримые цели продукта.' },
+                    strategy: { title: 'Продуктовая стратегия', desc: 'Определяем приоритеты, объём, roadmap и сильный путь к первому ценному релизу.' },
+                    architecture: { title: 'UX и архитектура', desc: 'Проектируем пользовательские сценарии, интерфейсы, данные и масштабируемую техническую основу.' },
+                    engineering: { title: 'Разработка', desc: 'Создаём, интегрируем и тестируем frontend, backend, AI и операционные инструменты.' },
+                    evolution: { title: 'Развитие', desc: 'После запуска улучшаем продукт на основе реальной обратной связи, данных и задач бизнеса.' },
                     consultation: {
                         title: 'Консультация и анализ',
                         desc: 'Обсуждаем вашу идею, цели, аудиторию, функционал и задачи бизнеса.',
@@ -486,15 +504,15 @@ const resources = {
             },
 
             servicesPage: {
-                badge: 'Наши услуги',
-                title: 'Цифровые решения для современного бизнеса',
+                badge: 'Инженерные компетенции',
+                title: 'Программные продукты под ваш бизнес, а не по шаблону',
                 description:
-                    'Мы создаем сайты, платформы, AI инструменты, Telegram WebApps, системы автоматизации и админ панели для бизнеса.',
+                    'От продуктовой стратегии и архитектуры до разработки, запуска и развития — создаём системы для реальной эксплуатации.',
 
                 backHome: 'Вернуться на главную',
 
-                servicesTitle: 'Услуги',
-                servicesDesc: 'Выберите решение, которое нужно вашему бизнесу.',
+                servicesTitle: 'Компетенции',
+                servicesDesc: 'Продуктовая и инженерная работа на всём жизненном цикле программного продукта.',
 
                 processTitle: 'Как мы работаем',
                 processDesc: 'Понятный процесс от идеи до запуска.',
@@ -503,37 +521,37 @@ const resources = {
                 ctaDesc:
                     'Расскажите нам о вашем проекте, и мы поможем превратить его в реальный цифровой продукт.',
 
-                whatWeBuild: 'Что мы создаем',
+                whatWeBuild: 'Ключевые компетенции',
 
                 list: {
                     website: {
-                        title: 'Разработка сайтов',
-                        desc: 'Современные бизнес сайты, landing page и корпоративные сайты с premium UX/UI дизайном.',
+                        title: 'AI и интеллектуальные системы',
+                        desc: 'AI-ассистенты, умные workflow, инструменты на основе данных и прикладная автоматизация.',
                     },
 
                     saas: {
-                        title: 'SaaS платформы',
-                        desc: 'Веб платформы для стартапов и бизнеса с dashboard, аккаунтами и подписками.',
+                        title: 'Заказная разработка ПО',
+                        desc: 'Индивидуальные системы, внутренние продукты и сложное ПО для ваших процессов.',
                     },
 
                     ai: {
-                        title: 'AI инструменты',
-                        desc: 'AI помощники, чат-боты и системы автоматизации для бизнеса.',
+                        title: 'Web и SaaS платформы',
+                        desc: 'Масштабируемые web-приложения, SaaS-продукты, кабинеты клиентов и commerce-платформы.',
                     },
 
                     telegram: {
-                        title: 'Telegram Bot & WebApp',
-                        desc: 'Telegram боты, Mini App, платежные системы и автоматизация бизнеса.',
+                        title: 'Разработка мобильных продуктов',
+                        desc: 'Mobile-first продукты и кроссплатформенные приложения с надёжным backend.',
                     },
 
                     crm: {
-                        title: 'CRM и Admin Panel',
-                        desc: 'Системы управления клиентами, заказами и бизнес процессами.',
+                        title: 'Автоматизация бизнеса',
+                        desc: 'CRM, админ-системы и workflow, которые сокращают ручную работу и дают контроль.',
                     },
 
                     automation: {
-                        title: 'Системы автоматизации',
-                        desc: 'API интеграции, синхронизация данных и автоматизация workflow.',
+                        title: 'Системы и интеграции',
+                        desc: 'API, платежи, синхронизация данных и интеграции вашей технологической экосистемы.',
                     },
                 },
             },
@@ -563,6 +581,7 @@ const resources = {
             },
 
             process: {
+                discovery: 'Discovery', strategy: 'Стратегия', architecture: 'UX и архитектура', engineering: 'Разработка', evolution: 'Развитие',
                 analysis: 'Анализ',
                 design: 'Дизайн',
                 development: 'Разработка',
@@ -572,9 +591,10 @@ const resources = {
             },
             footer: {
                 eyebrow: 'Есть идея?',
-                title: 'Давайте создадим вместе что-то мощное.',
-                description: 'Расскажите о ваших целях — мы подберём правильное digital-решение и превратим его в продукт, готовый к реальному росту.',
-                brandText: 'Премиальные сайты, платформы, AI-инструменты, Telegram WebApps и системы автоматизации для амбициозного бизнеса.',
+                title: 'Есть сложная идея? Превратим её в масштабируемый продукт.',
+                description: 'Расскажите о бизнес-задаче. Мы поможем сформировать продукт, архитектуру и план реализации.',
+                brandText: 'AI-системы, заказное ПО и цифровые платформы для амбициозного бизнеса.',
+                talkToAI: 'Обсудить с Isolation AI',
                 navigation: 'Навигация',
                 contact: 'Контакты',
                 address: 'Акопа Акопяна 3, Ереван',
@@ -597,33 +617,35 @@ const resources = {
 
             nav: {
                 home: 'Գլխավոր',
-                services: 'Ծառայություններ',
-                projects: 'Նախագծեր',
+                services: 'Կարողություններ',
+                projects: 'Աշխատանքներ',
                 process: 'Գործընթաց',
                 contact: 'Կապ',
             },
 
             menu: {
-                title: 'Եկեք ստեղծենք հզոր բան',
-                subtitle: 'Կայքեր, AI լուծումներ, Telegram հավելվածներ և ավտոմատացում',
-                desc: 'Մենք ստեղծում ենք թվային լուծումներ, որոնք օգնում են բիզնեսին աճել և ունենալ պրեմիում տեսք',
+                title: 'Եկեք կառուցենք հաջորդ հզոր համակարգը',
+                subtitle: 'AI համակարգեր, անհատական software և թվային հարթակներ',
+                desc: 'Բարդ բիզնես խնդիրները վերածում ենք մասշտաբավորվող ծրագրային պրոդուկտների։',
             },
 
             hero: {
-                eyebrow: 'Պրեմիում թվային ստուդիա',
-                title: 'Մենք ստեղծում ենք թվային լուծումներ, որոնք',
+                eyebrow: 'AI & Software Engineering Company',
+                title: 'Բարդ բիզնես խնդիրները վերածում ենք խելացի software-ի',
                 typingWords: [
-                    'բերում են եկամուտ',
-                    'գրավում են հաճախորդներ',
-                    'ավտոմատացնում են բիզնեսը',
-                    'օգնում են արագ աճել',
+                    'պատրաստ մասշտաբավորման',
+                    'աշխատում AI-ով',
+                    'ստեղծված աճի համար',
+                    'նախագծված բիզնեսի համար',
                 ],
                 description:
-                    'Isolation IT Solutions-ը ստեղծում է կայքեր, հարթակներ, AI գործիքներ և ավտոմատացման համակարգեր բիզնեսի համար։',
+                    'Մենք նախագծում և մշակում ենք AI համակարգեր, բիզնես հարթակներ և թվային պրոդուկտներ, որոնք օգնում են ընկերություններին ավտոմատացնել, մասշտաբավորվել և աշխատել ավելի խելացի։',
+                capabilitiesLabel: 'Հիմնական կարողություններ',
+                capabilities: ['AI համակարգեր', 'Custom Software', 'Web հարթակներ', 'Mobile Apps', 'Բիզնես ավտոմատացում'],
                 stats: {
                     experience: 'Տարվա փորձ',
-                    projects: 'Նախագիծ',
-                    support: 'Աջակցություն',
+                    projects: 'Իրական պրոդուկտ',
+                    support: 'Ոլորտ',
                 },
             },
             contact: {
@@ -641,23 +663,20 @@ const resources = {
             startProject: {
                 badge: 'Սկսել նախագիծ',
                 title: 'Եկեք ստեղծենք ձեր հաջորդ թվային պրոդուկտը',
-                desc: 'Ընտրեք նախագծի տեսակը, փաթեթը և ուղարկեք ձեր գաղափարը։ Մենք կապ կհաստատենք ձեզ հետ և կառաջարկենք լավագույն լուծումը։',
+                desc: 'Պատմեք՝ ինչ եք ստեղծում և ինչ բիզնես խնդիր պետք է լուծվի։ Մենք կուսումնասիրենք scope-ը և կառաջարկենք ճիշտ ճանապարհը։',
 
                 chooseType: 'Ընտրեք նախագծի տեսակը',
-                choosePackage: 'Ընտրեք փաթեթը',
+                choosePackage: 'Նախնական բյուջե',
+                chooseTimeline: 'Նախընտրելի ժամկետ',
                 yourRequest: 'Ձեր հայտը',
-                selectedPackage: 'Ընտրված փաթեթ',
+                selectedPackage: 'Ընտրված բյուջե',
 
                 types: {
-                    website: 'Վեբ կայք',
-                    bot: 'Telegram բոտ',
-                    webapp: 'Web App',
-                    ai: 'AI լուծում',
-                    design: 'UI / UX',
-                    mvp: 'Startup MVP',
+                    website: 'AI համակարգ', bot: 'Custom Software', webapp: 'Web / SaaS հարթակ', ai: 'Mobile պրոդուկտ', design: 'Բիզնես ավտոմատացում', mvp: 'Startup / MVP',
                 },
 
                 packages: {
+                    notSure: 'Դեռ վստահ չեմ',
                     basic: {
                         title: 'Basic',
                         desc: 'Landing / պարզ կայք',
@@ -674,11 +693,15 @@ const resources = {
 
                 form: {
                     name: 'Ձեր անունը',
-                    contact: 'Հեռախոս / Telegram',
-                    idea: 'Գրեք ձեր գաղափարի մասին...',
+                    company: 'Ընկերություն',
+                    email: 'Աշխատանքային email *',
+                    contact: 'Հեռախոս / Telegram (ոչ պարտադիր)',
+                    idea: 'Ի՞նչ եք ստեղծում և ի՞նչ բիզնես խնդիր պետք է լուծվի։ *',
+                    required: 'Նշեք անունը, աշխատանքային email-ը և նախագծի նկարագրությունը։',
                     sendTelegram: 'Ուղարկել Telegram',
                     sendWhatsapp: 'Գրել WhatsApp',
                 },
+                timelines: { flexible: 'Ճկուն / դեռ վստահ չեմ', oneThree: '1–3 ամիս', threeSix: '3–6 ամիս', sixPlus: '6+ ամիս' },
             },
 
             projects: {
@@ -750,6 +773,11 @@ const resources = {
                 ctaTitle: 'Պատրա՞ստ եք սկսել նախագիծը',
                 ctaDesc: 'Պատմեք ձեր գաղափարի մասին, և մենք կօգնենք ընտրել ճիշտ լուծումը, կառուցվածքը և մշակման պլանը։',
                 steps: {
+                    discovery: { title: 'Discovery', desc: 'Հստակեցնում ենք բիզնես խնդիրը, օգտատերերին, սահմանափակումներն ու չափելի նպատակները։' },
+                    strategy: { title: 'Պրոդուկտային ռազմավարություն', desc: 'Սահմանում ենք առաջնահերթությունները, scope-ը, roadmap-ը և առաջին արժեքավոր release-ի ուղին։' },
+                    architecture: { title: 'UX և ճարտարապետություն', desc: 'Նախագծում ենք user flow-երը, interface-ը, տվյալները և մասշտաբավորվող տեխնիկական հիմքը։' },
+                    engineering: { title: 'Engineering', desc: 'Մշակում, ինտեգրում և թեստավորում ենք frontend-ը, backend-ը, AI-ը և գործառնական գործիքները։' },
+                    evolution: { title: 'Զարգացում', desc: 'Գործարկումից հետո բարելավում ենք պրոդուկտը իրական feedback-ի, տվյալների և բիզնես կարիքների հիման վրա։' },
                     consultation: {
                         title: 'Քննարկում և վերլուծություն',
                         desc: 'Քննարկում ենք ձեր գաղափարը, նպատակները, լսարանը, ֆունկցիոնալը և բիզնեսի կարիքները։',
@@ -781,15 +809,15 @@ const resources = {
                 },
             },
             servicesPage: {
-                badge: 'Մեր ծառայությունները',
-                title: 'Թվային լուծումներ ժամանակակից բիզնեսների համար',
+                badge: 'Ինժեներական կարողություններ',
+                title: 'Software՝ ստեղծված ձեր բիզնեսի, ոչ թե template-ի շուրջ',
                 description:
-                    'Մենք ստեղծում ենք կայքեր, հարթակներ, AI գործիքներ, Telegram WebApps, ավտոմատացման համակարգեր և ադմին վահանակներ բիզնեսների համար։',
+                    'Պրոդուկտային ռազմավարությունից և ճարտարապետությունից մինչև մշակում, գործարկում և զարգացում։',
 
                 backHome: 'Վերադառնալ գլխավոր էջ',
 
-                servicesTitle: 'Ծառայություններ',
-                servicesDesc: 'Ընտրեք ձեր բիզնեսին անհրաժեշտ լուծումը։',
+                servicesTitle: 'Կարողություններ',
+                servicesDesc: 'Պրոդուկտային և ինժեներական աշխատանք software-ի ամբողջ lifecycle-ի ընթացքում։',
 
                 processTitle: 'Ինչպես ենք աշխատում',
                 processDesc: 'Հստակ գործընթաց՝ գաղափարից մինչև գործարկում։',
@@ -798,37 +826,37 @@ const resources = {
                 ctaDesc:
                     'Պատմեք ձեր նախագծի մասին, և մենք կօգնենք այն վերածել իրական թվային պրոդուկտի։',
 
-                whatWeBuild: 'Ինչ ենք ստեղծում',
+                whatWeBuild: 'Հիմնական կարողություններ',
 
                 list: {
                     website: {
-                        title: 'Կայքերի ստեղծում',
-                        desc: 'Ժամանակակից բիզնես կայքեր, landing page-եր և կորպորատիվ կայքեր premium UX/UI դիզայնով։',
+                        title: 'AI և խելացի համակարգեր',
+                        desc: 'AI օգնականներ, խելացի workflow-ներ, տվյալների վրա հիմնված գործիքներ և ավտոմատացում։',
                     },
 
                     saas: {
-                        title: 'SaaS հարթակներ',
-                        desc: 'Պատվերով վեբ հարթակներ startup-ների և բիզնեսների համար՝ dashboard-ներով և subscription համակարգերով։',
+                        title: 'Custom Software Engineering',
+                        desc: 'Անհատական համակարգեր, ներքին պրոդուկտներ և բարդ software ձեր գործընթացների համար։',
                     },
 
                     ai: {
-                        title: 'AI գործիքներ',
-                        desc: 'AI օգնականներ, chatbot-ներ և ավտոմատացման լուծումներ բիզնեսի համար։',
+                        title: 'Web և SaaS հարթակներ',
+                        desc: 'Մասշտաբավորվող web հավելվածներ, SaaS պրոդուկտներ, client portal-ներ և commerce հարթակներ։',
                     },
 
                     telegram: {
-                        title: 'Telegram Bot & WebApp',
-                        desc: 'Telegram bot-եր, Mini App-եր, վճարային համակարգեր և բիզնես ավտոմատացում։',
+                        title: 'Mobile պրոդուկտների մշակում',
+                        desc: 'Mobile-first պրոդուկտներ և cross-platform հավելվածներ՝ հուսալի backend-ով։',
                     },
 
                     crm: {
-                        title: 'CRM և Admin Panel',
-                        desc: 'Ներքին համակարգեր հաճախորդների, պատվերների և բիզնես գործընթացների կառավարման համար։',
+                        title: 'Բիզնես ավտոմատացում',
+                        desc: 'CRM, admin համակարգեր և workflow-ներ, որոնք նվազեցնում են ձեռքի աշխատանքը։',
                     },
 
                     automation: {
-                        title: 'Ավտոմատացման համակարգեր',
-                        desc: 'API ինտեգրացիաներ, տվյալների սինխրոնացում և workflow ավտոմատացում։',
+                        title: 'Համակարգեր և ինտեգրացիաներ',
+                        desc: 'API-ներ, վճարումներ, տվյալների սինխրոնացում և տեխնոլոգիական համակարգերի կապ։',
                     },
                 },
             },
@@ -858,6 +886,7 @@ const resources = {
             },
 
             process: {
+                discovery: 'Discovery', strategy: 'Ռազմավարություն', architecture: 'UX և Architecture', engineering: 'Engineering', evolution: 'Զարգացում',
                 analysis: 'Վերլուծություն',
                 design: 'Դիզայն',
                 development: 'Մշակում',
@@ -867,9 +896,10 @@ const resources = {
             },
             footer: {
                 eyebrow: 'Ունե՞ք գաղափար',
-                title: 'Եկեք միասին ստեղծենք հզոր մի բան։',
-                description: 'Պատմեք ձեր նպատակների մասին․ մենք կընտրենք ճիշտ թվային լուծումը և այն կդարձնենք իրական աճի պատրաստ պրոդուկտ։',
-                brandText: 'Պրեմիում կայքեր, հարթակներ, AI գործիքներ, Telegram WebApp-եր և ավտոմատացման համակարգեր հավակնոտ բիզնեսների համար։',
+                title: 'Ունե՞ք բարդ գաղափար։ Դարձնենք այն մասշտաբավորվող պրոդուկտ։',
+                description: 'Պատմեք բիզնես խնդրի մասին։ Մենք կօգնենք ձևավորել պրոդուկտը, architecture-ը և իրականացման պլանը։',
+                brandText: 'AI համակարգեր, custom software և թվային հարթակներ հավակնոտ բիզնեսների համար։',
+                talkToAI: 'Քննարկել Isolation AI-ի հետ',
                 navigation: 'Նավիգացիա',
                 contact: 'Կապ',
                 address: 'Հակոբ Հակոբյան 3, Երևան',
@@ -885,7 +915,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: 'en',
+    lng: localStorage.getItem('isolation-language') || 'en',
     fallbackLng: 'en',
     interpolation: {
         escapeValue: false,

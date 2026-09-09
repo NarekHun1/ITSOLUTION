@@ -11,13 +11,14 @@ import ProcessPage from './components/ProcessPage';
 import SocialDock from './components/SocialDock';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
+import PositioningSections from './components/PositioningSections';
 
 function Home() {
     return (
         <>
             <Hero />
+            <PositioningSections />
             <Projects />
-            <AIChatWidget />
         </>
     );
 }
@@ -54,6 +55,7 @@ export default function App() {
 
             <Footer />
             <SocialDock />
+            <AIChatWidget />
         </>
     );
 }

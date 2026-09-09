@@ -299,6 +299,23 @@ body {
     margin-top: 32px;
 }
 
+.heroCapabilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.heroCapabilities span {
+    padding: 8px 11px;
+    border: 1px solid rgba(0, 216, 120, 0.2);
+    border-radius: 999px;
+    color: #b8c7be;
+    background: rgba(0, 216, 120, 0.055);
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .heroCubesBg {
     inset: 0 calc(50% - 50vw);
     width: auto;

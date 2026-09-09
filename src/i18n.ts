@@ -38,7 +38,7 @@ const resources = {
                 capabilities: ['AI Systems', 'Custom Software', 'Web Platforms', 'Mobile Apps', 'Business Automation'],
                 stats: {
                     experience: 'Years experience',
-                    projects: 'Real products',
+                    projects: 'Projects',
                     support: 'Industries',
                 },
             },
@@ -338,7 +338,7 @@ const resources = {
                 capabilities: ['AI-системы', 'Заказное ПО', 'Web-платформы', 'Mobile Apps', 'Автоматизация бизнеса'],
                 stats: {
                     experience: 'Лет опыта',
-                    projects: 'Реальных продуктов',
+                    projects: 'Проектов',
                     support: 'Индустрий',
                 },
             },
@@ -644,7 +644,7 @@ const resources = {
                 capabilities: ['AI համակարգեր', 'Custom Software', 'Web հարթակներ', 'Mobile Apps', 'Բիզնես ավտոմատացում'],
                 stats: {
                     experience: 'Տարվա փորձ',
-                    projects: 'Իրական պրոդուկտ',
+                    projects: 'Նախագիծ',
                     support: 'Ոլորտ',
                 },
             },

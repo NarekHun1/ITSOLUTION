@@ -87,7 +87,7 @@ export default function Hero() {
                         </div>
 
                         <div>
-                            <strong>9</strong>
+                            <strong>50+</strong>
                             <span>{t('hero.stats.projects')}</span>
                         </div>
 

@@ -53,7 +53,7 @@ export default function PositioningSections() {
     const value = (key: string) => c[key as keyof typeof c] as string;
 
     return <>
-        <section className="featuredWork" aria-labelledby="featured-work-title"><div className="container">
+        <section className="featuredWork" id="featured-work" aria-labelledby="featured-work-title"><div className="container">
             <div className="positioningHead"><span>{c.featured}</span><h2 id="featured-work-title">{c.featuredTitle}</h2><p>{c.featuredDesc}</p></div>
             <div className="caseStudyGrid">{cases.map((item) => <article className={`caseStudyCard${item.featured ? ' isFeatured' : ''}`} key={item.key}>
                 <div className="caseStudyVisual"><img src={item.image} alt="" loading="lazy" /></div><div className="caseStudyCopy">
@@ -62,7 +62,7 @@ export default function PositioningSections() {
                     {item.link ? <a href={item.link} target="_blank" rel="noreferrer">{c.visit}<ArrowUpRight size={16}/></a> : <span className="caseStatus"><Sparkles size={15}/>{c.inDevelopment}</span>}
                 </div></article>)}</div><a className="allWorkLink" href="#projects">{c.explore}<ArrowUpRight size={17}/></a>
         </div></section>
-        <section className="whyIsolation" aria-labelledby="why-title"><div className="container whyGrid"><div className="positioningHead"><span>{c.why}</span><h2 id="why-title">{c.whyTitle}</h2></div><div className="principlesGrid">{c.principles.map((item, index) => <div key={item}><i>{[<Cpu/>, <Sparkles/>, <Layers3/>, <Check/>, <ShieldCheck/>][index]}</i><span>0{index + 1}</span><h3>{item}</h3></div>)}</div></div></section>
+        <section className="whyIsolation" id="why-isolation" aria-labelledby="why-title"><div className="container whyGrid"><div className="positioningHead"><span>{c.why}</span><h2 id="why-title">{c.whyTitle}</h2></div><div className="principlesGrid">{c.principles.map((item, index) => <div key={item}><i>{[<Cpu/>, <Sparkles/>, <Layers3/>, <Check/>, <ShieldCheck/>][index]}</i><span>0{index + 1}</span><h3>{item}</h3></div>)}</div></div></section>
         <section className="industries" id="industries" aria-labelledby="industries-title"><div className="container industriesGrid"><div className="positioningHead"><span>{c.industries}</span><h2 id="industries-title">{c.industriesTitle}</h2></div><div className="industryList">{c.industryList.map((item, index) => <div key={item}><span>0{index + 1}</span><strong>{item}</strong></div>)}</div><Link className="industryCta" to="/services">{c.capability}<ArrowUpRight size={18}/></Link></div></section>
     </>;
 }

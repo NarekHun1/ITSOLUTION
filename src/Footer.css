@@ -153,27 +153,46 @@
     padding: 64px 12px 52px;
 }
 
+
 .footerBrand {
     max-width: 440px;
 }
 
 .footerLogo {
-    display: inline-flex;
-    padding: 5px 8px;
-    border-radius: 13px;
-    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .footerLogo .brandLogoViewport {
-    width: 220px;
-    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
 }
 
 .footerLogo .brandLogoImage {
-    top: -52px;
-    left: -35px;
-    width: 290px;
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background: transparent;
 }
+
 
 .footerBrand > p {
     max-width: 410px;
@@ -183,33 +202,61 @@
     line-height: 1.7;
 }
 
+/* SOCIAL ICONS */
+
 .footerSocials {
     display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: 24px;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
 }
 
 .footerSocials a {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 9px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    color: #cbd3ce;
-    background: rgba(255, 255, 255, 0.035);
-    font-size: 12px;
-    font-weight: 700;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    justify-content: center;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    background: transparent;
+    text-decoration: none;
+    transition: all .25s ease;
 }
 
-.footerSocials a:hover {
-    color: #06150d;
-    border-color: #22f59a;
-    background: #22f59a;
-    transform: translateY(-2px);
+.footerSocials a svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
 }
+
+/* Instagram — brand color */
+
+.footerSocials a[aria-label="Instagram"] {
+    color: #e1306c;
+    border-color: rgba(225,48,108,.3);
+}
+
+/* Facebook — brand color */
+
+.footerSocials a[aria-label="Facebook"] {
+    color: #1877f2;
+    border-color: rgba(24,119,242,.3);
+}
+
+/* Hover — Isolation green */
+
+.footerSocials a:hover {
+    color: #22f59a;
+    border-color: #22f59a;
+    background: rgba(34,245,154,.08);
+    transform: translateY(-3px);
+}
+
+
 
 .footerColumn h3 {
     margin: 5px 0 21px;
@@ -330,14 +377,14 @@
     }
 
     .footerLogo .brandLogoViewport {
-        width: 190px;
-        height: 38px;
+        width: 245px;
+        max-width: 100%;
     }
 
     .footerLogo .brandLogoImage {
-        top: -46px;
-        left: -31px;
-        width: 252px;
+        position: static;
+        width: 100%;
+        height: auto;
     }
 
     .footerBottom {
@@ -354,4 +401,30 @@
     .footerNav a {
         transition: none;
     }
+}
+/* White logo for dark footer */
+
+.footerLogo .brandLogoImage {
+    filter: brightness(0) invert(1);
+}
+
+/* Instagram — original gradient */
+
+.footerSocials a[aria-label="Instagram"] {
+    border-color: rgba(225, 48, 108, 0.35);
+}
+
+/* Instagram — green on hover */
+
+.footerSocials a[aria-label="Instagram"]:hover {
+    border-color: #22f59a;
+    background: rgba(34, 245, 154, 0.08);
+}
+
+.footerSocials a[aria-label="Instagram"]:hover svg {
+    stroke: #22f59a;
+}
+
+.footerSocials a[aria-label="Instagram"]:hover svg circle[fill] {
+    fill: #22f59a;
 }

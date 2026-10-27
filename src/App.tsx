@@ -1,3 +1,4 @@
+
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -12,6 +13,7 @@ import SocialDock from './components/SocialDock';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
 import PositioningSections from './components/PositioningSections';
+import ScrollToHash from './components/ScrollToHash';
 
 function Home() {
     return (
@@ -26,6 +28,8 @@ function Home() {
 export default function App() {
     return (
         <>
+            <ScrollToHash />
+
             <Seo />
             <Header />
 

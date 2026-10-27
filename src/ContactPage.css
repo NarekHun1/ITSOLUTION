@@ -1,10 +1,20 @@
 .contactPage {
     min-height: 100vh;
     padding-top: 110px;
+
     background:
-            radial-gradient(circle at 15% 20%, rgba(124, 77, 255, 0.35), transparent 32%),
-            radial-gradient(circle at 85% 10%, rgba(80, 170, 255, 0.28), transparent 30%),
-            linear-gradient(180deg, #090918, #111027);
+            radial-gradient(
+                    circle at 15% 20%,
+                    rgba(0, 216, 120, 0.12),
+                    transparent 36%
+            ),
+            radial-gradient(
+                    circle at 85% 10%,
+                    rgba(34, 245, 154, 0.07),
+                    transparent 32%
+            ),
+            linear-gradient(180deg, #101b18, #0d1514);
+
     color: #fff;
     overflow: hidden;
 }
@@ -31,7 +41,7 @@
 .contactGlowOne {
     width: 260px;
     height: 260px;
-    background: #7c4dff;
+    background: rgba(0, 216, 120, 0.22);
     left: -80px;
     top: 40px;
 }
@@ -39,7 +49,7 @@
 .contactGlowTwo {
     width: 220px;
     height: 220px;
-    background: #ffb84d;
+    background: rgba(34, 245, 154, 0.14);
     right: -60px;
     bottom: 30px;
 }
@@ -67,18 +77,34 @@
 
 .contactContent h1 {
     max-width: 760px;
-    font-size: clamp(44px, 7vw, 92px);
-    line-height: 0.92;
-    letter-spacing: -0.06em;
     margin: 0;
+    padding: 0.08em 0 0.12em;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.055em;
+    color: #f5faf7;
+    overflow: visible;
 }
 
 .contactContent h1 span {
     display: block;
-    background: linear-gradient(135deg, #7c4dff, #58c5ff, #ffb84d);
+    padding-bottom: 0.1em;
+
+    background: linear-gradient(
+            110deg,
+            #d8fff0 0%,
+            #7af5c4 35%,
+            #22e69a 75%,
+            #00c97b 100%
+    );
+
     -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 40px rgba(124,77,255,0.35);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    line-height: 1.15;
+    overflow: visible;
 }
 
 .contactContent p {
@@ -134,44 +160,74 @@
     gap: 16px;
 }
 
+
 .contactInfoCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     min-height: 132px;
     padding: 22px;
-    border-radius: 28px;
+    border: 1px solid rgba(62, 200, 145, 0.18);
+    border-radius: 22px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     background:
-            linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
-    border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 24px 70px rgba(0,0,0,0.28);
-    transition: 0.3s ease;
+            linear-gradient(
+                    135deg,
+                    rgba(28, 67, 51, 0.52),
+                    rgba(17, 29, 26, 0.96)
+            );
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.15);
+    transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
 }
 
 .contactInfoCard:hover {
-    transform: translateY(-5px) scale(1.01);
-    border-color: rgba(124,77,255,0.45);
+    transform: translateY(-4px);
+    border-color: rgba(34, 245, 154, 0.48);
+    box-shadow: 0 20px 45px rgba(0, 216, 120, 0.09);
 }
 
 .contactInfoCard div {
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
     display: grid;
     place-items: center;
+    width: 48px;
+    height: 48px;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, #7c4dff, #ffb84d);
+    border: 1px solid rgba(34, 245, 154, 0.24);
+    border-radius: 14px;
+    color: #48e9a4;
+    background: rgba(34, 245, 154, 0.08);
+}
+
+.contactInfoCard div svg {
+    width: 23px;
+    height: 23px;
+    stroke: currentColor;
+    stroke-width: 1.8;
 }
 
 .contactInfoCard span {
     display: block;
-    color: rgba(255,255,255,0.55);
-    font-size: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    color: #91ada0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
 }
 
 .contactInfoCard strong {
-    font-size: 19px;
-    line-height: 1.35;
+    display: block;
+    max-width: 100%;
+    color: #f5faf7;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 650;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 
 .contactMapSection {
@@ -287,4 +343,53 @@
     .contactMapText {
         padding: 14px;
     }
+}
+
+/* ISOLATION — YANDEX NAVIGATOR */
+
+.contactPage .navigatorBtn {
+    color: #03150c;
+    border: 1px solid rgba(34, 245, 154, 0.35);
+    background: linear-gradient(
+            135deg,
+            #39f6a5 0%,
+            #22e998 45%,
+            #00d878 100%
+    );
+    background-size: 200% 200%;
+    box-shadow: 0 12px 30px rgba(0, 216, 120, 0.20);
+    font-weight: 800;
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background-position 0.4s ease;
+}
+
+.contactPage .navigatorBtn:hover {
+    color: #03150c;
+    background-position: 100% 100%;
+    box-shadow: 0 16px 38px rgba(0, 216, 120, 0.35);
+    transform: translateY(-3px);
+}
+
+.contactPage .navigatorBtn svg {
+    color: inherit;
+    stroke: currentColor;
+}
+
+/* Yandex Navigator — green gradient heading */
+
+.contactPage .contactMapSection h2 {
+    color: #22f59a;
+    background: linear-gradient(
+            135deg,
+            #f5fff9 0%,
+            #39f6a5 35%,
+            #00d878 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.15;
+    padding-bottom: 8px;
 }

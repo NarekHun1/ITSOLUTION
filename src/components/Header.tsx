@@ -11,9 +11,9 @@ export default function Header() {
     const { t, i18n } = useTranslation();
 
     const languages = [
-        { code: 'en', label: 'EN' },
-        { code: 'ru', label: 'RU' },
-        { code: 'hy', label: 'HY' },
+        { code: 'en', label: 'English', flag: '/flags/en.svg' },
+        { code: 'ru', label: 'Русский', flag: '/flags/ru.svg' },
+        { code: 'hy', label: 'Հայերեն', flag: '/flags/hy.svg' },
     ];
     const currentLanguage = languages.find(({ code }) =>
         i18n.resolvedLanguage?.startsWith(code)
@@ -72,39 +72,64 @@ export default function Header() {
 
                     {/* Right side */}
                     <div className="headerRight">
-                        {/* 🌍 Language Switch */}
-                        <div className={`langSwitch${languageOpen ? ' isOpen' : ''}`} ref={languageRef}>
+
+                        {/* Language Switch */}
+                        <div
+                            className={`langSwitch${languageOpen ? ' isOpen' : ''}`}
+                            ref={languageRef}
+                        >
                             <button
                                 type="button"
                                 className="langCurrent"
-                                aria-label="Change language"
+                                aria-label={`Change language. Current: ${currentLanguage.label}`}
                                 aria-haspopup="menu"
                                 aria-expanded={languageOpen}
-                                onClick={() => setLanguageOpen((value) => !value)}
+                                onClick={() => setLanguageOpen(value => !value)}
                             >
-                                <span>{currentLanguage.label}</span>
-                                <ChevronDown size={14} aria-hidden="true" />
+                                <img
+                                    src={currentLanguage.flag}
+                                    alt=""
+                                    className="langFlag"
+                                />
+                                <ChevronDown
+                                    size={14}
+                                    className="langChevron"
+                                    aria-hidden="true"
+                                />
                             </button>
 
-                            <div className="langMenu" role="menu">
-                                {languages
-                                    .filter(({ code }) => code !== currentLanguage.code)
-                                    .map(({ code, label }) => (
+                            {languageOpen && (
+                                <div className="langMenu" role="menu">
+                                    {languages
+                                        .filter(({ code }) => code !== currentLanguage.code)
+                                        .map(({ code, label, flag }) => (
                                         <button
-                                            type="button"
-                                            role="menuitem"
                                             key={code}
+                                            type="button"
+                                            role="menuitemradio"
+                                            aria-label={label}
+                                            aria-checked={code === currentLanguage.code}
+                                            title={label}
+                                            className={`langOption ${
+                                                code === currentLanguage.code ? 'active' : ''
+                                            }`}
                                             onClick={() => {
                                                 localStorage.setItem('isolation-language', code);
                                                 void i18n.changeLanguage(code);
                                                 setLanguageOpen(false);
                                             }}
                                         >
-                                            {label}
+                                            <img
+                                                src={flag}
+                                                alt=""
+                                                className="langFlag"
+                                            />
                                         </button>
                                     ))}
-                            </div>
+                                </div>
+                            )}
                         </div>
+
 
                         {/* CTA */}
                         <Link to="/start-project" className="btn primary desktopOnly">

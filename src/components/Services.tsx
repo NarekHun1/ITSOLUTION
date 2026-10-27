@@ -3,6 +3,7 @@ import { BrainCircuit, Code2, Layers3, Smartphone, Workflow, Network } from 'luc
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../services.css';
+import '../Capabilities.css';
 
 import reactIcon from '../assets/icons/react.svg';
 import nodeIcon from '../assets/icons/nodedotjs.svg';
@@ -11,6 +12,7 @@ import postgresIcon from '../assets/icons/postgresql.svg';
 import nestIcon from '../assets/icons/nestjs.svg';
 import tsIcon from '../assets/icons/typescript.svg';
 import prismaIcon from '../assets/icons/prisma.svg';
+
 
 export default function ServicesPage() {
     const { t } = useTranslation();
@@ -138,16 +140,164 @@ export default function ServicesPage() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <h3>{t('servicesPage.whatWeBuild')}</h3>
 
-                        <ul>
+                        <div className="capabilitiesHeading">
+    <span className="capabilitiesEyebrow">
+        <span className="capabilitiesDot" />
+        OUR EXPERTISE
+    </span>
+
+                            <h3>{t('servicesPage.whatWeBuild')}</h3>
+                        </div>
+
+                        <ul className="capabilitiesGrid">
                             {heroList.map((item, index) => (
-                                <li key={item}>
-                                    <span>{String(index + 1).padStart(2, '0')}</span>
-                                    <strong>{item}</strong>
+                                <li
+                                    className={`capabilityCard capabilityCard--${index + 1}`}
+                                    key={index}
+                                >
+            <span className="capabilityArtwork" aria-hidden="true">
+
+{index === 0 && (
+    <span className="aiGlassScene">
+        <span className="aiGlassPanel aiGlassPanel--back" />
+        <span className="aiGlassPanel aiGlassPanel--middle" />
+        <span className="aiGlassPanel aiGlassPanel--front" />
+        <span className="aiGlassGlow" />
+    </span>
+)}
+
+
+
+                {index === 1 && (
+                    <span className="softwareScene">
+        <span className="softwareLayer softwareLayer--back">
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+        </span>
+
+        <span className="softwareLayer softwareLayer--middle">
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+        </span>
+
+        <span className="softwareLayer softwareLayer--front">
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+            <span className="softwareLine" />
+        </span>
+
+        <span className="softwareGlow" />
+    </span>
+                )}
+
+
+
+                {index === 2 && (
+                    <span className="riverScene">
+        <span className="riverGlow" />
+
+        <span className="riverLayer riverLayer--back">
+            <span className="riverShine" />
+        </span>
+
+        <span className="riverLayer riverLayer--middle">
+            <span className="riverShine" />
+        </span>
+
+        <span className="riverLayer riverLayer--front">
+            <span className="riverShine" />
+        </span>
+
+        <span className="riverParticles" />
+    </span>
+                )}
+
+
+
+                {index === 3 && (
+                    <span className="mobileScene">
+        <span className="mobileAura" />
+
+        <span className="mobileDevice">
+            <img
+                className="capMobileImage"
+                src="/capabilities/mobile.png"
+                alt=""
+            />
+        </span>
+
+        <span className="mobileLight" />
+    </span>
+                )}
+
+
+
+
+                {index === 4 && (
+                    <span className="automationScene">
+        <span className="automationGlow" />
+
+                        {[1, 2, 3].map((cube) => (
+                            <span
+                                className={`automationCube automationCube--${cube}`}
+                                key={cube}
+                            >
+                <span className="cubeBody">
+                    <span className="cubeFace cubeFront" />
+                    <span className="cubeFace cubeBack" />
+                    <span className="cubeFace cubeLeft" />
+                    <span className="cubeFace cubeRight" />
+                    <span className="cubeFace cubeTop" />
+                    <span className="cubeFace cubeBottom" />
+                </span>
+            </span>
+                        ))}
+    </span>
+                )}
+
+
+
+
+                {index === 5 && (
+                    <span className="integrationScene">
+        <span className="integrationGlow" />
+
+        <span className="integrationSystem">
+            <span className="integrationOrbit integrationOrbit--one">
+                <span className="integrationSatellite" />
+            </span>
+
+            <span className="integrationOrbit integrationOrbit--two">
+                <span className="integrationSatellite" />
+            </span>
+
+            <span className="integrationOrbit integrationOrbit--three">
+                <span className="integrationSatellite" />
+            </span>
+
+            <span className="integrationCore">
+                <span className="integrationCoreInner" />
+            </span>
+        </span>
+    </span>
+                )}
+
+            </span>
+
+                                    <span className="capabilityNumber">
+                {String(index + 1).padStart(2, '0')}
+            </span>
+
+                                    <strong className="capabilityTitle">
+                                        {item}
+                                    </strong>
                                 </li>
                             ))}
                         </ul>
+
                     </motion.div>
                 </div>
             </section>

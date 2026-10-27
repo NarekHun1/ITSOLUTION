@@ -147,6 +147,11 @@ const resources = {
                         desc: 'Travel platform for discovering stays, experiences, tours and local services across Armenia.',
                         result: 'A premium foundation for smarter travel discovery and future bookings.',
                     },
+                    chochi: {
+                        title: 'ChoChi — Hot Chicken & Fast Food',
+                        desc: 'A modern, responsive fast-food restaurant website with an interactive menu, online ordering and a seamless shopping cart experience.',
+                        result: 'Restaurant Website · Online Ordering · UX/UI Design',
+                    },
                 },
             },
             contact: {
@@ -458,6 +463,11 @@ const resources = {
                         desc: 'Платформа для поиска жилья, впечатлений, туров и локальных услуг по всей Армении.',
                         result: 'Премиальная основа для умного планирования путешествий и будущих бронирований.',
                     },
+                    chochi: {
+                        title: 'ChoChi — Ресторан быстрого питания',
+                        desc: 'Современный адаптивный сайт ресторана быстрого питания с интерактивным меню, онлайн-заказами и удобной корзиной.',
+                        result: 'Сайт ресторана · Онлайн-заказы · UX/UI дизайн',
+                    },
                 },
             },
             processPage: {
@@ -763,6 +773,11 @@ const resources = {
                         title: 'HimaGo — բացահայտիր Հայաստանը',
                         desc: 'Հայաստանում կացարաններ, տպավորություններ, տուրեր և տեղական ծառայություններ գտնելու հարթակ։',
                         result: 'Պրեմիում հիմք՝ խելացի ճանապարհորդությունների և ապագա ամրագրումների համար։',
+                    },
+                    chochi: {
+                        title: 'ChoChi — Արագ սննդի ռեստորան',
+                        desc: 'Ժամանակակից, հարմարեցվող կայք արագ սննդի ռեստորանի համար՝ ինտերակտիվ մենյուով, առցանց պատվերներով և հարմարավետ զամբյուղով։',
+                        result: 'Ռեստորանի կայք · Առցանց պատվերներ · UX/UI դիզայն',
                     },
                 },
             },

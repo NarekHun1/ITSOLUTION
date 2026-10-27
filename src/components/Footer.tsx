@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
+import { Phone, Mail, ArrowUpRight, Sparkles, MapPin } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../Footer.css';
@@ -63,14 +63,77 @@ export default function Footer() {
                         </Link>
                         <p>{t('footer.brandText')}</p>
 
+
+
                         <div className="footerSocials">
-                            <a href={INSTAGRAM} target="_blank" rel="noreferrer">
-                                Instagram <ArrowUpRight size={14} />
+                            <a
+                                href={INSTAGRAM}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                title="Instagram"
+                            >
+
+                                <svg
+                                    width="21"
+                                    height="21"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="url(#footerInstagramGradient)"
+                                    strokeWidth="1.8"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <defs>
+                                        <linearGradient
+                                            id="footerInstagramGradient"
+                                            x1="0%"
+                                            y1="100%"
+                                            x2="100%"
+                                            y2="0%"
+                                        >
+                                            <stop offset="0%" stopColor="#FFDC80" />
+                                            <stop offset="25%" stopColor="#FCAF45" />
+                                            <stop offset="50%" stopColor="#FD1D1D" />
+                                            <stop offset="75%" stopColor="#E1306C" />
+                                            <stop offset="100%" stopColor="#833AB4" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <circle
+                                        cx="17.5"
+                                        cy="6.5"
+                                        r="1"
+                                        fill="url(#footerInstagramGradient)"
+                                        stroke="none"
+                                    />
+                                </svg>
+
                             </a>
-                            <a href={FACEBOOK} target="_blank" rel="noreferrer">
-                                Facebook <ArrowUpRight size={14} />
+
+                            <a
+                                href={FACEBOOK}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                title="Facebook"
+                            >
+                                <svg
+                                    width="21"
+                                    height="21"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.9 3.78-3.9 1.1 0 2.25.2 2.25.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
+                                </svg>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div className="footerColumn">

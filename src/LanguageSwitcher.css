@@ -1,0 +1,177 @@
+
+/* =====================================
+   ISOLATION — TRANSPARENT LANGUAGE SWITCHER
+   ===================================== */
+
+.header .langSwitch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    z-index: 100;
+}
+
+/* Current language — flag only */
+
+.header .langSwitch .langCurrent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    width: 54px;
+    height: 42px;
+    min-width: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    color: #26342e;
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.header .langSwitch .langCurrent:hover {
+    background: transparent;
+    border: none;
+    opacity: 0.75;
+}
+
+.header .langSwitch.isOpen .langCurrent {
+    background: transparent;
+    border: none;
+}
+
+/* Flag */
+
+.header .langFlag {
+    display: block;
+    width: 30px;
+    height: 21px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: none;
+}
+
+/* Dropdown arrow */
+
+.header .langChevron {
+    width: 13px;
+    height: 13px;
+    opacity: 0.65;
+    transition: transform 0.2s ease;
+}
+
+.header .langSwitch.isOpen .langChevron {
+    transform: rotate(180deg);
+}
+
+
+/* Dropdown — background only when opened */
+
+.header .langMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    width: 58px;
+    padding: 10px 6px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 14px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+
+    z-index: 1000;
+}
+
+
+/* Language options */
+
+
+.header .langSwitch .langOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 36px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+    box-shadow: none;
+
+    cursor: pointer;
+    transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+}
+
+.header .langSwitch .langOption:hover {
+    background: rgba(34, 245, 154, 0.12);
+    transform: scale(1.05);
+}
+
+.header .langSwitch .langOption.active {
+    background: transparent;
+    border: none;
+}
+
+
+.header .langSwitch .langOption:hover {
+    background: transparent;
+    border: none;
+    transform: scale(1.12);
+}
+
+.header .langSwitch .langOption.active {
+    background: transparent;
+    border: none;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .header .langSwitch .langCurrent {
+        width: 48px;
+        height: 40px;
+        padding: 0;
+    }
+
+    .header .langMenu {
+        width: 48px;
+    }
+
+    .header .langFlag {
+        width: 28px;
+        height: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header .langChevron,
+    .header .langSwitch .langOption {
+        transition: none;
+    }
+}

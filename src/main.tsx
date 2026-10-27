@@ -4,6 +4,8 @@ import App from './App';
 import './styles.css';
 import './i18n';
 import './brand.css';
+import './LanguageSwitcher.css';
+
 
 import { BrowserRouter } from 'react-router-dom';
 

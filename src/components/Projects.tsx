@@ -12,12 +12,20 @@ import brandingImg from '../assets/projects /baubranding.png';
 import arosImg from '../assets/projects /aros.jpg';
 import astrumImg from '../assets/projects /astrum.jpg';
 import himagoImg from '../assets/projects /himago.jpg';
+import chochiImg from '../assets/projects /chochi.png';
 
 
 export default function Projects() {
     const { t } = useTranslation();
 
     const projects = [
+        {
+            key: 'chochi',
+            image: chochiImg,
+            tags: ['Restaurant', 'E-Commerce'],
+            link: 'https://cho-chi-rid5.vercel.app/',
+            button: 'Live Demo',
+        },
         {
             key: 'hayfin',
             image: hayfinImg,
@@ -81,6 +89,7 @@ export default function Projects() {
             link: 'https://www.himago.am',
             button: 'Visit Website',
         },
+
     ];
 
     const projectRows = [
